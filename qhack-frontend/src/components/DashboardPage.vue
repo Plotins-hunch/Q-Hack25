@@ -8,7 +8,9 @@
             <!-- Top Row - Overall Score Card -->
             <div class="score-card">
                 <div class="score-circle">
-                    <div class="score-value">86</div>
+                    <div class="score-value">
+                        {{ business_data.overall_score }}
+                    </div>
                 </div>
                 <div class="score-info">
                     <h2>Overall Unicorn Score</h2>
@@ -21,182 +23,35 @@
 
             <!-- Metrics Grid -->
             <div class="metrics-grid">
-                <!-- Team Card -->
-                <div class="metric-card">
+                <!-- Dynamic Metric Cards -->
+                <div
+                    v-for="(data, category) in metricData"
+                    :key="category"
+                    class="metric-card"
+                >
                     <div class="metric-header">
-                        <h3>Team</h3>
-                        <div class="metric-score">82</div>
+                        <h3>{{ formatTitle(category) }}</h3>
+                        <div class="metric-score">{{ data.score }}</div>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" style="width: 82%"></div>
+                        <div
+                            class="progress-fill"
+                            :style="{width: data.score + '%'}"
+                        ></div>
                     </div>
                     <div class="metric-details">
-                        <div class="metric-item">
-                            <span>Founder Experience</span>
-                            <strong>Strong</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Tech Expertise</span>
-                            <strong>High</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Retention</span>
-                            <strong>95%</strong>
+                        <div
+                            v-for="(value, key) in data.metrics"
+                            :key="key"
+                            class="metric-item"
+                        >
+                            <span>{{ formatTitle(key) }}</span>
+                            <strong>{{ value }}</strong>
                         </div>
                     </div>
                 </div>
 
-                <!-- Market Card -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <h3>Market</h3>
-                        <div class="metric-score">94</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 94%"></div>
-                    </div>
-                    <div class="metric-details">
-                        <div class="metric-item">
-                            <span>TAM Size</span>
-                            <strong>$7.2B</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Growth Rate</span>
-                            <strong>23% YoY</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Competition</span>
-                            <strong>Medium</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product Card -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <h3>Product</h3>
-                        <div class="metric-score">76</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 76%"></div>
-                    </div>
-                    <div class="metric-details">
-                        <div class="metric-item">
-                            <span>Innovation</span>
-                            <strong>High</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Product-Market Fit</span>
-                            <strong>Good</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>User Feedback</span>
-                            <strong>4.7/5</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Traction Card -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <h3>Traction</h3>
-                        <div class="metric-score">89</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 89%"></div>
-                    </div>
-                    <div class="metric-details">
-                        <div class="metric-item">
-                            <span>MRR</span>
-                            <strong>$320K</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Growth</span>
-                            <strong>16% MoM</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Active Users</span>
-                            <strong>48K</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Funding Card -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <h3>Funding</h3>
-                        <div class="metric-score">80</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%"></div>
-                    </div>
-                    <div class="metric-details">
-                        <div class="metric-item">
-                            <span>Total Raised</span>
-                            <strong>$12.5M</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Last Round</span>
-                            <strong>Series A</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Investor Quality</span>
-                            <strong>Top-tier</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Financial Efficiency Card -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <h3>Financial Efficiency</h3>
-                        <div class="metric-score">85</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 85%"></div>
-                    </div>
-                    <div class="metric-details">
-                        <div class="metric-item">
-                            <span>Burn Rate</span>
-                            <strong>$190K/mo</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>CAC</span>
-                            <strong>$380</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>LTV/CAC</span>
-                            <strong>4.2</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Miscellaneous Card -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <h3>Miscellaneous</h3>
-                        <div class="metric-score">78</div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 78%"></div>
-                    </div>
-                    <div class="metric-details">
-                        <div class="metric-item">
-                            <span>Legal Status</span>
-                            <strong>Good</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>IP Portfolio</span>
-                            <strong>3 Patents</strong>
-                        </div>
-                        <div class="metric-item">
-                            <span>Location</span>
-                            <strong>Boston</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Growth Projection Card -->
+                <!-- Growth Projection Card - This remains fixed -->
                 <div class="metric-card">
                     <div class="metric-header">
                         <h3>Growth Projection</h3>
@@ -215,14 +70,88 @@
 import '../css/dashboard-page.css'
 import NavButton from './NavButton.vue'
 import {useRouter} from 'vue-router'
+import {computed, onMounted} from 'vue'
+import business_data from '../model/business_data.json'
 
 const router = useRouter()
 const handleNavClick = () => {
     router.push('/')
 }
 
+// Format category or key names for display
+const formatTitle = (str) => {
+    return str
+        .replace(/_/g, ' ')
+        .split(' ')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ')
+}
+
+// Transform the JSON data into a format suitable for the v-for loop
+const metricData = computed(() => {
+    return {
+        team: {
+            score: business_data.team.team_score,
+            metrics: {
+                founder: business_data.team.founders[0].name,
+                team_strength: business_data.team.team_strength + '/10',
+                network_strength: business_data.team.network_strength + '/10',
+            },
+        },
+        market: {
+            score: business_data.market.market_score,
+            metrics: {
+                tam_size: business_data.market.TAM,
+                growth_rate: business_data.market.growth_rate,
+                som: business_data.market.SOM,
+            },
+        },
+        product: {
+            score: business_data.product.product_score,
+            metrics: {
+                stage: business_data.product.stage,
+                usp: business_data.product.USP,
+                customer_acquisition:
+                    business_data.product.customer_acquisition,
+            },
+        },
+        traction: {
+            score: business_data.traction.customer_validation.NPS,
+            metrics: {
+                mrr: '$' + business_data.traction.revenue_growth.MRR + 'K',
+                user_growth: business_data.traction.user_growth,
+                engagement: business_data.traction.engagement,
+            },
+        },
+        funding: {
+            score: business_data.funding.cap_table_strength,
+            metrics: {
+                total_raised: business_data.funding.amount,
+                stage: business_data.funding.stage,
+                investor: business_data.funding.investors_on_board[0].name,
+            },
+        },
+        financial_efficiency: {
+            score: business_data.financial_efficiency.unit_economics * 20,
+            metrics: {
+                burn_rate: business_data.financial_efficiency.burn_rate,
+                cac_ltv: business_data.financial_efficiency.CAC_vs_LTV,
+                unit_economics:
+                    business_data.financial_efficiency.unit_economics + '/5',
+            },
+        },
+        miscellaneous: {
+            score: 70, // Fixed score since there's no direct score in your JSON
+            metrics: {
+                regulatory_risk: business_data.miscellaneous.regulatory_risk,
+                geographic_focus: business_data.miscellaneous.geographic_focus,
+                timing_fad_risk: business_data.miscellaneous.timing_fad_risk,
+            },
+        },
+    }
+})
+
 // Ensure proper scrolling when component mounts
-import {onMounted} from 'vue'
 onMounted(() => {
     // Reset any overflow restrictions that might be present
     document.body.style.overflow = 'auto'
