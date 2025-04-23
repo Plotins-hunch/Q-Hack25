@@ -1,0 +1,34 @@
+Working prototype r MVP
+Demo video and GitHub repo
+Ui mockup or dashboard
+Scoring logic and evaluation framework
+
+Automatisierte anfragen per mail wenn Daten nicht verfügbar
+
+
+Metrics:
+Team -> Founder, team, network strength
+Market -> market size (TAM,SAM,SOM), growth rate
+Product -> stage, USP, customer acquisition 
+Traction -> revenue growth (MRR,ARR), user growth/engagement, customer validation (testimonials, churn, NPS)
+Funding -> stage/amount, cap table strength, investors on board (also type)
+Financials/Effieciency -> burn rate, CACvsLTV, Unit economics
+Miscellaneous -> regulatory risk, geographic focus, timing/fad risk
+
+
+Tools:
+API -> Crunchbase, Linkedin, pitchBook, web scraping
+Libs -> pandas/numpy data wrangling ; requests/aiohttp api calls ; beautiful soup/scrapy scraping
+Scoring -> scikit-learn/XG boost scoring models ; bayesian scoring/weighted scoring for deterministic ; fastAPI/Flask expose scoring APIs ; Pydantic validate incoming data ; airflow/prefect schedule data pipelines
+Datapackaging/Structuring -> pydantic/marshmallow structured schemas ; JSON/Parquet serialize data ; Celery for asynchronous tasks
+Logging monitoring testing -> loguru/sentry backend logging ; pytest score logic ; prometheus/Grafana monitoring 
+
+Structure:
+Enter startup -> search for infos -> clean -> transform -> evaluate which scores can be made -> evaluate -> send out email for missing informations -> show evaluated scores & info
+
+
+Potential:
+personalizing 
+Give informations that have been used in process 
+
+
