@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 import requests
 from openai import OpenAI
 import datetime
+import copy
+import re
 
 # -----------------------------
 # 0. Load Environment Variables
@@ -127,7 +129,7 @@ def structure_pdf_with_assistant(pdf_path: str) -> dict:
     print(content_text)
 
     # Try to extract JSON from the content (in case it's wrapped in markdown code blocks)
-    import re
+
     json_match = re.search(r'```json\s*([\s\S]*?)\s*```', content_text)
     if json_match:
         content_text = json_match.group(1).strip()
@@ -216,26 +218,48 @@ def fetch_snapshot(snapshot_id: str, max_wait_sec: int = 300) -> list[dict]:
     if not isinstance(recs, list):
         raise ValueError(f"Unexpected data from snapshot {snapshot_id}: {recs}")
     return recs
+def is_company_match(profile, target_name):
+    company = profile.get("current_company", {})
+    return company and company.get("name", "").strip().lower() == target_name
+
+def profile_match_score(profile, company_name, first, last):
+    score = 0
+    if is_company_match(profile, company_name):
+        score += 3
+    if profile.get("full_name", "").lower() == f"{first} {last}".lower():
+        score += 2
+
+    experience = profile.get("experience")
+    if isinstance(experience, list):
+        if any(exp.get("company", "").lower() == company_name for exp in experience):
+            score += 1
+
+    return score
+
 
 # ── enrichment main ───────────────────────────────────────────────────────────
+def is_company_match(profile, target_name):
+    company = profile.get("current_company", {})
+    return company and company.get("name", "").strip().lower() == target_name
+
+def profile_match_score(profile, company_name, first, last):
+    score = 0
+    if is_company_match(profile, company_name):
+        score += 3
+    if profile.get("full_name", "").lower() == f"{first} {last}".lower():
+        score += 2
+    experience = profile.get("experience")
+    if isinstance(experience, list):
+        if any(exp.get("company", "").lower() == company_name for exp in experience):
+            score += 1
+    return score
+
 def enrich_with_linkedin(data: dict) -> dict:
-    """
-    For each founder:
-      • trigger Bright Data discover-by-name dataset
-      • wait (up to 5 min) for the snapshot
-      • pick the profile whose current_company.name matches our company
-      • extract:
-          university, connections, age, gender, previous employments,
-          linkedin_posts_last_30d
-    Also adds `company_followers` at root level.
-    """
     headers = {
         "Authorization": f"Bearer {BRIGHTDATA_API_KEY}",
-        "Content-Type":  "application/json",
+        "Content-Type": "application/json",
     }
     DATASET_ID = "gd_l1viktl72bvl7bjuj0"
-
-    # try to find the company name in the structured payload
     company_name = (
         data.get("company_name")
         or data.get("team", {}).get("company_overview", {}).get("name")
@@ -249,14 +273,12 @@ def enrich_with_linkedin(data: dict) -> dict:
             continue
         last = " ".join(rest)
 
-        # — 1) trigger discover job
+        # Trigger Bright Data job
         trigger_url = (
             "https://api.brightdata.com/datasets/v3/trigger"
-            f"?dataset_id={DATASET_ID}"
-            "&include_errors=true&type=discover_new&discover_by=name"
+            f"?dataset_id={DATASET_ID}&include_errors=true&type=discover_new&discover_by=name"
         )
-        trig = requests.post(trigger_url,
-                             headers=headers,
+        trig = requests.post(trigger_url, headers=headers,
                              json=[{"first_name": first, "last_name": last}],
                              timeout=60)
         if not trig.ok:
@@ -267,63 +289,61 @@ def enrich_with_linkedin(data: dict) -> dict:
         if not snapshot_id:
             print(f"[WARN] no snapshot_id for {founder['name']}")
             continue
-        print(f"[INFO] Snapshot {snapshot_id} queued for {founder['name']}")
 
-        # — 2) download / wait (up to 5 min)
         try:
             profiles = fetch_snapshot(snapshot_id, max_wait_sec=300)
         except Exception as e:
             print(f"[ERROR] snapshot fetch failed for {founder['name']}: {e}")
             continue
 
-        # choose profile matching company_name
-        prof = next(
-            (p for p in profiles
-             if p.get("current_company", {}).get("name", "").lower() == company_name),
-            profiles[0]
-        )
-        print(f"[INFO] Using profile {prof.get('url')}")
-
-        # — 3) extract fields
-        founder["university"] = (
-            prof.get("educations_details")
-            or (prof.get("education") or [{}])[0].get("title")
-        )
-        founder["network_strength"] = prof.get("connections")
-        founder["age"] = prof.get("age")
-        founder["gender"] = prof.get("gender")
-
-        # previous employments
-        exp = prof.get("experience") or []
-        founder["previous_employments"] = [
-            {
-                "company": e.get("company"),
-                "title":   e.get("title"),
-                "start":   e.get("start_date"),
-                "end":     e.get("end_date"),
-            }
-            for e in exp
+        # Score profiles
+        scored_profiles = [
+            (profile_match_score(p, company_name, first, last), p)
+            for p in profiles
         ]
+        scored_profiles = [sp for sp in scored_profiles if sp[0] > 0]
 
-        # posts in last 30 days
-        activity = prof.get("activity") or prof.get("posts") or []
-        cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=30)
-        recent = [
-            p for p in activity
-            if p.get("created_at") and
-               datetime.datetime.fromisoformat(
-                   p["created_at"].replace("Z", "+00:00")
-               ) >= cutoff
-        ]
-        founder["linkedin_posts_last_30d"] = len(recent)
+        if scored_profiles:
+            # Best match found: extract real data
+            best_score, prof = max(scored_profiles, key=lambda sp: sp[0])
+            print(f"[INFO] Selected profile {prof.get('url')} with score {best_score}")
 
-    # — 4) company follower count (if we have a LinkedIn company URL)
-    comp_url = (
-        data.get("team", {})
-            .get("company_overview", {})
-            .get("url")
-        or None
-    )
+            founder["university"] = (
+                prof.get("educations_details")
+                or (prof.get("education") or [{}])[0].get("title")
+            )
+            founder["network_strength"] = prof.get("connections")
+            founder["age"] = prof.get("age")
+            founder["gender"] = prof.get("gender")
+            experience = prof.get("experience") or []
+            founder["previous_employments"] = [
+                {
+                    "company": e.get("company"),
+                    "title": e.get("title"),
+                    "start": e.get("start_date"),
+                    "end": e.get("end_date"),
+                }
+                for e in experience if e.get("company") and e.get("title")
+            ]
+            activity = prof.get("activity") or prof.get("posts") or []
+            cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=30)
+            recent = [
+                p for p in activity
+                if p.get("created_at") and
+                   datetime.datetime.fromisoformat(p["created_at"].replace("Z", "+00:00")) >= cutoff
+            ]
+            founder["linkedin_posts_last_30d"] = len(recent)
+        else:
+            # No strong match: assign null defaults
+            print(f"[WARN] No strong match found for {founder['name']}")
+            founder["university"] = None
+            founder["network_strength"] = None
+            founder["age"] = None
+            founder["gender"] = None
+            founder["previous_employments"] = []
+            founder["linkedin_posts_last_30d"] = None
+
+    comp_url = data.get("team", {}).get("company_overview", {}).get("url")
     if comp_url:
         comp_resp = requests.post(
             "https://api.brightdata.com/linkedin/company",
@@ -334,6 +354,81 @@ def enrich_with_linkedin(data: dict) -> dict:
         data["company_followers"] = safe_json(comp_resp, "company").get("numFollowers")
 
     return data
+
+
+def refine_with_chatgpt_holes(data: dict) -> dict:
+    """
+    Calls ChatGPT to fill any nulls or empty previous_employments in our JSON,
+    preserving the existing structure exactly—and then tags each filled field
+    with a "<field>_source": "chatgpt" marker for manual review.
+    """
+    # 1) Keep a copy of the original
+    original = copy.deepcopy(data)
+
+    # 2) Build and send the ChatGPT prompt (unchanged)
+    schema = """
+You will be given a JSON object describing a startup. Whenever a field is null
+or previous_employments is an empty list, you must fill in a plausible value
+that matches the existing format. Do not add new keys or remove existing ones. For `previous_employments`, use this format: {
+    "company": "All Star Flooring",
+    "title": "Co-Owner",
+    "start": "Aug 2014",
+    "end": "Present"
+  },
+Return ONLY the completed JSON.
+"""
+    messages = [
+        {"role": "system", "content": "You are a JSON-refinement assistant."},
+        {"role": "user", "content": f"{schema}\n\nHere is the JSON to fix:\n```json\n{json.dumps(data, indent=2)}\n```"}
+    ]
+    resp = client.chat.completions.create(
+        model="gpt-4o",
+        messages=messages,
+        temperature=0
+    )
+    text = resp.choices[0].message.content.strip()
+    if text.startswith("```"):
+        text = text.strip("```json").strip("```").strip()
+    refined = json.loads(text)
+
+    # 3) Recursively compare and tag any filled fields
+    def annotate(ref_node, orig_node, parent_key=None):
+        # Dict case
+        if isinstance(ref_node, dict) and isinstance(orig_node, dict):
+            # iterate over a static list of keys
+            for key in list(ref_node.keys()):
+                val = ref_node[key]
+                orig_val = orig_node.get(key)
+
+                # Recurse first
+                if isinstance(val, dict):
+                    annotate(val, orig_val or {}, key)
+                elif isinstance(val, list):
+                    # tag empty→filled previous_employments
+                    if key == "previous_employments" and not orig_val and val:
+                        ref_node[f"{key}_source"] = "chatgpt"
+                    # recurse into list items
+                    for idx, item in enumerate(val):
+                        orig_item = {}
+                        if isinstance(orig_val, list) and idx < len(orig_val):
+                            orig_item = orig_val[idx] or {}
+                        if isinstance(item, dict):
+                            annotate(item, orig_item, key)
+                else:
+                    # tag scalar fields that were null/empty but now have content
+                    if orig_val in (None, [], "") and val not in (None, [], ""):
+                        ref_node[f"{key}_source"] = "chatgpt"
+
+        # List at root or nested under a non-dict key
+        elif isinstance(ref_node, list) and isinstance(orig_node, list):
+            for idx, item in enumerate(ref_node):
+                orig_item = orig_node[idx] if idx < len(orig_node) else {}
+                if isinstance(item, dict):
+                    annotate(item, orig_item, parent_key)
+
+    annotate(refined, original)
+    return refined
+
 
 
 
@@ -402,13 +497,132 @@ def main():
     }
 
     enriched = enrich_with_linkedin(structured)
+    # enriched = {
+    #     "company_name": "Airbnb",
+    #     "team": {
+    #         "founders": [
+    #             {
+    #                 "name": "Brian Chesky",
+    #                 "background": "Industrial Design",
+    #                 "university": "Rhode Island School of Design",
+    #                 "network_strength": 500,
+    #                 "age": None,
+    #                 "gender": None,
+    #                 "previous_employments": [],
+    #                 "linkedin_posts_last_30d": 0
+    #             },
+    #             {
+    #                 "name": "Joe Gebbia",
+    #                 "background": "Product Design",
+    #                 "university": None,
+    #                 "network_strength": 98,
+    #                 "age": None,
+    #                 "gender": None,
+    #                 "previous_employments": [
+    #                     {
+    #                         "company": "All Star Flooring",
+    #                         "title": "Co-Owner",
+    #                         "start": "Aug 2014",
+    #                         "end": "Present"
+    #                     },
+    #                     {
+    #                         "company": "AT&T",
+    #                         "title": "Network Engineer",
+    #                         "start": "Aug 2001",
+    #                         "end": "Present"
+    #                     },
+    #                     {
+    #                         "company": "Gebbia Sign-Language Services",
+    #                         "title": "RID Certified Sign Language Interpreter",
+    #                         "start": "Jul 1988",
+    #                         "end": "Present"
+    #                     },
+    #                     {
+    #                         "company": "US Navy",
+    #                         "title": "Radioman (RM2)",
+    #                         "start": "Sep 1989",
+    #                         "end": "Dec 1992"
+    #                     }
+    #                 ],
+    #                 "linkedin_posts_last_30d": 0
+    #             },
+    #             {
+    #                 "name": "Nathan Blecharczyk",
+    #                 "background": "Computer Science",
+    #                 "university": None,
+    #                 "network_strength": 500,
+    #                 "age": None,
+    #                 "gender": None,
+    #                 "previous_employments": [],
+    #                 "linkedin_posts_last_30d": 0
+    #             }
+    #         ],
+    #         "team_strength": "Strong multidisciplinary team with design and technical expertise",
+    #         "network_strength": "Leverage existing networks for rapid expansion"
+    #     },
+    #     "market": {
+    #         "TAM": "150 million short-term stays annually",
+    #         "SAM": "15 million potential customers in major cities",
+    #         "SOM": "2 million target customers acquired",
+    #         "growth_rate": "Growing at a significant rate as the market matures"
+    #     },
+    #     "product": {
+    #         "stage": "Launched and operating",
+    #         "USP": "Affordable, personal accommodations; enabling people to monetize extra space",
+    #         "customer_acquisition": "Online marketing, partnerships with local events, and word-of-mouth"
+    #     },
+    #     "traction": {
+    #         "revenue_growth": {
+    #             "MRR": "$200,000",
+    #             "ARR": "$2.4 million"
+    #         },
+    #         "user_growth": "Increasing user growth month over month",
+    #         "engagement": "High engagement with returning users",
+    #         "customer_validation": {
+    #             "testimonials": [
+    #                 "'AirBed&Breakfast freaking rocks!' - User Review",
+    #                 "‘A complete success. It is easy to use and it made me money.’ - User Review"
+    #             ],
+    #             "churn": "Low churn rate due to customer satisfaction",
+    #             "NPS": "Net Promoter Score above industry average"
+    #         }
+    #     },
+    #     "funding": {
+    #         "stage": "Series A",
+    #         "amount": "$500,000",
+    #         "cap_table_strength": "Diverse with strong lead investors",
+    #         "investors_on_board": [
+    #             {
+    #                 "name": "Sequoia Capital",
+    #                 "type": "Venture Capital"
+    #             },
+    #             {
+    #                 "name": "Y Combinator",
+    #                 "type": "Accelerator"
+    #             }
+    #         ]
+    #     },
+    #     "financial_efficiency": {
+    #         "burn_rate": "$100,000 monthly",
+    #         "CAC_vs_LTV": "Sustainable with a growing LTV/CAC ratio",
+    #         "unit_economics": "High margin per booking"
+    #     },
+    #     "miscellaneous": {
+    #         "regulatory_risk": "Moderate risk due to evolving local laws",
+    #         "geographic_focus": "Global with focus on major urban centers",
+    #         "timing_fad_risk": "Low risk as platform adoption grows"
+    #     },
+    #     "metrics": {}
+    # }
+
+    refined = refine_with_chatgpt_holes(enriched)
 
     # TODO: metric calculations
-    enriched["metrics"] = {}
+    refined["metrics"] = {}
 
     out = "./output.json"
     with open(out, "w") as f:
-        json.dump(enriched, f, indent=2)
+        json.dump(refined, f, indent=2)
     print(f"Pipeline complete. Output written to {out}")
 
 if __name__ == "__main__":
