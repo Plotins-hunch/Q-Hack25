@@ -50,25 +50,18 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Growth Projection Card - This remains fixed -->
-                <div class="metric-card">
-                    <div class="metric-header">
-                        <h3>Growth Projection</h3>
-                    </div>
-                    <div class="growth-chart">
-                        <span class="chart-line"></span>
-                        <div class="chart-label">Unicorn in ~18 months</div>
-                    </div>
-                </div>
             </div>
         </div>
+
+        <!-- Add ChatGPT Component -->
+        <ChatGptComponent :businessData="business_data" />
     </div>
 </template>
 
 <script setup>
 import '../css/dashboard-page.css'
 import NavButton from './NavButton.vue'
+import ChatGptComponent from './ChatGptComponent.vue'
 import {useRouter} from 'vue-router'
 import {computed, onMounted} from 'vue'
 import business_data from '../model/business_data.json'
