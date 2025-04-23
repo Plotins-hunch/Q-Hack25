@@ -446,8 +446,8 @@ Return ONLY the completed JSON.
 # -----------------------------
 
 def main(pdf_path=None):
-    if pdf_path is None:
-        pdf_path = "./airbnb.pdf"  # Default for direct script execution
+    # if pdf_path is None:
+    #     pdf_path = "./airbnb.pdf"  # Default for direct script execution
 
     # Extract data from the PDF
     structured = structure_pdf_with_assistant(pdf_path)
