@@ -38,7 +38,7 @@ body {
     font-size: calc(1.5rem + 1vw);
     font-weight: 300;
     color: var(--text-color);
-    margin-bottom: min(50px, 5vh);
+    margin-bottom: min(80px, 10vh);
     text-align: center;
     letter-spacing: -0.5px;
     width: 100%;

@@ -32,14 +32,11 @@
 <script setup>
 import {ref} from 'vue'
 import '../css/search-page.css'
+import {useRouter} from 'vue-router'
 
+const router = useRouter()
 const searchQuery = ref('')
-
 const searchCompanies = () => {
-    if (searchQuery.value.trim()) {
-        // We would typically emit an event or use a router to navigate
-        console.log('Searching for:', searchQuery.value)
-        // Example: router.push({ name: 'results', query: { search: searchQuery.value } });
-    }
+    router.push('/dashboard')
 }
 </script>

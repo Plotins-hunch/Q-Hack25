@@ -1,15 +1,11 @@
 <template>
-    <SearchPage msg="Welcome to Your Vue.js App" />
+    <RouterView> </RouterView>
 </template>
 
 <script>
-import SearchPage from './components/SearchPage.vue'
-
 export default {
     name: 'App',
-    components: {
-        SearchPage,
-    },
+    components: {},
 }
 </script>
 
