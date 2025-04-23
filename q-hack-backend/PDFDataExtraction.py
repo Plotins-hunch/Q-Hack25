@@ -441,51 +441,37 @@ Return ONLY the completed JSON.
 # 3. Main Pipeline
 # -----------------------------
 
-def main():
-    # Check if Slidedecks and Jsons folders are accessible
-    slides_dir = "./Slidedecks"
-    jsons_dir = "./Jsons"
+# -----------------------------
+# 3. Main Pipeline
+# -----------------------------
 
-    print("[DEBUG] Checking directories...")
-    if not os.path.exists(slides_dir):
-        raise FileNotFoundError(f"[ERROR] Directory '{slides_dir}' not found.")
-    if not os.path.isdir(slides_dir):
-        raise NotADirectoryError(f"[ERROR] '{slides_dir}' is not a directory.")
+def main(pdf_path=None):
+    if pdf_path is None:
+        pdf_path = "./airbnb.pdf"  # Default for direct script execution
 
-    if not os.path.exists(jsons_dir):
-        print(f"[INFO] '{jsons_dir}' does not exist. Creating it.")
-        os.makedirs(jsons_dir)
-    elif not os.path.isdir(jsons_dir):
-        raise NotADirectoryError(f"[ERROR] '{jsons_dir}' is not a directory.")
+    # Extract data from the PDF
+    structured = structure_pdf_with_assistant(pdf_path)
 
-    print("[DEBUG] Directory check passed. Beginning PDF processing...")
+    # Enrich the data with LinkedIn information
+    enriched = enrich_with_linkedin(structured)
 
-    # Loop through all PDFs in the ./Slidedecks folder
-    for filename in os.listdir(slides_dir):
-        if filename.lower().endswith(".pdf"):
-            pdf_path = os.path.join(slides_dir, filename)
-            print(f"\n[INFO] Processing: {pdf_path}")
+    # Refine the data by filling in any missing information
+    refined = refine_with_chatgpt_holes(enriched)
 
-            try:
-                structured = structure_pdf_with_assistant(pdf_path)
-                enriched = enrich_with_linkedin(structured)
-                refined = refine_with_chatgpt_holes(enriched)
-                refined["metrics"] = {}
+    # Add metrics calculations
+    refined["metrics"] = {}
 
-                # Determine output file name from company name or fallback to PDF name
-                company = (
-                        refined.get("company_name")
-                        or os.path.splitext(filename)[0]
-                ).strip().replace(" ", "_").lower()
+    # If called as a module, return the data
+    if pdf_path != "./airbnb.pdf":
+        return refined
 
-                out_path = os.path.join(jsons_dir, f"{company}.json")
-                with open(out_path, "w") as f:
-                    json.dump(refined, f, indent=2)
+    # If run as a script, write to output file
+    out = "./output.json"
+    with open(out, "w") as f:
+        json.dump(refined, f, indent=2)
+    print(f"Pipeline complete. Output written to {out}")
+    return refined
 
-                print(f"[✅] Pipeline complete. Output written to {out_path}")
-
-            except Exception as e:
-                print(f"[❌] Failed to process {filename}: {e}")
 
 if __name__ == "__main__":
     main()

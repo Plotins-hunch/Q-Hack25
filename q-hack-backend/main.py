@@ -2,10 +2,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
+from fastapi.responses import JSONResponse
 
 from api.email_routes import router as email_router
 from api.chat_routes import router as chat_router
-from api.upload_routes import router as upload_router  # ADD THIS
+from api.upload_routes import router as upload_router
+
+# Import the data extraction module
+from PDFDataExtraction import main as extract_pdf_data
 
 # Create FastAPI application
 app = FastAPI(title="Startup Analyzer API")
@@ -28,6 +32,19 @@ app.include_router(upload_router)
 @app.get("/")
 async def root():
     return {"message": "Welcome to Startup Analyzer API"}
+
+# Add endpoint to process PDF after upload
+@app.post("/api/analyze-pdf")
+async def analyze_pdf(file_path: str):
+    try:
+        # Call the PDFDataExtraction module with the uploaded file path
+        result = extract_pdf_data(file_path)
+        return JSONResponse(content=result)
+    except Exception as e:
+        return JSONResponse(
+            status_code=500,
+            content={"status": "error", "message": f"Failed to analyze PDF: {str(e)}"}
+        )
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
