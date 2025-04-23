@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #a47bf6;
+    --primary-hover: #b892f8;
+    --text-color: #e9e9ec;
+    --background-color: #242428;
+    --input-bg: #242428;
+    --placeholder-color: #9992a9;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color, #242428);
+    color: var(--text-color, #e9e9ec);
+    min-height: 100%;
+    width: 100%;
+    /* The important part to enable scrolling */
+    overflow-y: auto !important;
+    overflow-x: hidden;
+}
+
+.unicorn-dashboard {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    /* Make sure the container allows scrolling */
+    overflow-y: auto;
+}
+
+.navigation {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    z-index: 10;
+    background-color: var(--background-color, #242428);
+}
+
+.dashboard-container {
+    flex: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px 24px 24px;
+    /* This ensures content can scroll if needed */
+    overflow-y: visible;
+}
+
+/* Overall Score Card */
+.score-card {
+    background-color: rgba(164, 123, 246, 0.08);
+    border: 1px solid rgba(164, 123, 246, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.score-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a47bf6 0%, #8150e4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+    box-shadow: 0 4px 12px rgba(164, 123, 246, 0.3);
+    flex-shrink: 0;
+}
+
+.score-value {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.score-info {
+    flex: 1;
+    padding-left: 0;
+}
+
+.score-info h2 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    text-align: left;
+    color: var(--text-color, #e9e9ec);
+}
+
+.score-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.tag.success {
+    background-color: rgba(45, 212, 144, 0.15);
+    color: #2dd490;
+}
+
+.tag.primary {
+    background-color: rgba(164, 123, 246, 0.15);
+    color: #a47bf6;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    /* Ensure the grid can grow as needed */
+    min-height: min-content;
+    width: 100%;
+}
+
+.metric-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.metric-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.metric-score {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-color, #a47bf6);
+}
+
+.progress-bar {
+    height: 6px;
+    background-color: rgba(164, 123, 246, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--primary-color, #a47bf6);
+    border-radius: 3px;
+}
+
+.metric-details {
+    margin-top: 16px;
+}
+
+.metric-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.metric-item span {
+    opacity: 0.85;
+    color: #d0d0d6;
+}
+
+.metric-item strong {
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Growth Chart */
+.growth-chart {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 16px;
+}
+
+.chart-line {
+    display: block;
+    width: 90%;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        rgba(164, 123, 246, 0.2) 0%,
+        rgba(164, 123, 246, 0.4) 50%,
+        rgba(164, 123, 246, 0.9) 100%
+    );
+    position: relative;
+    overflow: visible;
+}
+
+.chart-line:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(
+        180deg,
+        rgba(164, 123, 246, 0.2) 0%,
+        rgba(164, 123, 246, 0) 100%
+    );
+    bottom: 2px;
+    border-radius: 50% 50% 0 0;
+}
+
+.chart-label {
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--primary-color, #a47bf6);
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure proper padding at the bottom for scrolling */
+.dashboard-container::after {
+    content: '';
+    display: block;
+    padding-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .unicorn-dashboard {
+        padding: 0;
+    }
+
+    .dashboard-container {
+        padding: 0 16px 16px 16px;
+    }
+
+    .score-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .score-circle {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .score-tags {
+        justify-content: center;
+    }
+
+    .score-info h2 {
+        text-align: center;
+    }
+
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For very small height screens, ensure components remain visible and scrollable */
+@media (max-height: 700px) {
+    .unicorn-dashboard {
+        min-height: 700px;
+        height: auto;
+    }
+}

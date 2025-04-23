@@ -1,0 +1,48 @@
+{
+    "overall_score": "89",
+    "team": {
+      "founders": [{"name": "John Doe", "background": "Jane Doe"}],
+      "team_strength": "10",
+      "network_strength": "10",
+      "team_score": "67"
+    },
+    "market": {
+      "TAM": "55",
+      "SAM": "70",
+      "SOM": "67",
+      "growth_rate": "50%",
+      "market_score": "78"
+    },
+    "product": {
+      "stage": "early development",
+      "USP": "Krasses Zeug",
+      "customer_acquisition": "Zwingen",
+      "product_score": "100"
+    },
+    "traction": {
+      "revenue_growth": {"MRR": "100", "ARR": "300"},
+      "user_growth": "300%",
+      "engagement": "50%",
+      "customer_validation": {
+        "testimonials": ["Dies das"],
+        "churn": "fjek",
+        "NPS": "76"
+      }
+    },
+    "funding": {
+      "stage": "1.",
+      "amount": "100$",
+      "cap_table_strength": "50",
+      "investors_on_board": [{"name": "Warren", "type": "Peter"}]
+    },
+    "financial_efficiency": {
+      "burn_rate": "100k/month",
+      "CAC_vs_LTV": "1/2",
+      "unit_economics": "5"
+    },
+    "miscellaneous": {
+      "regulatory_risk": "low",
+      "geographic_focus": "Europe",
+      "timing_fad_risk": "5%"
+    }
+  }

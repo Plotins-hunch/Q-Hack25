@@ -5,8 +5,8 @@
 
 .navigation {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 10px;
+    left: 50px;
     z-index: 100;
 }
 

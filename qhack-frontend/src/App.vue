@@ -1,4 +1,5 @@
 <template>
+    <img height="150px" width="150px" src="./assets/unicorn_icon.png" />
     <RouterView> </RouterView>
 </template>
 
