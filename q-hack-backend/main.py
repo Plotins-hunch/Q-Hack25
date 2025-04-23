@@ -1,8 +1,9 @@
 # backend/main.py
-from fastapi import FastAPI
+from fastapi import FastAPI, Body
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 
 from api.email_routes import router as email_router
 from api.chat_routes import router as chat_router
@@ -33,12 +34,16 @@ app.include_router(upload_router)
 async def root():
     return {"message": "Welcome to Startup Analyzer API"}
 
+# Define a model for the file path request
+class FilePathRequest(BaseModel):
+    file_path: str
+
 # Add endpoint to process PDF after upload
 @app.post("/api/analyze-pdf")
-async def analyze_pdf(file_path: str):
+async def analyze_pdf(request: FilePathRequest):
     try:
         # Call the PDFDataExtraction module with the uploaded file path
-        result = extract_pdf_data(file_path)
+        result = extract_pdf_data(request.file_path)
         return JSONResponse(content=result)
     except Exception as e:
         return JSONResponse(
