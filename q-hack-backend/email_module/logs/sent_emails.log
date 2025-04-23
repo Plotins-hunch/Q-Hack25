@@ -1,0 +1,304 @@
+2025-04-23 15:08:02,824 - TO: contact@teststartup.com
+2025-04-23 15:08:02,825 - SUBJECT: Data Request for TestStartup
+2025-04-23 15:08:02,825 - CONTENT: <!-- email_module/templates/data_request.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .request-list { margin: 20px 0; padding-left: 20px; }
+        .request-item { margin-bottom: 10px; }
+        .company-name { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <p>Hello,</p>
+    
+    <p>We're building a comprehensive analysis of innovative startups in your space and are 
+    interested in including <span class="company-name">TestStartup</span> in our database.</p>
+    
+    <p>To ensure our information is accurate and complete, we'd appreciate if you could provide the following details:</p>
+    
+    <ul class="request-list">
+        
+        <li class="request-item"><strong>Year your company was founded</strong></li>
+        
+        <li class="request-item"><strong>How your business generates revenue</strong></li>
+        
+        <li class="request-item"><strong>Estimated market size (in $)</strong></li>
+        
+        <li class="request-item"><strong>Information about your founding team</strong></li>
+        
+        <li class="request-item"><strong>Current funding stage</strong></li>
+        
+        <li class="request-item"><strong>Total funding raised to date</strong></li>
+        
+        <li class="request-item"><strong>Monthly cash burn rate</strong></li>
+        
+        <li class="request-item"><strong>Customer Acquisition Cost</strong></li>
+        
+        <li class="request-item"><strong>Customer Lifetime Value</strong></li>
+        
+        <li class="request-item"><strong>Your technology stack</strong></li>
+        
+    </ul>
+    
+    <p>This information will help us better understand your startup's potential and could connect you 
+    with relevant investment opportunities in our network.</p>
+    
+    <p>You can reply directly to this email with your responses or schedule a brief call if you prefer.</p>
+    
+    <p>Thank you for your time,<br>
+    The Startup Analysis Team</p>
+</body>
+</html>
+2025-04-23 15:08:02,825 - --------------------------------------------------
+2025-04-23 15:13:49,759 - TO: will.kruger@acme.com
+2025-04-23 15:13:49,760 - SUBJECT: Data Request for Acme Corp
+2025-04-23 15:13:49,760 - CONTENT: <!-- email_module/templates/data_request.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .request-list { margin: 20px 0; padding-left: 20px; }
+        .request-item { margin-bottom: 10px; }
+        .company-name { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <p>Hello,</p>
+    
+    <p>We're building a comprehensive analysis of innovative startups in your space and are 
+    interested in including <span class="company-name">Acme Corp</span> in our database.</p>
+    
+    <p>To ensure our information is accurate and complete, we'd appreciate if you could provide the following details:</p>
+    
+    <ul class="request-list">
+        
+        <li class="request-item"><strong>Year your company was founded</strong></li>
+        
+        <li class="request-item"><strong>How your business generates revenue</strong></li>
+        
+        <li class="request-item"><strong>Your target industry</strong></li>
+        
+        <li class="request-item"><strong>Estimated market size (in $)</strong></li>
+        
+        <li class="request-item"><strong>Information about your founding team</strong></li>
+        
+        <li class="request-item"><strong>Current funding stage</strong></li>
+        
+        <li class="request-item"><strong>Total funding raised to date</strong></li>
+        
+        <li class="request-item"><strong>Monthly cash burn rate</strong></li>
+        
+        <li class="request-item"><strong>Customer Acquisition Cost</strong></li>
+        
+        <li class="request-item"><strong>Customer Lifetime Value</strong></li>
+        
+        <li class="request-item"><strong>Your technology stack</strong></li>
+        
+    </ul>
+    
+    <p>This information will help us better understand your startup's potential and could connect you 
+    with relevant investment opportunities in our network.</p>
+    
+    <p>You can reply directly to this email with your responses or schedule a brief call if you prefer.</p>
+    
+    <p>Thank you for your time,<br>
+    The Startup Analysis Team</p>
+</body>
+</html>
+2025-04-23 15:13:49,760 - --------------------------------------------------
+2025-04-23 15:16:22,310 - Searching for email for Anthropic with domain anthropic.com
+2025-04-23 15:16:22,310 - Hunter API Key present: True
+2025-04-23 15:16:22,310 - Calling Hunter.io API for domain: anthropic.com
+2025-04-23 15:16:22,311 - URL: https://api.hunter.io/v2/domain-search?domain=anthropic.com&api_key=1c3e9bc3800aa8b76c2ec5b9e5e9e1ca42194b70
+2025-04-23 15:16:22,728 - Hunter.io response status: 200
+2025-04-23 15:16:22,728 - Hunter.io response data: {'data': {'domain': 'anthropic.com', 'disposable': False, 'webmail': False, 'accept_all': True, 'pattern': '{first}{l}', 'organization': 'Anthropic', 'description': 'Anthropic is a technology company specializing in artificial intelligence and machine learning solutions.', 'industry': 'Research Services', 'twitter': 'https://twitter.com/anthropicai', 'facebook': None, 'linkedin': 'https://linkedin.com/company/anthropicresearch', 'instagram': None, 'youtube': None, 'technologies': ['6sense', 'alibaba-cloud', 'amazon-web-services', 'angular-js', 'c', 'cloudflare', 'cloudflare-bot-management', 'docker', 'git', 'gitlab', 'go', 'google-analytics', 'google-cloud-cdn', 'google-cloud-platform', 'google-tag-manager', 'google-workspace', 'grafana', 'hsts', 'hubspot', 'java', 'javascript', 'kafka', 'kotlin', 'kubernetes', 'microsoft', 'microsoft-azure', 'microsoft-excel', 'microsoft-office', 'mysql', 'netsuite', 'next-js', 'node-js', 'objective-c', 'oracle', 'postgresql', 'prometheus', 'python', 'radix-ui', 'react-js', 'retool', 'rust', 'salesforce', 'sap', 'spark', 'splunk', 'sql', 'stripe', 'tailwind-css', 'tencent-cloud', 'terraform', 'typescript', 'uikit', 'vue-js', 'webflow', 'windows', 'zoominfo'], 'country': None, 'state': None, 'city': None, 'postal_code': None, 'street': None, 'headcount': '501-1000', 'company_type': 'privately held', 'emails': [{'value': 'nova@anthropic.com', 'type': 'personal', 'confidence': 99, 'sources': [{'domain': 'dl.acm.org', 'uri': 'http://dl.acm.org/doi/fullhtml/10.1145/3531146.3533229', 'extracted_on': '2025-01-19', 'last_seen_on': '2025-01-19', 'still_on_page': False}], 'first_name': None, 'last_name': None, 'position': None, 'position_raw': None, 'seniority': None, 'department': None, 'linkedin': None, 'twitter': None, 'phone_number': None, 'verification': {'date': None, 'status': None}}, {'value': 'danny@anthropic.com', 'type': 'personal', 'confidence': 98, 'sources': [{'domain': 'dl.acm.org', 'uri': 'http://dl.acm.org/doi/fullhtml/10.1145/3531146.3533229', 'extracted_on': '2025-01-19', 'last_seen_on': '2025-01-19', 'still_on_page': False}], 'first_name': None, 'last_name': None, 'position': None, 'position_raw': None, 'seniority': None, 'department': None, 'linkedin': None, 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-25', 'status': 'valid'}}, {'value': 'carlos@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20carlos%20cuevas%20anthropic', 'extracted_on': '2025-03-16', 'last_seen_on': '2025-03-16', 'still_on_page': True}], 'first_name': 'Carlos', 'last_name': 'Cuevas', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/carloscuevasnyc', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-16', 'status': 'accept_all'}}, {'value': 'diana@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20diana%20jung%20anthropic', 'extracted_on': '2025-03-14', 'last_seen_on': '2025-03-14', 'still_on_page': True}], 'first_name': 'Diana', 'last_name': 'Jung', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/diana-jung-2752b68', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-04-14', 'status': 'accept_all'}}, {'value': 'sarah@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20sarah%20o%27brien%20anthropic', 'extracted_on': '2025-03-16', 'last_seen_on': '2025-03-16', 'still_on_page': True}], 'first_name': 'Sarah', 'last_name': "O'Brien", 'position': 'Recruiter', 'position_raw': 'GTM Recruiter', 'seniority': None, 'department': None, 'linkedin': 'https://www.linkedin.com/in/sdobrien', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-04-17', 'status': 'accept_all'}}, {'value': 'sofia@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20sofia%20feld%20anthropic', 'extracted_on': '2025-03-11', 'last_seen_on': '2025-03-11', 'still_on_page': True}], 'first_name': 'Sofia', 'last_name': 'Feld', 'position': 'Technical Manager', 'position_raw': 'Member of Technical Staff (Manager)', 'seniority': 'senior', 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/sofiafeld', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-11', 'status': 'valid'}}, {'value': 'colindablain@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20colin%20dablain%20anthropic', 'extracted_on': '2025-03-08', 'last_seen_on': '2025-03-08', 'still_on_page': True}], 'first_name': 'Colin', 'last_name': 'Dablain', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/colin-dablain-1066a420b', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-08', 'status': 'valid'}}, {'value': 'tina@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20tina%20chin%20anthropic', 'extracted_on': '2025-03-08', 'last_seen_on': '2025-03-08', 'still_on_page': True}], 'first_name': 'Tina', 'last_name': 'Chin', 'position': 'Contracts Manager', 'position_raw': 'Senior Contracts Manager', 'seniority': 'senior', 'department': 'management', 'linkedin': 'https://www.linkedin.com/in/tina-chin-0b9897284', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-06', 'status': 'valid'}}, {'value': 'shunyuyao@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20shunyu%20yao%20anthropic', 'extracted_on': '2025-03-06', 'last_seen_on': '2025-03-06', 'still_on_page': True}], 'first_name': 'Shunyu', 'last_name': 'Yao', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/shunyu-yao-204158285', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-06', 'status': 'valid'}}, {'value': 'derry@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20derry%20chen%20anthropic', 'extracted_on': '2025-03-05', 'last_seen_on': '2025-03-05', 'still_on_page': True}], 'first_name': 'Derry', 'last_name': 'Chen', 'position': 'Account Manager', 'position_raw': 'Account Manager', 'seniority': 'senior', 'department': 'sales', 'linkedin': 'https://www.linkedin.com/in/duchen2020', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-24', 'status': 'valid'}}], 'linked_domains': []}, 'meta': {'results': 222, 'limit': 10, 'offset': 0, 'params': {'domain': 'anthropic.com', 'company': None, 'type': None, 'seniority': None, 'department': None}}}
+2025-04-23 15:16:22,729 - No generic email found, using first: nova@anthropic.com
+2025-04-23 15:16:22,736 - TO: nova@anthropic.com
+2025-04-23 15:16:22,736 - SUBJECT: Data Request for Anthropic
+2025-04-23 15:16:22,736 - CONTENT: <!-- email_module/templates/data_request.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .request-list { margin: 20px 0; padding-left: 20px; }
+        .request-item { margin-bottom: 10px; }
+        .company-name { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <p>Hello,</p>
+    
+    <p>We're building a comprehensive analysis of innovative startups in your space and are 
+    interested in including <span class="company-name">Anthropic</span> in our database.</p>
+    
+    <p>To ensure our information is accurate and complete, we'd appreciate if you could provide the following details:</p>
+    
+    <ul class="request-list">
+        
+        <li class="request-item"><strong>Year your company was founded</strong></li>
+        
+        <li class="request-item"><strong>How your business generates revenue</strong></li>
+        
+        <li class="request-item"><strong>Your target industry</strong></li>
+        
+        <li class="request-item"><strong>Estimated market size (in $)</strong></li>
+        
+        <li class="request-item"><strong>Information about your founding team</strong></li>
+        
+        <li class="request-item"><strong>Current funding stage</strong></li>
+        
+        <li class="request-item"><strong>Total funding raised to date</strong></li>
+        
+        <li class="request-item"><strong>Monthly cash burn rate</strong></li>
+        
+        <li class="request-item"><strong>Customer Acquisition Cost</strong></li>
+        
+        <li class="request-item"><strong>Customer Lifetime Value</strong></li>
+        
+        <li class="request-item"><strong>Your technology stack</strong></li>
+        
+    </ul>
+    
+    <p>This information will help us better understand your startup's potential and could connect you 
+    with relevant investment opportunities in our network.</p>
+    
+    <p>You can reply directly to this email with your responses or schedule a brief call if you prefer.</p>
+    
+    <p>Thank you for your time,<br>
+    The Startup Analysis Team</p>
+</body>
+</html>
+2025-04-23 15:16:22,736 - --------------------------------------------------
+2025-04-23 15:22:17,213 - Searching for email for Anthropic with domain anthropic.com
+2025-04-23 15:22:17,214 - Hunter API Key present: True
+2025-04-23 15:22:17,214 - Calling Hunter.io API for domain: anthropic.com
+2025-04-23 15:22:17,214 - URL: https://api.hunter.io/v2/domain-search?domain=anthropic.com&api_key=1c3e9bc3800aa8b76c2ec5b9e5e9e1ca42194b70
+2025-04-23 15:22:17,570 - Hunter.io response status: 200
+2025-04-23 15:22:17,571 - Hunter.io response data: {'data': {'domain': 'anthropic.com', 'disposable': False, 'webmail': False, 'accept_all': True, 'pattern': '{first}{l}', 'organization': 'Anthropic', 'description': 'Anthropic is a technology company specializing in artificial intelligence and machine learning solutions.', 'industry': 'Research Services', 'twitter': 'https://twitter.com/anthropicai', 'facebook': None, 'linkedin': 'https://linkedin.com/company/anthropicresearch', 'instagram': None, 'youtube': None, 'technologies': ['6sense', 'alibaba-cloud', 'amazon-web-services', 'angular-js', 'c', 'cloudflare', 'cloudflare-bot-management', 'docker', 'git', 'gitlab', 'go', 'google-analytics', 'google-cloud-cdn', 'google-cloud-platform', 'google-tag-manager', 'google-workspace', 'grafana', 'hsts', 'hubspot', 'java', 'javascript', 'kafka', 'kotlin', 'kubernetes', 'microsoft', 'microsoft-azure', 'microsoft-excel', 'microsoft-office', 'mysql', 'netsuite', 'next-js', 'node-js', 'objective-c', 'oracle', 'postgresql', 'prometheus', 'python', 'radix-ui', 'react-js', 'retool', 'rust', 'salesforce', 'sap', 'spark', 'splunk', 'sql', 'stripe', 'tailwind-css', 'tencent-cloud', 'terraform', 'typescript', 'uikit', 'vue-js', 'webflow', 'windows', 'zoominfo'], 'country': None, 'state': None, 'city': None, 'postal_code': None, 'street': None, 'headcount': '501-1000', 'company_type': 'privately held', 'emails': [{'value': 'nova@anthropic.com', 'type': 'personal', 'confidence': 99, 'sources': [{'domain': 'dl.acm.org', 'uri': 'http://dl.acm.org/doi/fullhtml/10.1145/3531146.3533229', 'extracted_on': '2025-01-19', 'last_seen_on': '2025-01-19', 'still_on_page': False}], 'first_name': None, 'last_name': None, 'position': None, 'position_raw': None, 'seniority': None, 'department': None, 'linkedin': None, 'twitter': None, 'phone_number': None, 'verification': {'date': None, 'status': None}}, {'value': 'danny@anthropic.com', 'type': 'personal', 'confidence': 98, 'sources': [{'domain': 'dl.acm.org', 'uri': 'http://dl.acm.org/doi/fullhtml/10.1145/3531146.3533229', 'extracted_on': '2025-01-19', 'last_seen_on': '2025-01-19', 'still_on_page': False}], 'first_name': None, 'last_name': None, 'position': None, 'position_raw': None, 'seniority': None, 'department': None, 'linkedin': None, 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-25', 'status': 'valid'}}, {'value': 'carlos@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20carlos%20cuevas%20anthropic', 'extracted_on': '2025-03-16', 'last_seen_on': '2025-03-16', 'still_on_page': True}], 'first_name': 'Carlos', 'last_name': 'Cuevas', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/carloscuevasnyc', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-16', 'status': 'accept_all'}}, {'value': 'diana@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20diana%20jung%20anthropic', 'extracted_on': '2025-03-14', 'last_seen_on': '2025-03-14', 'still_on_page': True}], 'first_name': 'Diana', 'last_name': 'Jung', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/diana-jung-2752b68', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-04-14', 'status': 'accept_all'}}, {'value': 'sarah@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20sarah%20o%27brien%20anthropic', 'extracted_on': '2025-03-16', 'last_seen_on': '2025-03-16', 'still_on_page': True}], 'first_name': 'Sarah', 'last_name': "O'Brien", 'position': 'Recruiter', 'position_raw': 'GTM Recruiter', 'seniority': None, 'department': None, 'linkedin': 'https://www.linkedin.com/in/sdobrien', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-04-17', 'status': 'accept_all'}}, {'value': 'sofia@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20sofia%20feld%20anthropic', 'extracted_on': '2025-03-11', 'last_seen_on': '2025-03-11', 'still_on_page': True}], 'first_name': 'Sofia', 'last_name': 'Feld', 'position': 'Technical Manager', 'position_raw': 'Member of Technical Staff (Manager)', 'seniority': 'senior', 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/sofiafeld', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-11', 'status': 'valid'}}, {'value': 'colindablain@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20colin%20dablain%20anthropic', 'extracted_on': '2025-03-08', 'last_seen_on': '2025-03-08', 'still_on_page': True}], 'first_name': 'Colin', 'last_name': 'Dablain', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/colin-dablain-1066a420b', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-08', 'status': 'valid'}}, {'value': 'tina@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20tina%20chin%20anthropic', 'extracted_on': '2025-03-08', 'last_seen_on': '2025-03-08', 'still_on_page': True}], 'first_name': 'Tina', 'last_name': 'Chin', 'position': 'Contracts Manager', 'position_raw': 'Senior Contracts Manager', 'seniority': 'senior', 'department': 'management', 'linkedin': 'https://www.linkedin.com/in/tina-chin-0b9897284', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-06', 'status': 'valid'}}, {'value': 'shunyuyao@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20shunyu%20yao%20anthropic', 'extracted_on': '2025-03-06', 'last_seen_on': '2025-03-06', 'still_on_page': True}], 'first_name': 'Shunyu', 'last_name': 'Yao', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/shunyu-yao-204158285', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-06', 'status': 'valid'}}, {'value': 'derry@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20derry%20chen%20anthropic', 'extracted_on': '2025-03-05', 'last_seen_on': '2025-03-05', 'still_on_page': True}], 'first_name': 'Derry', 'last_name': 'Chen', 'position': 'Account Manager', 'position_raw': 'Account Manager', 'seniority': 'senior', 'department': 'sales', 'linkedin': 'https://www.linkedin.com/in/duchen2020', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-24', 'status': 'valid'}}], 'linked_domains': []}, 'meta': {'results': 222, 'limit': 10, 'offset': 0, 'params': {'domain': 'anthropic.com', 'company': None, 'type': None, 'seniority': None, 'department': None}}}
+2025-04-23 15:22:17,571 - No generic email found, using first: nova@anthropic.com
+2025-04-23 15:22:17,576 - TO: nova@anthropic.com
+2025-04-23 15:22:17,577 - SUBJECT: Data Request for Anthropic
+2025-04-23 15:22:17,577 - CONTENT: <!-- email_module/templates/data_request.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .request-list { margin: 20px 0; padding-left: 20px; }
+        .request-item { margin-bottom: 10px; }
+        .company-name { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <p>Hello,</p>
+    
+    <p>We're building a comprehensive analysis of innovative startups in your space and are 
+    interested in including <span class="company-name">Anthropic</span> in our database.</p>
+    
+    <p>To ensure our information is accurate and complete, we'd appreciate if you could provide the following details:</p>
+    
+    <ul class="request-list">
+        
+        <li class="request-item"><strong>Year your company was founded</strong></li>
+        
+        <li class="request-item"><strong>How your business generates revenue</strong></li>
+        
+        <li class="request-item"><strong>Your target industry</strong></li>
+        
+        <li class="request-item"><strong>Estimated market size (in $)</strong></li>
+        
+        <li class="request-item"><strong>Information about your founding team</strong></li>
+        
+        <li class="request-item"><strong>Current funding stage</strong></li>
+        
+        <li class="request-item"><strong>Total funding raised to date</strong></li>
+        
+        <li class="request-item"><strong>Monthly cash burn rate</strong></li>
+        
+        <li class="request-item"><strong>Customer Acquisition Cost</strong></li>
+        
+        <li class="request-item"><strong>Customer Lifetime Value</strong></li>
+        
+        <li class="request-item"><strong>Your technology stack</strong></li>
+        
+    </ul>
+    
+    <p>This information will help us better understand your startup's potential and could connect you 
+    with relevant investment opportunities in our network.</p>
+    
+    <p>You can reply directly to this email with your responses or schedule a brief call if you prefer.</p>
+    
+    <p>Thank you for your time,<br>
+    The Startup Analysis Team</p>
+</body>
+</html>
+2025-04-23 15:22:17,577 - --------------------------------------------------
+2025-04-23 15:23:11,762 - Searching for email for Anthropic with domain anthropic.com
+2025-04-23 15:23:11,762 - Hunter API Key present: True
+2025-04-23 15:23:11,762 - Calling Hunter.io API for domain: anthropic.com
+2025-04-23 15:23:11,762 - URL: https://api.hunter.io/v2/domain-search?domain=anthropic.com&api_key=1c3e9bc3800aa8b76c2ec5b9e5e9e1ca42194b70
+2025-04-23 15:23:12,232 - Hunter.io response status: 200
+2025-04-23 15:23:12,233 - Hunter.io response data: {'data': {'domain': 'anthropic.com', 'disposable': False, 'webmail': False, 'accept_all': True, 'pattern': '{first}{l}', 'organization': 'Anthropic', 'description': 'Anthropic is a technology company specializing in artificial intelligence and machine learning solutions.', 'industry': 'Research Services', 'twitter': 'https://twitter.com/anthropicai', 'facebook': None, 'linkedin': 'https://linkedin.com/company/anthropicresearch', 'instagram': None, 'youtube': None, 'technologies': ['6sense', 'alibaba-cloud', 'amazon-web-services', 'angular-js', 'c', 'cloudflare', 'cloudflare-bot-management', 'docker', 'git', 'gitlab', 'go', 'google-analytics', 'google-cloud-cdn', 'google-cloud-platform', 'google-tag-manager', 'google-workspace', 'grafana', 'hsts', 'hubspot', 'java', 'javascript', 'kafka', 'kotlin', 'kubernetes', 'microsoft', 'microsoft-azure', 'microsoft-excel', 'microsoft-office', 'mysql', 'netsuite', 'next-js', 'node-js', 'objective-c', 'oracle', 'postgresql', 'prometheus', 'python', 'radix-ui', 'react-js', 'retool', 'rust', 'salesforce', 'sap', 'spark', 'splunk', 'sql', 'stripe', 'tailwind-css', 'tencent-cloud', 'terraform', 'typescript', 'uikit', 'vue-js', 'webflow', 'windows', 'zoominfo'], 'country': None, 'state': None, 'city': None, 'postal_code': None, 'street': None, 'headcount': '501-1000', 'company_type': 'privately held', 'emails': [{'value': 'nova@anthropic.com', 'type': 'personal', 'confidence': 99, 'sources': [{'domain': 'dl.acm.org', 'uri': 'http://dl.acm.org/doi/fullhtml/10.1145/3531146.3533229', 'extracted_on': '2025-01-19', 'last_seen_on': '2025-01-19', 'still_on_page': False}], 'first_name': None, 'last_name': None, 'position': None, 'position_raw': None, 'seniority': None, 'department': None, 'linkedin': None, 'twitter': None, 'phone_number': None, 'verification': {'date': None, 'status': None}}, {'value': 'danny@anthropic.com', 'type': 'personal', 'confidence': 98, 'sources': [{'domain': 'dl.acm.org', 'uri': 'http://dl.acm.org/doi/fullhtml/10.1145/3531146.3533229', 'extracted_on': '2025-01-19', 'last_seen_on': '2025-01-19', 'still_on_page': False}], 'first_name': None, 'last_name': None, 'position': None, 'position_raw': None, 'seniority': None, 'department': None, 'linkedin': None, 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-25', 'status': 'valid'}}, {'value': 'carlos@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20carlos%20cuevas%20anthropic', 'extracted_on': '2025-03-16', 'last_seen_on': '2025-03-16', 'still_on_page': True}], 'first_name': 'Carlos', 'last_name': 'Cuevas', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/carloscuevasnyc', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-16', 'status': 'accept_all'}}, {'value': 'diana@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20diana%20jung%20anthropic', 'extracted_on': '2025-03-14', 'last_seen_on': '2025-03-14', 'still_on_page': True}], 'first_name': 'Diana', 'last_name': 'Jung', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/diana-jung-2752b68', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-04-14', 'status': 'accept_all'}}, {'value': 'sarah@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20sarah%20o%27brien%20anthropic', 'extracted_on': '2025-03-16', 'last_seen_on': '2025-03-16', 'still_on_page': True}], 'first_name': 'Sarah', 'last_name': "O'Brien", 'position': 'Recruiter', 'position_raw': 'GTM Recruiter', 'seniority': None, 'department': None, 'linkedin': 'https://www.linkedin.com/in/sdobrien', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-04-17', 'status': 'accept_all'}}, {'value': 'sofia@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20sofia%20feld%20anthropic', 'extracted_on': '2025-03-11', 'last_seen_on': '2025-03-11', 'still_on_page': True}], 'first_name': 'Sofia', 'last_name': 'Feld', 'position': 'Technical Manager', 'position_raw': 'Member of Technical Staff (Manager)', 'seniority': 'senior', 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/sofiafeld', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-11', 'status': 'valid'}}, {'value': 'colindablain@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20colin%20dablain%20anthropic', 'extracted_on': '2025-03-08', 'last_seen_on': '2025-03-08', 'still_on_page': True}], 'first_name': 'Colin', 'last_name': 'Dablain', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/colin-dablain-1066a420b', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-08', 'status': 'valid'}}, {'value': 'tina@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20tina%20chin%20anthropic', 'extracted_on': '2025-03-08', 'last_seen_on': '2025-03-08', 'still_on_page': True}], 'first_name': 'Tina', 'last_name': 'Chin', 'position': 'Contracts Manager', 'position_raw': 'Senior Contracts Manager', 'seniority': 'senior', 'department': 'management', 'linkedin': 'https://www.linkedin.com/in/tina-chin-0b9897284', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-06', 'status': 'valid'}}, {'value': 'shunyuyao@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20shunyu%20yao%20anthropic', 'extracted_on': '2025-03-06', 'last_seen_on': '2025-03-06', 'still_on_page': True}], 'first_name': 'Shunyu', 'last_name': 'Yao', 'position': 'Software Engineer', 'position_raw': 'Member of Technical Staff', 'seniority': None, 'department': 'it', 'linkedin': 'https://www.linkedin.com/in/shunyu-yao-204158285', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-03-06', 'status': 'valid'}}, {'value': 'derry@anthropic.com', 'type': 'personal', 'confidence': 94, 'sources': [{'domain': 'linkedin.com', 'uri': 'https://www.google.com/search?q=site:linkedin.com%20derry%20chen%20anthropic', 'extracted_on': '2025-03-05', 'last_seen_on': '2025-03-05', 'still_on_page': True}], 'first_name': 'Derry', 'last_name': 'Chen', 'position': 'Account Manager', 'position_raw': 'Account Manager', 'seniority': 'senior', 'department': 'sales', 'linkedin': 'https://www.linkedin.com/in/duchen2020', 'twitter': None, 'phone_number': None, 'verification': {'date': '2025-02-24', 'status': 'valid'}}], 'linked_domains': []}, 'meta': {'results': 222, 'limit': 10, 'offset': 0, 'params': {'domain': 'anthropic.com', 'company': None, 'type': None, 'seniority': None, 'department': None}}}
+2025-04-23 15:23:12,233 - No generic email found, using first: nova@anthropic.com
+2025-04-23 15:23:12,240 - TO: nova@anthropic.com
+2025-04-23 15:23:12,240 - SUBJECT: Data Request for Anthropic
+2025-04-23 15:23:12,240 - CONTENT: <!-- email_module/templates/data_request.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .request-list { margin: 20px 0; padding-left: 20px; }
+        .request-item { margin-bottom: 10px; }
+        .company-name { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <p>Hello,</p>
+    
+    <p>We're building a comprehensive analysis of innovative startups in your space and are 
+    interested in including <span class="company-name">Anthropic</span> in our database.</p>
+    
+    <p>To ensure our information is accurate and complete, we'd appreciate if you could provide the following details:</p>
+    
+    <ul class="request-list">
+        
+        <li class="request-item"><strong>Year your company was founded</strong></li>
+        
+        <li class="request-item"><strong>How your business generates revenue</strong></li>
+        
+        <li class="request-item"><strong>Your target industry</strong></li>
+        
+        <li class="request-item"><strong>Estimated market size (in $)</strong></li>
+        
+        <li class="request-item"><strong>Information about your founding team</strong></li>
+        
+        <li class="request-item"><strong>Current funding stage</strong></li>
+        
+        <li class="request-item"><strong>Total funding raised to date</strong></li>
+        
+        <li class="request-item"><strong>Monthly cash burn rate</strong></li>
+        
+        <li class="request-item"><strong>Customer Acquisition Cost</strong></li>
+        
+        <li class="request-item"><strong>Customer Lifetime Value</strong></li>
+        
+        <li class="request-item"><strong>Your technology stack</strong></li>
+        
+    </ul>
+    
+    <p>This information will help us better understand your startup's potential and could connect you 
+    with relevant investment opportunities in our network.</p>
+    
+    <p>You can reply directly to this email with your responses or schedule a brief call if you prefer.</p>
+    
+    <p>Thank you for your time,<br>
+    The Startup Analysis Team</p>
+</body>
+</html>
+2025-04-23 15:23:12,240 - --------------------------------------------------

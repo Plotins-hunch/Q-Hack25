@@ -2,8 +2,8 @@
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+# Load environment variables from .env file in parent directory
+load_dotenv(dotenv_path="../.env")
 
 class EmailConfig:
     # Mode configuration

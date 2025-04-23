@@ -1,0 +1,12 @@
+{
+    "company_data": {
+      "company_overview": {
+        "name": "TestStartup",
+        "mission": "Revolutionizing testing"
+      },
+      "market": {
+        "industry": "Software Testing"
+      }
+    },
+    "domain": "teststartup.com"
+  }
