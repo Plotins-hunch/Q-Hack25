@@ -89,7 +89,12 @@ def structure_pdf_with_assistant(pdf_path: str) -> dict:
         instructions=(
             "You are an expert at analysing startup pitch decks. "
             "Return ONLY valid JSON conforming to the schema provided by the user. "
-            "Make sure your response is valid JSON without any markdown formatting or backticks."
+            "Make sure your response is valid JSON without any markdown formatting or backticks. "
+            "Ensure the following rules are respected: "
+            "1. 'growth_rate' must be a real number formatted as a string (e.g., '3.75'). "
+            "2. 'geographic_focus' must explicitly mention the country where the startup is based. "
+            "3. The structure of the response must exactly match the schema provided by the user. "
+            "4. Do not include nulls or additional fields not present in the schema. "
         ),
     )
 
