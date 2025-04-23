@@ -22,6 +22,7 @@
 
 <script setup>
 import {defineEmits} from 'vue'
+import '../css/chat-gpt-button.css'
 
 /**
 const props = defineProps({
@@ -38,35 +39,3 @@ const toggleChat = () => {
     emit('toggle-chat')
 }
 </script>
-
-<style scoped>
-.chat-button {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: var(--background-color, #242428);
-    border: 1px solid var(--primary-color, #a47bf6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.chat-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(164, 123, 246, 0.3);
-    background-color: rgba(164, 123, 246, 0.1);
-}
-
-.chatgpt-icon {
-    width: 24px;
-    height: 24px;
-    color: var(--primary-color, #a47bf6);
-}
-</style>
