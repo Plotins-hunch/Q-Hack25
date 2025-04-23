@@ -442,193 +442,50 @@ Return ONLY the completed JSON.
 # -----------------------------
 
 def main():
-    pdf_path = "./airbnb.pdf"  # TODO: parameterize
+    # Check if Slidedecks and Jsons folders are accessible
+    slides_dir = "./Slidedecks"
+    jsons_dir = "./Jsons"
 
-    structured = structure_pdf_with_assistant(pdf_path)
-    # structured = {
-    #     "company_name": "Airbnb",
-    #     "team": {
-    #         "founders": [
-    #             {"name": "Brian Chesky", "background": "Industrial Design"},
-    #             {"name": "Joe Gebbia", "background": "Product Design"},
-    #             {"name": "Nathan Blecharczyk", "background": "Computer Science"}
-    #         ],
-    #         "team_strength": "Strong multidisciplinary team with design and technical expertise",
-    #         "network_strength": "Leverage existing networks for rapid expansion"
-    #     },
-    #     "market": {
-    #         "TAM": "150 million short-term stays annually",
-    #         "SAM": "15 million potential customers in major cities",
-    #         "SOM": "2 million target customers acquired",
-    #         "growth_rate": "Growing at a significant rate as the market matures"
-    #     },
-    #     "product": {
-    #         "stage": "Launched and operating",
-    #         "USP": "Affordable, personal accommodations; enabling people to monetize extra space",
-    #         "customer_acquisition": "Online marketing, partnerships with local events, and word-of-mouth"
-    #     },
-    #     "traction": {
-    #         "revenue_growth": {"MRR": "$200,000", "ARR": "$2.4 million"},
-    #         "user_growth": "Increasing user growth month over month",
-    #         "engagement": "High engagement with returning users",
-    #         "customer_validation": {
-    #             "testimonials": [
-    #                 "'AirBed&Breakfast freaking rocks!' - User Review",
-    #                 "‘A complete success. It is easy to use and it made me money.’ - User Review"
-    #             ],
-    #             "churn": "Low churn rate due to customer satisfaction",
-    #             "NPS": "Net Promoter Score above industry average"
-    #         }
-    #     },
-    #     "funding": {
-    #         "stage": "Series A",
-    #         "amount": "$500,000",
-    #         "cap_table_strength": "Diverse with strong lead investors",
-    #         "investors_on_board": [
-    #             {"name": "Sequoia Capital", "type": "Venture Capital"},
-    #             {"name": "Y Combinator", "type": "Accelerator"}
-    #         ]
-    #     },
-    #     "financial_efficiency": {
-    #         "burn_rate": "$100,000 monthly",
-    #         "CAC_vs_LTV": "Sustainable with a growing LTV/CAC ratio",
-    #         "unit_economics": "High margin per booking"
-    #     },
-    #     "miscellaneous": {
-    #         "regulatory_risk": "Moderate risk due to evolving local laws",
-    #         "geographic_focus": "Global with focus on major urban centers",
-    #         "timing_fad_risk": "Low risk as platform adoption grows"
-    #     }
-    # }
+    print("[DEBUG] Checking directories...")
+    if not os.path.exists(slides_dir):
+        raise FileNotFoundError(f"[ERROR] Directory '{slides_dir}' not found.")
+    if not os.path.isdir(slides_dir):
+        raise NotADirectoryError(f"[ERROR] '{slides_dir}' is not a directory.")
 
-    enriched = enrich_with_linkedin(structured)
-    # enriched = {
-    #     "company_name": "Airbnb",
-    #     "team": {
-    #         "founders": [
-    #             {
-    #                 "name": "Brian Chesky",
-    #                 "background": "Industrial Design",
-    #                 "university": "Rhode Island School of Design",
-    #                 "network_strength": 500,
-    #                 "age": None,
-    #                 "gender": None,
-    #                 "previous_employments": [],
-    #                 "linkedin_posts_last_30d": 0
-    #             },
-    #             {
-    #                 "name": "Joe Gebbia",
-    #                 "background": "Product Design",
-    #                 "university": None,
-    #                 "network_strength": 98,
-    #                 "age": None,
-    #                 "gender": None,
-    #                 "previous_employments": [
-    #                     {
-    #                         "company": "All Star Flooring",
-    #                         "title": "Co-Owner",
-    #                         "start": "Aug 2014",
-    #                         "end": "Present"
-    #                     },
-    #                     {
-    #                         "company": "AT&T",
-    #                         "title": "Network Engineer",
-    #                         "start": "Aug 2001",
-    #                         "end": "Present"
-    #                     },
-    #                     {
-    #                         "company": "Gebbia Sign-Language Services",
-    #                         "title": "RID Certified Sign Language Interpreter",
-    #                         "start": "Jul 1988",
-    #                         "end": "Present"
-    #                     },
-    #                     {
-    #                         "company": "US Navy",
-    #                         "title": "Radioman (RM2)",
-    #                         "start": "Sep 1989",
-    #                         "end": "Dec 1992"
-    #                     }
-    #                 ],
-    #                 "linkedin_posts_last_30d": 0
-    #             },
-    #             {
-    #                 "name": "Nathan Blecharczyk",
-    #                 "background": "Computer Science",
-    #                 "university": None,
-    #                 "network_strength": 500,
-    #                 "age": None,
-    #                 "gender": None,
-    #                 "previous_employments": [],
-    #                 "linkedin_posts_last_30d": 0
-    #             }
-    #         ],
-    #         "team_strength": "Strong multidisciplinary team with design and technical expertise",
-    #         "network_strength": "Leverage existing networks for rapid expansion"
-    #     },
-    #     "market": {
-    #         "TAM": "150 million short-term stays annually",
-    #         "SAM": "15 million potential customers in major cities",
-    #         "SOM": "2 million target customers acquired",
-    #         "growth_rate": "Growing at a significant rate as the market matures"
-    #     },
-    #     "product": {
-    #         "stage": "Launched and operating",
-    #         "USP": "Affordable, personal accommodations; enabling people to monetize extra space",
-    #         "customer_acquisition": "Online marketing, partnerships with local events, and word-of-mouth"
-    #     },
-    #     "traction": {
-    #         "revenue_growth": {
-    #             "MRR": "$200,000",
-    #             "ARR": "$2.4 million"
-    #         },
-    #         "user_growth": "Increasing user growth month over month",
-    #         "engagement": "High engagement with returning users",
-    #         "customer_validation": {
-    #             "testimonials": [
-    #                 "'AirBed&Breakfast freaking rocks!' - User Review",
-    #                 "‘A complete success. It is easy to use and it made me money.’ - User Review"
-    #             ],
-    #             "churn": "Low churn rate due to customer satisfaction",
-    #             "NPS": "Net Promoter Score above industry average"
-    #         }
-    #     },
-    #     "funding": {
-    #         "stage": "Series A",
-    #         "amount": "$500,000",
-    #         "cap_table_strength": "Diverse with strong lead investors",
-    #         "investors_on_board": [
-    #             {
-    #                 "name": "Sequoia Capital",
-    #                 "type": "Venture Capital"
-    #             },
-    #             {
-    #                 "name": "Y Combinator",
-    #                 "type": "Accelerator"
-    #             }
-    #         ]
-    #     },
-    #     "financial_efficiency": {
-    #         "burn_rate": "$100,000 monthly",
-    #         "CAC_vs_LTV": "Sustainable with a growing LTV/CAC ratio",
-    #         "unit_economics": "High margin per booking"
-    #     },
-    #     "miscellaneous": {
-    #         "regulatory_risk": "Moderate risk due to evolving local laws",
-    #         "geographic_focus": "Global with focus on major urban centers",
-    #         "timing_fad_risk": "Low risk as platform adoption grows"
-    #     },
-    #     "metrics": {}
-    # }
+    if not os.path.exists(jsons_dir):
+        print(f"[INFO] '{jsons_dir}' does not exist. Creating it.")
+        os.makedirs(jsons_dir)
+    elif not os.path.isdir(jsons_dir):
+        raise NotADirectoryError(f"[ERROR] '{jsons_dir}' is not a directory.")
 
-    refined = refine_with_chatgpt_holes(enriched)
+    print("[DEBUG] Directory check passed. Beginning PDF processing...")
 
-    # TODO: metric calculations
-    refined["metrics"] = {}
+    # Loop through all PDFs in the ./Slidedecks folder
+    for filename in os.listdir(slides_dir):
+        if filename.lower().endswith(".pdf"):
+            pdf_path = os.path.join(slides_dir, filename)
+            print(f"\n[INFO] Processing: {pdf_path}")
 
-    out = "./output.json"
-    with open(out, "w") as f:
-        json.dump(refined, f, indent=2)
-    print(f"Pipeline complete. Output written to {out}")
+            try:
+                structured = structure_pdf_with_assistant(pdf_path)
+                enriched = enrich_with_linkedin(structured)
+                refined = refine_with_chatgpt_holes(enriched)
+                refined["metrics"] = {}
+
+                # Determine output file name from company name or fallback to PDF name
+                company = (
+                        refined.get("company_name")
+                        or os.path.splitext(filename)[0]
+                ).strip().replace(" ", "_").lower()
+
+                out_path = os.path.join(jsons_dir, f"{company}.json")
+                with open(out_path, "w") as f:
+                    json.dump(refined, f, indent=2)
+
+                print(f"[✅] Pipeline complete. Output written to {out_path}")
+
+            except Exception as e:
+                print(f"[❌] Failed to process {filename}: {e}")
 
 if __name__ == "__main__":
     main()
