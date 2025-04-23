@@ -22,6 +22,7 @@ app.add_middleware(
 # Include routers
 app.include_router(email_router)
 app.include_router(chat_router)
+app.include_router(upload_router)
 
 # Root endpoint
 @app.get("/")
