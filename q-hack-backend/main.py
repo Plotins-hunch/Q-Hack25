@@ -5,6 +5,7 @@ import uvicorn
 
 from api.email_routes import router as email_router
 from api.chat_routes import router as chat_router
+from api.upload_routes import router as upload_router  # ADD THIS
 
 # Create FastAPI application
 app = FastAPI(title="Startup Analyzer API")
