@@ -9,7 +9,7 @@
             <div class="score-card">
                 <div class="score-circle">
                     <div class="score-value">
-                        {{ business_data.overall_score }}
+                        {{ business_data.metrics.UnicornScore }}
                     </div>
                 </div>
                 <div class="score-info">
@@ -64,7 +64,8 @@ import NavButton from './NavButton.vue'
 import ChatGptComponent from './ChatGptComponent.vue'
 import {useRouter} from 'vue-router'
 import {computed, onMounted} from 'vue'
-import business_data from '../model/business_data.json'
+
+const business_data = JSON.parse(window.localStorage.getItem('business_data'))
 
 const router = useRouter()
 const handleNavClick = () => {
@@ -84,15 +85,15 @@ const formatTitle = (str) => {
 const metricData = computed(() => {
     return {
         team: {
-            score: business_data.team.team_score,
+            score: business_data.metrics.Team,
             metrics: {
                 founder: business_data.team.founders[0].name,
-                team_strength: business_data.team.team_strength + '/10',
-                network_strength: business_data.team.network_strength + '/10',
+                team_strength: business_data.team.team_strength,
+                network_strength: business_data.team.network_strength,
             },
         },
         market: {
-            score: business_data.market.market_score,
+            score: business_data.metrics.Market,
             metrics: {
                 tam_size: business_data.market.TAM,
                 growth_rate: business_data.market.growth_rate,
@@ -100,7 +101,7 @@ const metricData = computed(() => {
             },
         },
         product: {
-            score: business_data.product.product_score,
+            score: business_data.metrics.Product,
             metrics: {
                 stage: business_data.product.stage,
                 usp: business_data.product.USP,
@@ -109,15 +110,15 @@ const metricData = computed(() => {
             },
         },
         traction: {
-            score: business_data.traction.customer_validation.NPS,
+            score: business_data.metrics.Traction,
             metrics: {
-                mrr: '$' + business_data.traction.revenue_growth.MRR + 'K',
+                mrr: business_data.traction.revenue_growth.MRR,
                 user_growth: business_data.traction.user_growth,
                 engagement: business_data.traction.engagement,
             },
         },
         funding: {
-            score: business_data.funding.cap_table_strength,
+            score: business_data.metrics.Funding,
             metrics: {
                 total_raised: business_data.funding.amount,
                 stage: business_data.funding.stage,
@@ -125,16 +126,16 @@ const metricData = computed(() => {
             },
         },
         financial_efficiency: {
-            score: business_data.financial_efficiency.unit_economics * 20,
+            score: business_data.metrics.FinancialEfficiency,
             metrics: {
                 burn_rate: business_data.financial_efficiency.burn_rate,
                 cac_ltv: business_data.financial_efficiency.CAC_vs_LTV,
                 unit_economics:
-                    business_data.financial_efficiency.unit_economics + '/5',
+                    business_data.financial_efficiency.unit_economics,
             },
         },
         miscellaneous: {
-            score: 70, // Fixed score since there's no direct score in your JSON
+            score: business_data.metrics.Miscellaneous,
             metrics: {
                 regulatory_risk: business_data.miscellaneous.regulatory_risk,
                 geographic_focus: business_data.miscellaneous.geographic_focus,

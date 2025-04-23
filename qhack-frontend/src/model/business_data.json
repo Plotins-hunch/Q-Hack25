@@ -136,5 +136,14 @@
     "geographic_focus": "Global with focus on major urban centers",
     "timing_fad_risk": "Low risk as platform adoption grows"
   },
-  "metrics": {}
+  "metrics": {
+    "Team": 95,
+    "Market": 88,
+    "Product": 92,
+    "Traction": 90,
+    "Funding": 86,
+    "FinancialEfficiency": 84,
+    "Miscellaneous": 79,
+    "UnicornScore": 91
+  }
 }

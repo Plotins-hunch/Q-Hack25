@@ -144,7 +144,9 @@
                             {{ analysisStatus.status }}
                         </span>
                     </div>
-                    <div class="analysis-message">{{ analysisStatus.message }}</div>
+                    <div class="analysis-message">
+                        {{ analysisStatus.message }}
+                    </div>
 
                     <!-- If analysis is complete, show view button -->
                     <button
@@ -258,7 +260,11 @@ const uploadPdf = async () => {
 
             // Check if analysis is already available
             if (result.analysis) {
-                handleAnalysisComplete(result.analysis)
+                window.localStorage.setItem(
+                    'business_data',
+                    JSON.stringify(result.analysis),
+                )
+                handleAnalysisComplete(result)
             } else if (result.file_path) {
                 // Start tracking analysis progress
                 startAnalysisTracking(result.file_path)
@@ -286,7 +292,7 @@ const startAnalysisTracking = (filePath) => {
     analysisStatus.value = {
         type: 'pending',
         status: 'Processing',
-        message: 'Your PDF is being analyzed. This may take a few minutes...'
+        message: 'Your PDF is being analyzed. This may take a few minutes...',
     }
 
     // Poll for analysis status every 5 seconds
@@ -297,12 +303,16 @@ const startAnalysisTracking = (filePath) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ file_path: filePath }),
+                body: JSON.stringify({file_path: filePath}),
             })
 
             const result = await response.json()
 
             if (response.ok && result) {
+                window.localStorage.setItem(
+                    'business_data',
+                    JSON.stringify(analysisData.value.analysis),
+                )
                 handleAnalysisComplete(result)
             }
         } catch (error) {
@@ -322,17 +332,21 @@ const handleAnalysisComplete = (data) => {
     analysisStatus.value = {
         type: 'success',
         status: 'Complete',
-        message: 'PDF analysis completed successfully!'
+        message: 'PDF analysis completed successfully!',
     }
 
     // Store analysis data
-    analysisData.value = data
+    analysisData.value = data.analysis
+    console.log('jjaajaj: ' + data.analysis)
 }
 
 const viewAnalysis = () => {
     // Store the analysis data in sessionStorage to access it on the dashboard
     if (analysisData.value) {
-        sessionStorage.setItem('pdfAnalysisData', JSON.stringify(analysisData.value))
+        sessionStorage.setItem(
+            'pdfAnalysisData',
+            JSON.stringify(analysisData.value),
+        )
         router.push('/dashboard?source=pdf')
     }
 }
