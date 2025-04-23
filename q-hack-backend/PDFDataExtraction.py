@@ -4,6 +4,7 @@ import time
 from dotenv import load_dotenv
 import requests
 from openai import OpenAI
+import datetime
 
 # -----------------------------
 # 0. Load Environment Variables
@@ -22,48 +23,52 @@ MODEL_NAME = "gpt-4o"  # vision + file support model
 # -----------------------------
 JSON_SCHEMA_PROMPT = """
 Produce JSON matching this schema exactly (omit nulls):
-{
+{{
+  "company_name": "string",
   "team": {
-    "founders": [{"name": string, "background": string}],
-    "team_strength": string,
-    "network_strength": string
+    "founders": [{"name": "string", "background": "string"}],
+    "team_strength": "string",
+    "network_strength": "string"
   },
   "market": {
-    "TAM": string,
-    "SAM": string,
-    "SOM": string,
-    "growth_rate": string
+    "TAM": "string",
+    "SAM": "string",
+    "SOM": "string",
+    "growth_rate": "string"
   },
   "product": {
-    "stage": string,
-    "USP": string,
-    "customer_acquisition": string,
-    "launch date": string
+    "stage": "string",
+    "USP": "string",
+    "customer_acquisition": "string"
   },
   "traction": {
-    "revenue_growth": {"MRR": string, "ARR": string},
-    "user_growth": string,
-    "engagement": string,
-    "customer_validation": {"testimonials": [string], "churn": string, "NPS": string},
-    "active_users": string
+    "revenue_growth": {"MRR": "string", "ARR": "string"},
+    "user_growth": "string",
+    "engagement": "string",
+    "customer_validation": {
+      "testimonials": ["string"],
+      "churn": "string",
+      "NPS": "string"
+    }
   },
   "funding": {
-    "stage": string,
-    "amount": string,
-    "cap_table_strength": string,
-    "investors_on_board": [{"name": string, "type": string}]
+    "stage": "string",
+    "amount": "string",
+    "cap_table_strength": "string",
+    "investors_on_board": [{"name": "string", "type": "string"}]
   },
   "financial_efficiency": {
-    "burn_rate": string,
-    "CAC_vs_LTV": string,
-    "unit_economics": string
+    "burn_rate": "string",
+    "CAC_vs_LTV": "string",
+    "unit_economics": "string"
   },
   "miscellaneous": {
-    "regulatory_risk": string,
-    "geographic_focus": string,
-    "timing_fad_risk": string
+    "regulatory_risk": "string",
+    "geographic_focus": "string",
+    "timing_fad_risk": "string"
   }
 }
+
 """
 
 
@@ -160,21 +165,177 @@ def structure_pdf_with_assistant(pdf_path: str) -> dict:
 # -----------------------------
 # 2. Enrich with LinkedIn Data via BrightData API
 # -----------------------------
+def safe_json(resp, label: str) -> dict | list:
+    """
+    Return resp.json() if the body is non-empty and valid JSON;
+    otherwise log & return {}.
+    """
+    text = resp.text.strip()
+    if not text:
+        print(f"[WARN] {label}: empty response (HTTP {resp.status_code})")
+        return {}
+    try:
+        return resp.json()
+    except json.JSONDecodeError:
+        print(f"[ERROR] {label}: invalid JSON\n{text[:500]}")
+        return {}
 
+def fetch_snapshot(snapshot_id: str, max_wait_sec: int = 300) -> list[dict]:
+    """
+    Download an existing Bright Data snapshot; if it is not ready yet,
+    poll the /progress/ endpoint (up to `max_wait_sec`) until 'success'.
+    """
+    headers = {"Authorization": f"Bearer {BRIGHTDATA_API_KEY}"}
+    data_url = f"https://api.brightdata.com/datasets/v3/snapshot/{snapshot_id}?format=json"
+
+    # 1) first try direct download
+    resp = requests.get(data_url, headers=headers, timeout=30)
+    if resp.ok and resp.text.strip():
+        recs = safe_json(resp, f"snapshot {snapshot_id}")
+        if isinstance(recs, list) and recs:
+            return recs
+
+    # 2) if empty → poll /progress/
+    prog_url = f"https://api.brightdata.com/datasets/v3/progress/{snapshot_id}"
+    deadline = time.time() + max_wait_sec
+    while time.time() < deadline:
+        prog = requests.get(prog_url, headers=headers, timeout=15)
+        status = safe_json(prog, f"progress {snapshot_id}").get("status")
+        print(f"[INFO] Snapshot {snapshot_id} status={status!r}")
+        if status == "ready":
+            break
+        if status in ("failed", "error"):
+            raise RuntimeError(f"Snapshot {snapshot_id} failed: {prog.text}")
+        time.sleep(5)
+    else:
+        raise RuntimeError(f"Timeout waiting for snapshot {snapshot_id}")
+
+    # 3) final download
+    recs = safe_json(requests.get(data_url, headers=headers, timeout=30),
+                     f"snapshot {snapshot_id}")
+    if not isinstance(recs, list):
+        raise ValueError(f"Unexpected data from snapshot {snapshot_id}: {recs}")
+    return recs
+
+# ── enrichment main ───────────────────────────────────────────────────────────
 def enrich_with_linkedin(data: dict) -> dict:
+    """
+    For each founder:
+      • trigger Bright Data discover-by-name dataset
+      • wait (up to 5 min) for the snapshot
+      • pick the profile whose current_company.name matches our company
+      • extract:
+          university, connections, age, gender, previous employments,
+          linkedin_posts_last_30d
+    Also adds `company_followers` at root level.
+    """
     headers = {
         "Authorization": f"Bearer {BRIGHTDATA_API_KEY}",
-        "Content-Type": "application/json",
+        "Content-Type":  "application/json",
     }
+    DATASET_ID = "gd_l1viktl72bvl7bjuj0"
+
+    # try to find the company name in the structured payload
+    company_name = (
+        data.get("company_name")
+        or data.get("team", {}).get("company_overview", {}).get("name")
+        or ""
+    ).lower()
+
     for founder in data.get("team", {}).get("founders", []):
-        resp = requests.post(
-            "https://api.brightdata.com/linkedin/profile",
-            headers=headers,
-            json={"name": founder["name"]},
-            timeout=30,
+        first, *rest = founder["name"].split()
+        if not rest:
+            print(f"[WARN] skipping founder with single name: {founder['name']}")
+            continue
+        last = " ".join(rest)
+
+        # — 1) trigger discover job
+        trigger_url = (
+            "https://api.brightdata.com/datasets/v3/trigger"
+            f"?dataset_id={DATASET_ID}"
+            "&include_errors=true&type=discover_new&discover_by=name"
         )
-        founder["linkedin_profile_data"] = resp.json()
+        trig = requests.post(trigger_url,
+                             headers=headers,
+                             json=[{"first_name": first, "last_name": last}],
+                             timeout=60)
+        if not trig.ok:
+            print(f"[ERROR] trigger failed for {founder['name']}: {trig.text}")
+            continue
+
+        snapshot_id = safe_json(trig, f"trigger {founder['name']}").get("snapshot_id")
+        if not snapshot_id:
+            print(f"[WARN] no snapshot_id for {founder['name']}")
+            continue
+        print(f"[INFO] Snapshot {snapshot_id} queued for {founder['name']}")
+
+        # — 2) download / wait (up to 5 min)
+        try:
+            profiles = fetch_snapshot(snapshot_id, max_wait_sec=300)
+        except Exception as e:
+            print(f"[ERROR] snapshot fetch failed for {founder['name']}: {e}")
+            continue
+
+        # choose profile matching company_name
+        prof = next(
+            (p for p in profiles
+             if p.get("current_company", {}).get("name", "").lower() == company_name),
+            profiles[0]
+        )
+        print(f"[INFO] Using profile {prof.get('url')}")
+
+        # — 3) extract fields
+        founder["university"] = (
+            prof.get("educations_details")
+            or (prof.get("education") or [{}])[0].get("title")
+        )
+        founder["network_strength"] = prof.get("connections")
+        founder["age"] = prof.get("age")
+        founder["gender"] = prof.get("gender")
+
+        # previous employments
+        exp = prof.get("experience") or []
+        founder["previous_employments"] = [
+            {
+                "company": e.get("company"),
+                "title":   e.get("title"),
+                "start":   e.get("start_date"),
+                "end":     e.get("end_date"),
+            }
+            for e in exp
+        ]
+
+        # posts in last 30 days
+        activity = prof.get("activity") or prof.get("posts") or []
+        cutoff = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=30)
+        recent = [
+            p for p in activity
+            if p.get("created_at") and
+               datetime.datetime.fromisoformat(
+                   p["created_at"].replace("Z", "+00:00")
+               ) >= cutoff
+        ]
+        founder["linkedin_posts_last_30d"] = len(recent)
+
+    # — 4) company follower count (if we have a LinkedIn company URL)
+    comp_url = (
+        data.get("team", {})
+            .get("company_overview", {})
+            .get("url")
+        or None
+    )
+    if comp_url:
+        comp_resp = requests.post(
+            "https://api.brightdata.com/linkedin/company",
+            headers=headers,
+            json={"url": comp_url},
+            timeout=30
+        )
+        data["company_followers"] = safe_json(comp_resp, "company").get("numFollowers")
+
     return data
+
+
 
 # -----------------------------
 # 3. Main Pipeline
@@ -183,7 +344,63 @@ def enrich_with_linkedin(data: dict) -> dict:
 def main():
     pdf_path = "./airbnb.pdf"  # TODO: parameterize
 
-    structured = structure_pdf_with_assistant(pdf_path)
+    #structured = structure_pdf_with_assistant(pdf_path)
+    structured = {
+        "company_name": "Airbnb",
+        "team": {
+            "founders": [
+                {"name": "Brian Chesky", "background": "Industrial Design"},
+                {"name": "Joe Gebbia", "background": "Product Design"},
+                {"name": "Nathan Blecharczyk", "background": "Computer Science"}
+            ],
+            "team_strength": "Strong multidisciplinary team with design and technical expertise",
+            "network_strength": "Leverage existing networks for rapid expansion"
+        },
+        "market": {
+            "TAM": "150 million short-term stays annually",
+            "SAM": "15 million potential customers in major cities",
+            "SOM": "2 million target customers acquired",
+            "growth_rate": "Growing at a significant rate as the market matures"
+        },
+        "product": {
+            "stage": "Launched and operating",
+            "USP": "Affordable, personal accommodations; enabling people to monetize extra space",
+            "customer_acquisition": "Online marketing, partnerships with local events, and word-of-mouth"
+        },
+        "traction": {
+            "revenue_growth": {"MRR": "$200,000", "ARR": "$2.4 million"},
+            "user_growth": "Increasing user growth month over month",
+            "engagement": "High engagement with returning users",
+            "customer_validation": {
+                "testimonials": [
+                    "'AirBed&Breakfast freaking rocks!' - User Review",
+                    "‘A complete success. It is easy to use and it made me money.’ - User Review"
+                ],
+                "churn": "Low churn rate due to customer satisfaction",
+                "NPS": "Net Promoter Score above industry average"
+            }
+        },
+        "funding": {
+            "stage": "Series A",
+            "amount": "$500,000",
+            "cap_table_strength": "Diverse with strong lead investors",
+            "investors_on_board": [
+                {"name": "Sequoia Capital", "type": "Venture Capital"},
+                {"name": "Y Combinator", "type": "Accelerator"}
+            ]
+        },
+        "financial_efficiency": {
+            "burn_rate": "$100,000 monthly",
+            "CAC_vs_LTV": "Sustainable with a growing LTV/CAC ratio",
+            "unit_economics": "High margin per booking"
+        },
+        "miscellaneous": {
+            "regulatory_risk": "Moderate risk due to evolving local laws",
+            "geographic_focus": "Global with focus on major urban centers",
+            "timing_fad_risk": "Low risk as platform adoption grows"
+        }
+    }
+
     enriched = enrich_with_linkedin(structured)
 
     # TODO: metric calculations
