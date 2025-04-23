@@ -1,0 +1,34 @@
+<!-- email_module/templates/data_request.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        .request-list { margin: 20px 0; padding-left: 20px; }
+        .request-item { margin-bottom: 10px; }
+        .company-name { font-weight: bold; }
+    </style>
+</head>
+<body>
+    <p>Hello,</p>
+    
+    <p>We're building a comprehensive analysis of innovative startups in your space and are 
+    interested in including <span class="company-name">{{ company_name }}</span> in our database.</p>
+    
+    <p>To ensure our information is accurate and complete, we'd appreciate if you could provide the following details:</p>
+    
+    <ul class="request-list">
+        {% for field in missing_fields %}
+        <li class="request-item"><strong>{{ field.description }}</strong></li>
+        {% endfor %}
+    </ul>
+    
+    <p>This information will help us better understand your startup's potential and could connect you 
+    with relevant investment opportunities in our network.</p>
+    
+    <p>You can reply directly to this email with your responses or schedule a brief call if you prefer.</p>
+    
+    <p>Thank you for your time,<br>
+    The Startup Analysis Team</p>
+</body>
+</html>
