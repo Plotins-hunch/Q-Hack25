@@ -1,48 +1,140 @@
 {
-    "overall_score": "89",
-    "team": {
-      "founders": [{"name": "John Doe", "background": "Jane Doe"}],
-      "team_strength": "10",
-      "network_strength": "10",
-      "team_score": "67"
-    },
-    "market": {
-      "TAM": "55",
-      "SAM": "70",
-      "SOM": "67",
-      "growth_rate": "50%",
-      "market_score": "78"
-    },
-    "product": {
-      "stage": "early development",
-      "USP": "Krasses Zeug",
-      "customer_acquisition": "Zwingen",
-      "product_score": "100"
-    },
-    "traction": {
-      "revenue_growth": {"MRR": "100", "ARR": "300"},
-      "user_growth": "300%",
-      "engagement": "50%",
-      "customer_validation": {
-        "testimonials": ["Dies das"],
-        "churn": "fjek",
-        "NPS": "76"
+  "company_name": "Airbnb",
+  "team": {
+    "founders": [
+      {
+        "name": "Brian Chesky",
+        "background": "Industrial Design",
+        "university": "Rhode Island School of Design",
+        "network_strength": 500,
+        "age": 42,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "3DID",
+            "title": "Industrial Designer",
+            "start": "Jan 2007",
+            "end": "Aug 2008",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Joe Gebbia",
+        "background": "Product Design",
+        "university": "Rhode Island School of Design",
+        "network_strength": 450,
+        "age": 42,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Chronicle Books",
+            "title": "Designer",
+            "start": "Jan 2006",
+            "end": "Jan 2007",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 2,
+        "university_source": "chatgpt",
+        "network_strength_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt",
+        "linkedin_posts_last_30d_source": "chatgpt"
+      },
+      {
+        "name": "Nathan Blecharczyk",
+        "background": "Computer Science",
+        "university": "Harvard University",
+        "network_strength": 400,
+        "age": 40,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Microsoft",
+            "title": "Software Engineer",
+            "start": "Jun 2005",
+            "end": "Sep 2007",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 1,
+        "university_source": "chatgpt",
+        "network_strength_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt",
+        "linkedin_posts_last_30d_source": "chatgpt"
       }
+    ],
+    "team_strength": "Strong multidisciplinary team with design and technical expertise",
+    "network_strength": "Leverage existing networks for rapid expansion"
+  },
+  "market": {
+    "TAM": "150 million short-term stays annually",
+    "SAM": "15 million potential customers in major cities",
+    "SOM": "2 million target customers acquired",
+    "growth_rate": "Growing at a significant rate as the market matures"
+  },
+  "product": {
+    "stage": "Launched and operating",
+    "USP": "Affordable, personal accommodations; enabling people to monetize extra space",
+    "customer_acquisition": "Online marketing, partnerships with local events, and word-of-mouth"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "$200,000",
+      "ARR": "$2.4 million"
     },
-    "funding": {
-      "stage": "1.",
-      "amount": "100$",
-      "cap_table_strength": "50",
-      "investors_on_board": [{"name": "Warren", "type": "Peter"}]
-    },
-    "financial_efficiency": {
-      "burn_rate": "100k/month",
-      "CAC_vs_LTV": "1/2",
-      "unit_economics": "5"
-    },
-    "miscellaneous": {
-      "regulatory_risk": "low",
-      "geographic_focus": "Europe",
-      "timing_fad_risk": "5%"
+    "user_growth": "Increasing user growth month over month",
+    "engagement": "High engagement with returning users",
+    "customer_validation": {
+      "testimonials": [
+        "'AirBed&Breakfast freaking rocks!' - User Review",
+        "\u2018A complete success. It is easy to use and it made me money.\u2019 - User Review"
+      ],
+      "churn": "Low churn rate due to customer satisfaction",
+      "NPS": "Net Promoter Score above industry average"
     }
-  }
+  },
+  "funding": {
+    "stage": "Series A",
+    "amount": "$500,000",
+    "cap_table_strength": "Diverse with strong lead investors",
+    "investors_on_board": [
+      {
+        "name": "Sequoia Capital",
+        "type": "Venture Capital"
+      },
+      {
+        "name": "Y Combinator",
+        "type": "Accelerator"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "$100,000 monthly",
+    "CAC_vs_LTV": "Sustainable with a growing LTV/CAC ratio",
+    "unit_economics": "High margin per booking"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Moderate risk due to evolving local laws",
+    "geographic_focus": "Global with focus on major urban centers",
+    "timing_fad_risk": "Low risk as platform adoption grows"
+  },
+  "metrics": {}
+}

@@ -1,3 +1,5 @@
+<!-- TODO: add field where the user can upload a pdf file for the scraper to go through -->
+
 <template>
     <div class="search-container">
         <h1 class="headline">What company do you want to invest in?</h1>
@@ -37,6 +39,7 @@ import {useRouter} from 'vue-router'
 const router = useRouter()
 const searchQuery = ref('')
 const searchCompanies = () => {
+    // access the company name by searchQuery
     router.push('/dashboard')
 }
 </script>

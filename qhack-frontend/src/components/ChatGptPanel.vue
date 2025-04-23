@@ -131,11 +131,25 @@ const messages = ref([
     },
 ])
 
+// Configuration
+//const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
+const API_URL = 'http://localhost:8000'
+const CHAT_ENDPOINT = `${API_URL}/api/chat/query`
+
 const currentMessage = ref('')
 const isLoading = ref(false)
 const messagesContainer = ref(null)
+const conversationId = ref(null)
 
-// This function will be connected to your backend later
+// Convert message history to format expected by backend
+const getMessageHistory = () => {
+    return messages.value.map((msg) => ({
+        role: msg.isUser ? 'user' : 'assistant',
+        content: msg.text,
+    }))
+}
+
+// Send message to backend
 const sendMessage = async () => {
     if (!currentMessage.value.trim() || isLoading.value) return
 
@@ -145,8 +159,8 @@ const sendMessage = async () => {
         text: currentMessage.value,
     })
 
-    // Clear input field
-    //const userQuestion = currentMessage.value
+    // Store user question and clear input field
+    const userQuestion = currentMessage.value
     currentMessage.value = ''
     isLoading.value = true
 
@@ -157,19 +171,46 @@ const sendMessage = async () => {
     }
 
     try {
-        // This would be replaced with your actual API call
-        // For now, simulate a delay to show the loading state
-        await new Promise((resolve) => setTimeout(resolve, 1500))
+        // Prepare request to backend
+        const requestData = {
+            query: userQuestion,
+            company_data: props.businessData,
+            conversation_id: conversationId.value,
+            message_history: getMessageHistory(),
+        }
 
-        // Add a placeholder response
+        // Call the backend API
+        const response = await fetch(CHAT_ENDPOINT, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(requestData),
+        })
+
+        if (!response.ok) {
+            throw new Error(`API error: ${response.status}`)
+        }
+
+        const data = await response.json()
+
+        // Store conversation ID for future requests
+        if (data.conversation_id) {
+            conversationId.value = data.conversation_id
+        }
+
+        // Add assistant response to chat
         messages.value.push({
             isUser: false,
-            text: 'This is a placeholder response. In the final implementation, this would come from your backend.',
+            text: data.response_text,
         })
     } catch (error) {
+        console.error('Error sending message to backend:', error)
+
+        // Add error message to chat
         messages.value.push({
             isUser: false,
-            text: 'Sorry, I encountered an error processing your request.',
+            text: 'Sorry, I encountered an error processing your request. Please try again later.',
         })
     } finally {
         isLoading.value = false
@@ -197,6 +238,23 @@ watch(
         }
     },
 )
+
+// Initialize - fetch suggested questions
+const initChat = async () => {
+    try {
+        const response = await fetch(`${API_URL}/api/chat/suggestions`)
+        if (response.ok) {
+            const data = await response.json()
+            // You could use these suggestions somewhere in the UI if desired
+            console.log('Received suggestions:', data.suggestions)
+        }
+    } catch (error) {
+        console.error('Failed to fetch suggestions:', error)
+    }
+}
+
+// Call init function
+initChat()
 </script>
 
 <style scoped>
