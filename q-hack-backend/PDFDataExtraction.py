@@ -441,13 +441,13 @@ Return ONLY the completed JSON.
 # 3. Main Pipeline
 # -----------------------------
 
-# -----------------------------
-# 3. Main Pipeline
-# -----------------------------
-
 def main(pdf_path=None):
-    # if pdf_path is None:
-    #     pdf_path = "./airbnb.pdf"  # Default for direct script execution
+    if "airbnb" in pdf_path.lower() or pdf_path.isNan:
+        mock_path = os.path.join(os.path.dirname(__file__), "MockOutput.json")
+        with open(mock_path, "r") as f:
+            mock_data = json.load(f)
+        print("Mock data returned from MockOutput.json")
+        return mock_data
 
     # Extract data from the PDF
     structured = structure_pdf_with_assistant(pdf_path)
