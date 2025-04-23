@@ -119,6 +119,62 @@
                         <span>PDF</span>
                     </div>
                 </div>
+
+                <!-- Upload Status -->
+                <div class="upload-status" v-if="uploadStatus">
+                    <div class="status-icon" :class="uploadStatus">
+                        <svg
+                            v-if="uploadStatus === 'success'"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <svg
+                            v-if="uploadStatus === 'error'"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                    </div>
+                    <span class="status-message" :class="uploadStatus">
+                        {{
+                            uploadStatus === 'success'
+                                ? 'File uploaded successfully!'
+                                : 'Upload failed. Please try again.'
+                        }}
+                    </span>
+                </div>
+
+                <!-- Upload Button -->
+                <button
+                    class="upload-button"
+                    @click="uploadPdfToBackend"
+                    :disabled="isUploading"
+                >
+                    <div v-if="isUploading" class="loading-spinner"></div>
+                    <span v-else>{{
+                        uploadStatus === 'success' ? 'Uploaded' : 'Upload PDF'
+                    }}</span>
+                </button>
             </div>
         </div>
     </div>
@@ -133,6 +189,8 @@ const router = useRouter()
 const searchQuery = ref('')
 const isDragging = ref(false)
 const pdfFile = ref(null)
+const isUploading = ref(false)
+const uploadStatus = ref('') // success, error, or empty string
 
 const searchCompanies = () => {
     // access the company name by searchQuery
@@ -166,11 +224,54 @@ const handleFileUpload = (e) => {
 
 const removePdf = () => {
     pdfFile.value = null
+    uploadStatus.value = ''
 }
 
 const formatFileSize = (bytes) => {
     if (bytes < 1024) return bytes + ' bytes'
     else if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB'
     else return (bytes / 1048576).toFixed(1) + ' MB'
+}
+
+const uploadPdfToBackend = async () => {
+    if (!pdfFile.value) return
+
+    try {
+        isUploading.value = true
+        uploadStatus.value = ''
+
+        // Create FormData object to send the file
+        const formData = new FormData()
+        formData.append('file', pdfFile.value)
+
+        // Add search query if available
+        if (searchQuery.value) {
+            formData.append('query', searchQuery.value)
+        }
+
+        // Send the file to the backend
+        const response = await fetch('YOUR_BACKEND_API_URL/upload', {
+            method: 'POST',
+            body: formData,
+            // If you need to include credentials/cookies:
+            // credentials: 'include',
+        })
+
+        if (!response.ok) {
+            throw new Error(`Upload failed with status: ${response.status}`)
+        }
+
+        const data = await response.json()
+        console.log('Upload successful:', data)
+        uploadStatus.value = 'success'
+
+        // Optionally navigate to results page or dashboard
+        // router.push('/results')
+    } catch (error) {
+        console.error('Error uploading PDF:', error)
+        uploadStatus.value = 'error'
+    } finally {
+        isUploading.value = false
+    }
 }
 </script>
