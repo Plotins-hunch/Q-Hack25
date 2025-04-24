@@ -11,13 +11,23 @@ import sys
 
 
 # Function to load the JSON data
-def get_json(filename):
-    try:
-        with open(filename, 'r') as file:
-            return json.load(file)
-    except Exception as e:
-        print(f"Error loading JSON file: {e}")
-        return {}
+def get_json(data_or_path):
+    """
+    Accepts either a JSON filename (str) or a JSON dictionary (dict).
+    Returns the parsed JSON dictionary or an empty dict on failure.
+    """
+    if isinstance(data_or_path, dict):
+        return data_or_path
+    elif isinstance(data_or_path, str):
+        try:
+            with open(data_or_path, 'r') as file:
+                return json.load(file)
+        except Exception as e:
+            print(f"❌ Error loading JSON file '{data_or_path}': {e}")
+    else:
+        print("❌ Invalid input: must be a filename (str) or a dictionary.")
+
+    return {}
 
 
 # Function to load all CSV data
@@ -776,7 +786,7 @@ def evaluate(filename):
     jsons = get_json(filename)
 
     # Print loaded data for debugging
-    #print(jsons)
+    print(jsons)
 
     # Calculate all metrics
     metrics = {
@@ -792,6 +802,7 @@ def evaluate(filename):
     # Calculate unicorn score
     metrics["UnicornScore"] = calculate_unicorn_score(metrics)
 
+    print(metrics)
     return metrics
 
 

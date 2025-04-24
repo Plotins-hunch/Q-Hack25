@@ -8,6 +8,7 @@ import datetime
 import copy
 import re
 from AnalyzeTrends import add_google_trend_score
+from evaluator_final import evaluate as evaluate_metrics
 
 # -----------------------------
 # 0. Load Environment Variables
@@ -464,13 +465,11 @@ def main(pdf_path=None):
     # Refine the data by filling in any missing information
     refined = refine_with_chatgpt_holes(enriched)
 
-    # Add metrics calculations
-    refined["metrics"] = {}
-
     # 🆕 Add Google Trends enrichment
     company_name = refined.get("company_name", "Unknown")
     refined = add_google_trend_score(refined, company_name)
 
+    refined["metrics"] = evaluate_metrics(refined)
     # If called as a module, return the data
     if pdf_path != "./airbnb.pdf":
         return refined

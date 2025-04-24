@@ -27,3 +27,8 @@ urllib3==2.4.0
 uvicorn==0.34.2
 python-multipart==0.0.6
 pytrends==4.9.0
+torch
+transformers
+nltk
+pandas
+numpy
