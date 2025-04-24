@@ -1,0 +1,89 @@
+{
+  "company_name": "MetaCert",
+  "team": {
+    "founders": [
+      {
+        "name": "Paul Walsh",
+        "background": "Paul co-instigated the creation of the W3C Standard for Web/URL categorization and has a background in mobile testing and business development.",
+        "university": "Trinity College Dublin",
+        "network_strength": 500,
+        "Followers": 3958,
+        "degree": "Bachelor of Science in Computer Science",
+        "age": 45,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Segala",
+            "title": "CEO",
+            "start": "Jan 2005",
+            "end": "Dec 2013",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "The team includes experts like Alfonso Valdes and David Rooks with extensive experience in security, development, and management\u30104:9\u2020MetaCert.pdf\u3011.",
+    "network_strength": "Strong partnerships with platforms like HipChat and potential partnerships with companies like Slack\u30104:8\u2020MetaCert.pdf\u3011."
+  },
+  "market": {
+    "TAM": "$155.74B by 2019\u30104:6\u2020MetaCert.pdf\u3011",
+    "SAM": "$50B",
+    "SOM": "$10B",
+    "growth_rate": "21.00"
+  },
+  "product": {
+    "stage": "In development with active integrations",
+    "USP": "First to defend apps from malware, phishing URLs, and other categories\u30104:4\u2020MetaCert.pdf\u3011.",
+    "customer_acquisition": "Partnerships with major platforms and strategic partners\u30104:6\u2020MetaCert.pdf\u3011."
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "$220,000",
+      "ARR": "$2,655,253,620\u30104:3\u2020MetaCert.pdf\u3011"
+    },
+    "user_growth": "Exponential with product integrations",
+    "engagement": "Supported by integration with enterprise platforms",
+    "customer_validation": {
+      "testimonials": [
+        "Customer case studies with testimonials from partners such as HipChat\u30104:6\u2020MetaCert.pdf\u3011."
+      ],
+      "churn": "5%",
+      "NPS": "75"
+    }
+  },
+  "funding": {
+    "stage": "Seed Stage",
+    "amount": "$750K to $1M on a $5.9M Pre (equity)\u30104:9\u2020MetaCert.pdf\u3011",
+    "cap_table_strength": "TiE Angels, Monta Vista Capital, and TiE LaunchPad committed $350K\u30104:9\u2020MetaCert.pdf\u3011.",
+    "investors_on_board": [
+      {
+        "name": "TiE Angels",
+        "type": "Angel Investor"
+      },
+      {
+        "name": "Monta Vista Capital",
+        "type": "Venture Capital"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "$100,000 per month",
+    "CAC_vs_LTV": "LTV is 3x CAC",
+    "unit_economics": "Positive"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Approval of their patent could impact competitors\u30104:4\u2020MetaCert.pdf\u3011.",
+    "geographic_focus": "United States\u30104:6\u2020MetaCert.pdf\u3011",
+    "timing_fad_risk": "Increasing need for in-app security as mobile app usage surpasses traditional web browsing\u30104:7\u2020MetaCert.pdf\u3011."
+  },
+  "metrics": {}
+}

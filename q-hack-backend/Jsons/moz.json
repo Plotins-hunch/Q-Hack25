@@ -1,0 +1,86 @@
+{
+  "company_name": "Moz",
+  "team": {
+    "founders": [
+      {
+        "name": "Rand Fishkin",
+        "background": "CEO & Co-founder, history in SEO consulting, web building",
+        "university": "University of Washington",
+        "network_strength": 500,
+        "Followers": 181297,
+        "degree": "Bachelor of Arts in Marketing",
+        "age": 44,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "SEOmoz",
+            "title": "CEO",
+            "start": "Sep 2004",
+            "end": "Feb 2014",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "40-100 planned expansion",
+    "network_strength": "2 Insiders (Rand +1), 2 Investors (Michelle +1), 1 Independent"
+  },
+  "market": {
+    "TAM": "Organic marketing sector",
+    "SAM": "~5-10% current capture of target SEO market",
+    "SOM": "Focus on organic/earned media which drives 90%+ of traffic",
+    "growth_rate": "2X+ growth for 4 years"
+  },
+  "product": {
+    "stage": "Expanding product suite",
+    "USP": "Unique world-changing culture, technology lead",
+    "customer_acquisition": "Sweat marketing - no direct spending on customer acquisition"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "~$10.8 million",
+      "ARR": "$12 - $13 million"
+    },
+    "user_growth": "~1.2+MM visits/month, 10K+ subscribers",
+    "engagement": "83%+ margins maintained",
+    "customer_validation": {
+      "testimonials": [],
+      "churn": "~25%",
+      "NPS": "High community engagement with 300K+ marketers"
+    }
+  },
+  "funding": {
+    "stage": "Raising",
+    "amount": "$20-$25 Million",
+    "cap_table_strength": "Founder Equity: $6-7 Million",
+    "investors_on_board": [
+      {
+        "name": "Ignition Partners",
+        "type": "VC"
+      },
+      {
+        "name": "Curious Office",
+        "type": "VC"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "$650K / Month staffing costs",
+    "CAC_vs_LTV": "$100 CAC vs. $900 LTV",
+    "unit_economics": "~57% of free trials converting to paid"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Potential integration of SEO & Social Analytics by Google",
+    "geographic_focus": "Based in Seattle, USA",
+    "timing_fad_risk": "Failure to adapt to organic marketing shifts"
+  },
+  "metrics": {}
+}

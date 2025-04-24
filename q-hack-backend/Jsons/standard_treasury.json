@@ -1,0 +1,140 @@
+{
+  "company_name": "Standard Treasury",
+  "team": {
+    "founders": [
+      {
+        "name": "Dan Kimerling",
+        "background": "COO of Giftly, Analyst at TechCrunch, BA/MA University of Chicago",
+        "university": "Y Combinator",
+        "network_strength": 500,
+        "Followers": 16259,
+        "degree": "BA/MA",
+        "age": 35,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Giftly",
+            "title": "COO",
+            "start": "Jan 2012",
+            "end": "Dec 2013",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          },
+          {
+            "company": "TechCrunch",
+            "title": "Analyst",
+            "start": "Jan 2010",
+            "end": "Dec 2011",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Zac Townsend",
+        "background": "Risk @ Stripe, CTO of Newark NJ, BA Brown, MPA NYU",
+        "university": "Bainbridge High School",
+        "network_strength": 154,
+        "Followers": 156,
+        "degree": "MPA",
+        "age": 32,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Seattle Academy",
+            "title": "8th Grade Coordinator",
+            "start": "Aug 2015",
+            "end": "Present"
+          },
+          {
+            "company": "A PLUS Youth Program",
+            "title": "Program Coordinator",
+            "start": "Jan 2013",
+            "end": "Dec 2014",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          },
+          {
+            "company": "The Northwest School",
+            "title": "Campbassador Coordinator/Residential Life Faculty",
+            "start": "Jun 2010",
+            "end": "Present"
+          },
+          {
+            "company": "Bainbridge Island School District",
+            "title": "Adult Living Program",
+            "start": "Aug 2008",
+            "end": "Aug 2010"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      }
+    ],
+    "team_strength": "World class team with diverse backgrounds in fintech and technology",
+    "network_strength": "Strong connections with regulatory bodies and fintech ecosystems"
+  },
+  "market": {
+    "TAM": "$1 Trillion",
+    "SAM": "$259 Billion",
+    "SOM": "$5 Billion",
+    "growth_rate": "2.3"
+  },
+  "product": {
+    "stage": "Building Product",
+    "USP": "API-first banking infrastructure for fintech applications",
+    "customer_acquisition": "Leveraging partnerships with large banks and fintech companies"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "Not specified",
+      "ARR": "Not specified"
+    },
+    "user_growth": "Positive reception from fintech community",
+    "engagement": "High engagement with developer community",
+    "customer_validation": {
+      "testimonials": [
+        "Every startup we met said there was a need for the bank"
+      ],
+      "churn": "Not specified",
+      "NPS": "Not specified"
+    }
+  },
+  "funding": {
+    "stage": "Series A",
+    "amount": "$10M",
+    "cap_table_strength": "Strong interest from angels and early-stage investors",
+    "investors_on_board": [
+      {
+        "name": "Brian McLoughlin",
+        "type": "Angel"
+      },
+      {
+        "name": "Cory Ondrejka",
+        "type": "Angel"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "Current burn detailed in financial plan",
+    "CAC_vs_LTV": "Not specified",
+    "unit_economics": "Not specified"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Low risk in UK, higher in US",
+    "geographic_focus": "United Kingdom",
+    "timing_fad_risk": "Regulatory and technological trends support business model"
+  },
+  "metrics": {}
+}

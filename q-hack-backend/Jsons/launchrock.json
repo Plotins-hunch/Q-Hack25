@@ -1,0 +1,187 @@
+{
+  "company_name": "LaunchRock",
+  "team": {
+    "founders": [
+      {
+        "name": "Jameson Detweiler",
+        "background": "CEO",
+        "university": "Drexel University",
+        "network_strength": 175,
+        "Followers": 176,
+        "degree": "Bachelor of Science in Business Administration",
+        "age": 35,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Columbia University",
+            "title": "Compliance Officer",
+            "start": "Aug 2023",
+            "end": "Present"
+          },
+          {
+            "company": "Temple University",
+            "title": "Associate Health and Safety Specialist",
+            "start": "Dec 2021",
+            "end": "Aug 2023"
+          },
+          {
+            "company": "Pennoni",
+            "title": "Associate Industrial Hygienist",
+            "start": "May 2018",
+            "end": "Dec 2021"
+          },
+          {
+            "company": "Zoo Atlanta",
+            "title": "Exhibit Interpreter",
+            "start": "Mar 2017",
+            "end": "May 2018"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      },
+      {
+        "name": "Thomas Knoll",
+        "background": "Chief of Product & Relationships",
+        "university": "University of Michigan",
+        "network_strength": 500,
+        "Followers": 815,
+        "degree": "Bachelor of Arts in Communication",
+        "age": 40,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Zappos",
+            "title": "Community Architect",
+            "start": "Jan 2010",
+            "end": "Dec 2015",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Sean McCullough",
+        "background": "Chief System Architect & Engineer",
+        "university": "Rider University",
+        "network_strength": 406,
+        "Followers": 404,
+        "degree": "Bachelor of Science in Computer Science",
+        "age": 38,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Google",
+            "title": "Software Engineer",
+            "start": "Jun 2012",
+            "end": "Aug 2016",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Zachary Melamed",
+        "background": "Lead Developer",
+        "university": "Stanford University",
+        "network_strength": 300,
+        "Followers": 250,
+        "degree": "Master of Science in Computer Science",
+        "age": 32,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Adobe",
+            "title": "Assistant",
+            "start": "Jan 2015",
+            "end": "Dec 2016",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "network_strength_source": "chatgpt",
+        "Followers_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Strong technical and leadership team with varied expertise",
+    "network_strength": "Supported by prominent advisors and investors such as Ryan Holmes (CEO of HootSuite), Gabriel Weinberg (Founder of DuckDuckGo), and Hiten Shah (CEO of KISSmetrics)"
+  },
+  "market": {
+    "TAM": "Large market of digital marketing and customer acquisition platforms",
+    "SAM": "Emerging segment focusing on social referral and customer engagement",
+    "SOM": "Initial focus on startups and small to medium businesses seeking user growth through social amplification",
+    "growth_rate": "8.5"
+  },
+  "product": {
+    "stage": "Established with a significant user base",
+    "USP": "Facilitates viral sign-ups and social amplification to boost customer acquisition",
+    "customer_acquisition": "Utilizes social networks and referral systems to drive user sign-ups"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "50000",
+      "ARR": "600000"
+    },
+    "user_growth": "Rapid user base expansion with over 1,000,000+ signups",
+    "engagement": "High user engagement indicated by large referral streams",
+    "customer_validation": {
+      "testimonials": [
+        "Positive user testimonials highlighting effective amplification and conversion rates"
+      ],
+      "churn": "Low churn rate due to customer satisfaction and effective engagement",
+      "NPS": "75"
+    }
+  },
+  "funding": {
+    "stage": "Series A",
+    "amount": "2 million",
+    "cap_table_strength": "Balanced with reputable investors",
+    "investors_on_board": [
+      {
+        "name": "Venture51",
+        "type": "Early Stage Fund"
+      },
+      {
+        "name": "Dharmesh Shah",
+        "type": "Founder of HubSpot"
+      },
+      {
+        "name": "500 Startups",
+        "type": "Venture Fund"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "Moderate with sustainable growth",
+    "CAC_vs_LTV": "Favorable, indicating efficient customer acquisition",
+    "unit_economics": "Positive, with strong margin and revenue growth"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Low due to digital nature of the product and strong compliance",
+    "geographic_focus": "Based in the United States",
+    "timing_fad_risk": "Moderate, given the rapidly changing digital marketing landscape"
+  },
+  "metrics": {}
+}

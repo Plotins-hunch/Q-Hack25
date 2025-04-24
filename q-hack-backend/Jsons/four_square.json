@@ -1,0 +1,34 @@
+{
+  "name": "InnovateTech Solutions",
+  "founded": "2021",
+  "industry": "Technology",
+  "founder": {
+    "name": "Alex Johnson",
+    "age": 34,
+    "previous_employments": [
+      {
+        "company": "Tech Innovators Inc.",
+        "title": "Lead Developer",
+        "start": "Jan 2018",
+        "end": "Dec 2020",
+        "company_source": "chatgpt",
+        "title_source": "chatgpt",
+        "start_source": "chatgpt",
+        "end_source": "chatgpt"
+      }
+    ],
+    "name_source": "chatgpt",
+    "age_source": "chatgpt",
+    "previous_employments_source": "chatgpt"
+  },
+  "location": "San Francisco, CA",
+  "employees": 25,
+  "funding": "Series A",
+  "name_source": "chatgpt",
+  "founded_source": "chatgpt",
+  "industry_source": "chatgpt",
+  "location_source": "chatgpt",
+  "employees_source": "chatgpt",
+  "funding_source": "chatgpt",
+  "metrics": {}
+}

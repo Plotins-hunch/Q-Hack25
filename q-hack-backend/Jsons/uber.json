@@ -1,0 +1,112 @@
+{
+  "company_name": "Uber",
+  "team": {
+    "founders": [
+      {
+        "name": "Travis Kalanick",
+        "background": "Entrepreneur with prior startups in the tech industry.",
+        "university": "University of California, Los Angeles",
+        "network_strength": 500,
+        "Followers": 44486,
+        "degree": "Bachelor of Science in Computer Engineering",
+        "age": 42,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Scour",
+            "title": "Founder",
+            "start": "1998",
+            "end": "2000",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Garrett Camp",
+        "background": "Technology entrepreneur and co-founder of StumbleUpon.",
+        "university": "Boise State University",
+        "network_strength": 227,
+        "Followers": 234,
+        "degree": "Bachelor of Science in Electrical Engineering",
+        "age": 45,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "StumbleUpon",
+            "title": "Co-Founder",
+            "start": "2002",
+            "end": "2009",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "The founding team comprises experienced entrepreneurs with a background in technology startups.",
+    "network_strength": "The network includes tech-savvy professionals and advisors involved in urban transportation."
+  },
+  "market": {
+    "TAM": "$4.2B annually and growing",
+    "SAM": "Focus on Urban service on-demand",
+    "SOM": "Covers 50% of entire US market by expanding into major cities like SF, NYC, LA, Chicago, Houston, PA, Dallas.",
+    "growth_rate": "Growing"
+  },
+  "product": {
+    "stage": "Initial service area started in Central SF, with expansion plans to Manhattan.",
+    "USP": "Luxury service on-demand with a modern, fuel-efficient fleet and a high-tech solution for geo-aware auto-dispatch.",
+    "customer_acquisition": "Members only service that ensures respectable clientele, using professional networking and tech integrations."
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "Not explicitly mentioned",
+      "ARR": "Target $1B+ in yearly revenue in best-case scenario."
+    },
+    "user_growth": "Progress reported with recruitment of 5 advisors & 15 clients",
+    "engagement": "Guaranteed fast response times, luxurious service",
+    "customer_validation": {
+      "testimonials": [
+        "Not explicitly provided"
+      ],
+      "churn": "Not explicitly mentioned",
+      "NPS": "Not explicitly mentioned"
+    }
+  },
+  "funding": {
+    "stage": "Initial funding stage",
+    "amount": "Raise a few million for small office and general manager in SF",
+    "cap_table_strength": "Not explicitly mentioned",
+    "investors_on_board": [
+      {
+        "name": "Not provided",
+        "type": "Potential investors targeted"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "Not explicitly mentioned",
+    "CAC_vs_LTV": "Not explicitly mentioned",
+    "unit_economics": "Designed to be profitable with pre-paid, cashless billing system."
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Bypass medallion system with digital hailing for member-only service.",
+    "geographic_focus": "Based in the United States, initially focusing on SF and NYC.",
+    "timing_fad_risk": "Positioning as a next-generation car service with lasting efficiency and convenience advantages."
+  },
+  "metrics": {}
+}

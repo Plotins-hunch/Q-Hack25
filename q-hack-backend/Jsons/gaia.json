@@ -1,0 +1,68 @@
+{
+  "company_name": "Gaia",
+  "team": {
+    "founders": [
+      {
+        "name": "Carlos Martinez",
+        "background": "Experiences in online furniture sales in Latin America and online marketing at Google"
+      }
+    ],
+    "team_strength": "Experienced team with modern design focus and efficient customer service.",
+    "network_strength": "Strong collaboration with Mexican designers and craftsmen."
+  },
+  "market": {
+    "TAM": "$5 billion",
+    "SAM": "$1 billion",
+    "SOM": "$200 million",
+    "growth_rate": "15% annually"
+  },
+  "product": {
+    "stage": "E-Commerce platform with showrooms",
+    "USP": "Modern design furniture at accessible prices via online platform and quick delivery.",
+    "customer_acquisition": "Multiple channels: online platform, showrooms, mobile."
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "$100,000",
+      "ARR": "$1.2 million"
+    },
+    "user_growth": "20% month-over-month",
+    "engagement": "High engagement with repeat customers",
+    "customer_validation": {
+      "testimonials": [
+        {
+          "customer": "Maria Lopez",
+          "feedback": "Great quality and fast delivery!",
+          "customer_source": "chatgpt",
+          "feedback_source": "chatgpt"
+        }
+      ],
+      "churn": "5%",
+      "NPS": "75"
+    }
+  },
+  "funding": {
+    "stage": "Series A",
+    "amount": "$5 million",
+    "cap_table_strength": "Diverse investor base with strategic partners",
+    "investors_on_board": [
+      {
+        "name": "ABC Ventures",
+        "investment": "$2 million",
+        "name_source": "chatgpt",
+        "investment_source": "chatgpt"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "$50,000 per month",
+    "CAC_vs_LTV": "1:3",
+    "unit_economics": "Profitable on a per-unit basis"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Low",
+    "geographic_focus": "Mexico",
+    "timing_fad_risk": "Moderate"
+  },
+  "metrics": {}
+}

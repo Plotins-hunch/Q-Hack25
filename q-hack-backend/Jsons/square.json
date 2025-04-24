@@ -1,0 +1,114 @@
+{
+  "company_name": "Square",
+  "team": {
+    "founders": [
+      {
+        "name": "Jack Dorsey",
+        "background": "Co-Founder, Chairman of Twitter",
+        "university": "New York University",
+        "network_strength": "High",
+        "Followers": 1,
+        "degree": "Bachelor of Science in Computer Science",
+        "age": 47,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Citadel LLC",
+            "title": "Systems Admin",
+            "start": "Jan 2000",
+            "end": "Dec 2002",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "network_strength_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      },
+      {
+        "name": "Jim McKelvey",
+        "background": "Owner at Mira",
+        "university": "Washington University in St. Louis",
+        "network_strength": "Moderate",
+        "Followers": 0,
+        "degree": "Bachelor of Science in Computer Science",
+        "age": 58,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "All Star Flooring",
+            "title": "Co-Owner",
+            "start": "Aug 2014",
+            "end": "Present",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "network_strength_source": "chatgpt",
+        "Followers_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt",
+        "linkedin_posts_last_30d_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Inspiring and experienced management team",
+    "network_strength": "Advisor at Ustream, partnerships with Apple and other key advisors like Gideon Yu and Roelof Botha"
+  },
+  "market": {
+    "TAM": "$214 billion in the U.S.",
+    "SAM": "$46 billion",
+    "SOM": "$16 billion",
+    "growth_rate": "68%"
+  },
+  "product": {
+    "stage": "Established with significant market presence",
+    "USP": "Simplest and most compelling way to accept credit cards with a flat 2.75% fee and no monthly fees",
+    "customer_acquisition": "Wide exposure through social media and internet advertising, free card reader"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "N/A",
+      "ARR": "$222.34 million in 2013 to $400.21 million in 2014"
+    },
+    "user_growth": "Acquiring 100,000+ customers per month",
+    "engagement": "$1 million in payments per day",
+    "customer_validation": {
+      "testimonials": [
+        "Valued user base with recurring revenue stream"
+      ],
+      "churn": "N/A",
+      "NPS": "N/A"
+    }
+  },
+  "funding": {
+    "stage": "Series B",
+    "amount": "$27.5 million",
+    "cap_table_strength": "Valued at $240 million after the last round",
+    "investors_on_board": [
+      {
+        "name": "Sequoia Capital",
+        "type": "Venture Capital"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "N/A",
+    "CAC_vs_LTV": "N/A",
+    "unit_economics": "Solid business model with high revenue generation"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Industry flexibility promotes innovation despite lack of standards",
+    "geographic_focus": "U.S.",
+    "timing_fad_risk": "High growth potential with expanding, unsaturated market"
+  },
+  "metrics": {}
+}

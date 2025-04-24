@@ -1,0 +1,91 @@
+{
+  "company_name": "MixPanel",
+  "team": {
+    "founders": [
+      {
+        "name": "Tim Trefren",
+        "background": "Software Engineering",
+        "university": "Stanford University",
+        "network_strength": 5,
+        "Followers": 5,
+        "degree": "Bachelor of Science in Computer Science",
+        "age": 35,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Trefren Construction",
+            "title": "Owner",
+            "start": "Jan 2010",
+            "end": "Dec 2013",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      },
+      {
+        "name": "Suhail Doshi",
+        "background": "Product Management"
+      }
+    ],
+    "team_strength": "50+ employees",
+    "network_strength": "Strong connections with the analytics community"
+  },
+  "market": {
+    "TAM": "5 billion",
+    "SAM": "500 million",
+    "SOM": "50 million",
+    "growth_rate": "25.0"
+  },
+  "product": {
+    "stage": "Series B",
+    "USP": "Real-time mobile analytics",
+    "customer_acquisition": "Freemium model with tiered pricing"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "125,000",
+      "ARR": "1.5 million"
+    },
+    "user_growth": "20% month over month",
+    "engagement": "High engagement with daily active users",
+    "customer_validation": {
+      "testimonials": [
+        "MixPanel has revolutionized our data-driven decision making.",
+        "The insights from MixPanel are unparalleled."
+      ],
+      "churn": "5%",
+      "NPS": "70"
+    }
+  },
+  "funding": {
+    "stage": "Series B",
+    "amount": "15 million USD",
+    "cap_table_strength": "Diverse and balanced",
+    "investors_on_board": [
+      {
+        "name": "Sequoia Capital",
+        "type": "Venture Capital"
+      },
+      {
+        "name": "Andreessen Horowitz",
+        "type": "Venture Capital"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "200,000 USD/month",
+    "CAC_vs_LTV": "3:1",
+    "unit_economics": "Positive"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Low",
+    "geographic_focus": "USA",
+    "timing_fad_risk": "Moderate"
+  },
+  "metrics": {}
+}

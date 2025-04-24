@@ -1,0 +1,111 @@
+{
+  "company_name": "Buffer",
+  "team": {
+    "founders": [
+      {
+        "name": "Joel Gascoigne",
+        "background": "Co-Founder, took the idea to revenue in 7 weeks, Masters in CS",
+        "university": "University of Warwick",
+        "network_strength": 500,
+        "Followers": 21313,
+        "degree": "Masters in Computer Science",
+        "age": 35,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "OnePage",
+            "title": "Founder",
+            "start": "Jan 2010",
+            "end": "Dec 2010",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Leo Widrich",
+        "background": "Co-Founder, marketeer, took Buffer from 200 to 55,000 users",
+        "university": "University of Vienna",
+        "network_strength": 86,
+        "Followers": 86,
+        "degree": "Bachelor in Business Administration",
+        "age": 32,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Freelancing",
+            "title": "Freelance Graphic Designer",
+            "start": "Sep 2005",
+            "end": "Present"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Team successfully scaled the user base and increased revenue in a short period",
+    "network_strength": "Advisors include Guy Kawasaki and Hiten Shah"
+  },
+  "market": {
+    "TAM": "Social Media Marketing is a rapidly growing sector",
+    "SAM": "Twitter and Facebook users interested in social media management tools",
+    "SOM": "Buffer's current user base and potential new users from integrations",
+    "growth_rate": "40"
+  },
+  "product": {
+    "stage": "Established with integrated API and several app partnerships",
+    "USP": "Platform approach to intelligent social media sharing",
+    "customer_acquisition": "Freemium model with 2% conversion from free to paid"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "Calculated based on $150,000 ARR",
+      "ARR": "150000"
+    },
+    "user_growth": "55,000 users, growing 40% per month",
+    "engagement": "High engagement with 1.5 million updates Buffered",
+    "customer_validation": {
+      "testimonials": [
+        "Buffer Finds Tweet Scheduling Can Increase Clicks by 200%"
+      ],
+      "churn": "5",
+      "NPS": "Not specified, inferred positive customer feedback"
+    }
+  },
+  "funding": {
+    "stage": "Not explicitly stated, previous investment rounds implied",
+    "amount": "Not disclosed",
+    "cap_table_strength": "Presence of influential advisors and previous investors",
+    "investors_on_board": [
+      {
+        "name": "Guy Kawasaki",
+        "type": "Advisor"
+      },
+      {
+        "name": "Hiten Shah",
+        "type": "Advisor"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "Not disclosed",
+    "CAC_vs_LTV": "LTV of $240 allows paying up to $5 for acquiring a free user",
+    "unit_economics": "97% margins"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Not addressed",
+    "geographic_focus": "Located in the USA",
+    "timing_fad_risk": "Taking advantage of the growth in social media usage"
+  },
+  "metrics": {}
+}
