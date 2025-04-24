@@ -108,7 +108,7 @@
 </template>
 
 <script setup>
-import {ref, watch, nextTick, defineProps, defineEmits} from 'vue'
+import {ref, watch, nextTick, defineProps, defineEmits, onMounted} from 'vue'
 import '../css/chat-gpt-panel.css'
 
 const props = defineProps({
@@ -118,11 +118,70 @@ const props = defineProps({
     },
     businessData: {
         type: Object,
-        default: () => ({}),
+        default: () => ({
+            company_name: 'Sample Company',
+            metrics: {
+                UnicornScore: 75,
+                Team: 80,
+                Market: 70,
+                Product: 85,
+                Traction: 65,
+                Funding: 60,
+                FinancialEfficiency: 75,
+                Miscellaneous: 70,
+            },
+            team: {
+                founders: [{name: 'John Doe', background: 'Tech Industry'}],
+                team_strength: 'Balanced team with technical expertise',
+                network_strength: 'Good connections in the industry',
+            },
+            market: {
+                TAM: '$50B',
+                SAM: '$10B',
+                SOM: '$1B',
+                growth_rate: '15%',
+            },
+            product: {
+                stage: 'MVP',
+                USP: 'AI-powered solution',
+                customer_acquisition: 'Direct sales',
+            },
+        }),
     },
 })
 
 defineEmits(['close'])
+
+// Initialize default data for use in the component
+const defaultData = {
+    company_name: 'Sample Company',
+    metrics: {
+        UnicornScore: 75,
+        Team: 80,
+        Market: 70,
+        Product: 85,
+        Traction: 65,
+        Funding: 60,
+        FinancialEfficiency: 75,
+        Miscellaneous: 70,
+    },
+    team: {
+        founders: [{name: 'John Doe', background: 'Tech Industry'}],
+        team_strength: 'Balanced team with technical expertise',
+        network_strength: 'Good connections in the industry',
+    },
+    market: {
+        TAM: '$50B',
+        SAM: '$10B',
+        SOM: '$1B',
+        growth_rate: '15%',
+    },
+    product: {
+        stage: 'MVP',
+        USP: 'AI-powered solution',
+        customer_acquisition: 'Direct sales',
+    },
+}
 
 // Initial welcome message
 const messages = ref([
@@ -133,7 +192,6 @@ const messages = ref([
 ])
 
 // Configuration
-//const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
 const API_URL = 'http://localhost:8000'
 const CHAT_ENDPOINT = `${API_URL}/api/chat/query`
 
@@ -141,6 +199,52 @@ const currentMessage = ref('')
 const isLoading = ref(false)
 const messagesContainer = ref(null)
 const conversationId = ref(null)
+const processedData = ref({})
+
+// Process business data to ensure it's valid
+const processBusinessData = () => {
+    try {
+        // If businessData is a string, try to parse it
+        if (typeof props.businessData === 'string') {
+            try {
+                processedData.value = JSON.parse(props.businessData)
+                console.log(
+                    'Parsed business data from string',
+                    processedData.value,
+                )
+            } catch (error) {
+                console.error('Failed to parse business data string:', error)
+                processedData.value = defaultData
+            }
+        } else if (
+            typeof props.businessData === 'object' &&
+            props.businessData !== null
+        ) {
+            processedData.value = props.businessData
+            console.log(
+                'Using provided business data object',
+                processedData.value,
+            )
+        } else {
+            console.warn('Business data is not valid, using default data')
+            processedData.value = defaultData
+        }
+
+        // Validate essential properties
+        if (!processedData.value.company_name || !processedData.value.metrics) {
+            console.warn(
+                'Business data is missing essential properties, adding defaults',
+            )
+            processedData.value = {
+                ...defaultData,
+                ...processedData.value,
+            }
+        }
+    } catch (error) {
+        console.error('Error processing business data:', error)
+        processedData.value = defaultData
+    }
+}
 
 // Convert message history to format expected by backend
 const getMessageHistory = () => {
@@ -153,6 +257,9 @@ const getMessageHistory = () => {
 // Send message to backend
 const sendMessage = async () => {
     if (!currentMessage.value.trim() || isLoading.value) return
+
+    // Process business data first to ensure it's valid
+    processBusinessData()
 
     // Add user message to the chat
     messages.value.push({
@@ -172,10 +279,12 @@ const sendMessage = async () => {
     }
 
     try {
+        console.log('Sending data to backend:', processedData.value)
+
         // Prepare request to backend
         const requestData = {
             query: userQuestion,
-            company_data: props.businessData,
+            company_data: processedData.value,
             conversation_id: conversationId.value,
             message_history: getMessageHistory(),
         }
@@ -194,6 +303,7 @@ const sendMessage = async () => {
         }
 
         const data = await response.json()
+        console.log('Received response from API:', data)
 
         // Store conversation ID for future requests
         if (data.conversation_id) {
@@ -240,22 +350,78 @@ watch(
     },
 )
 
-// Initialize - fetch suggested questions
-const initChat = async () => {
-    try {
-        const response = await fetch(`${API_URL}/api/chat/suggestions`)
-        if (response.ok) {
-            const data = await response.json()
-            // You could use these suggestions somewhere in the UI if desired
-            console.log('Received suggestions:', data.suggestions)
-        }
-    } catch (error) {
-        console.error('Failed to fetch suggestions:', error)
+// Process business data on mount and when it changes
+watch(
+    () => props.businessData,
+    () => {
+        processBusinessData()
+    },
+    {immediate: true},
+)
+
+// Debug the businessData prop
+onMounted(() => {
+    console.log('ChatGptPanel mounted with businessData:', props.businessData)
+    processBusinessData()
+})
+</script>
+
+<style>
+/* Additional styling for loading animation */
+.thinking {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.7;
+    animation: dotPulse 1.4s infinite ease-in-out;
+}
+
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dotPulse {
+    0%,
+    80%,
+    100% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    40% {
+        transform: scale(1.2);
+        opacity: 1;
     }
 }
 
-// Call init function
-initChat()
-</script>
+.loading-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.8s linear infinite;
+}
 
-<style scoped></style>
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+</style>

@@ -10,18 +10,17 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import {ref, defineProps} from 'vue'
 import ChatGptButton from './ChatGptButton.vue'
 import ChatGptPanel from './ChatGptPanel.vue'
 
-/**
 const props = defineProps({
     businessData: {
         type: Object,
+        required: true,
         default: () => ({}),
     },
 })
-    */
 
 // Control chat panel visibility
 const isChatOpen = ref(false)

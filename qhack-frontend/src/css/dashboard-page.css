@@ -7,6 +7,8 @@
     --background-color: #242428;
     --input-bg: #242428;
     --placeholder-color: #9992a9;
+    --modal-bg: #2a2a2f;
+    --card-bg: rgba(255, 255, 255, 0.03);
 }
 
 html,
@@ -43,84 +45,59 @@ body {
     align-items: center;
 }
 
+.headline2 {
+    font-size: calc(1.2rem + 1vw);
+    font-weight: 300;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    width: 100%;
+    text-shadow: 0 2px 10px rgba(164, 123, 246, 0.2);
+}
+
 .dashboard-container {
     flex: 1;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px 24px 24px;
     /* This ensures content can scroll if needed */
     overflow-y: visible;
 }
 
-/* Overall Score Card */
+/* Overall Score Card - Simplified */
 .score-card {
     background-color: rgba(164, 123, 246, 0.08);
     border: 1px solid rgba(164, 123, 246, 0.2);
     border-radius: 12px;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.score-circle {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #a47bf6 0%, #8150e4 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 24px;
-    box-shadow: 0 4px 12px rgba(164, 123, 246, 0.3);
-    flex-shrink: 0;
+.score-info {
+    flex: 0 0 auto;
+    margin-left: 24px;
+}
+
+.score-info h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
 }
 
 .score-value {
     color: white;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 600;
 }
 
-.score-info {
-    flex: 1;
-    padding-left: 0;
-}
-
-.score-info h2 {
-    margin: 0 0 12px 0;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -0.5px;
-    text-align: left;
-}
-
-.score-tags {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
-
-.tag {
-    padding: 5px 12px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.tag.success {
-    background-color: rgba(45, 212, 144, 0.15);
-    color: #2dd490;
-}
-
-.tag.primary {
-    background-color: rgba(164, 123, 246, 0.15);
-    color: #a47bf6;
-}
-
-/* Metrics Grid */
+/* Metrics Grid - Simplified */
 .metrics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -131,11 +108,14 @@ body {
 }
 
 .metric-card {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: var(--card-bg);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .metric-card:hover {
@@ -143,106 +123,379 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
+.metric-card:hover .click-indicator {
+    opacity: 1;
+}
+
+.click-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(164, 123, 246, 0.2), transparent);
+    padding: 8px 0;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
 .metric-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .metric-header h3 {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: #ffffff;
 }
 
 .metric-score {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
     color: var(--primary-color, #a47bf6);
 }
 
+/* Progress Bar Styles */
+.progress-bar-container {
+    padding: 8px 0;
+}
+
 .progress-bar {
-    height: 6px;
+    height: 10px;
     background-color: rgba(164, 123, 246, 0.1);
-    border-radius: 3px;
+    border-radius: 5px;
     overflow: hidden;
-    margin-bottom: 16px;
 }
 
 .progress-fill {
     height: 100%;
     background-color: var(--primary-color, #a47bf6);
-    border-radius: 3px;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
 }
 
-.metric-details {
-    margin-top: 16px;
-}
-
-.metric-item {
+/* Pie Chart Styles */
+.pie-chart-container {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-.metric-item span {
-    opacity: 0.85;
-    color: #d0d0d6;
-}
-
-.metric-item strong {
-    font-weight: 500;
-    color: #ffffff;
-}
-
-/* Growth Chart */
-.growth-chart {
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    margin-top: 16px;
+    padding: 10px 0;
 }
 
-.chart-line {
-    display: block;
-    width: 90%;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        rgba(164, 123, 246, 0.2) 0%,
-        rgba(164, 123, 246, 0.4) 50%,
-        rgba(164, 123, 246, 0.9) 100%
-    );
+.pie-chart {
     position: relative;
-    overflow: visible;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-.chart-line:before {
-    content: '';
+.pie-chart-large {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(164, 123, 246, 0.3);
+}
+
+.pie-slice {
     position: absolute;
     width: 100%;
-    height: 40px;
-    background: linear-gradient(
-        180deg,
-        rgba(164, 123, 246, 0.2) 0%,
-        rgba(164, 123, 246, 0) 100%
+    height: 100%;
+    transform: rotate(-90deg); /* Start from the top */
+    transform-origin: center;
+    background: conic-gradient(
+        #a47bf6 0deg,
+        #a47bf6 0deg,
+        rgba(255, 255, 255, 0.1) 0deg,
+        rgba(255, 255, 255, 0.1) 360deg
     );
-    bottom: 2px;
-    border-radius: 50% 50% 0 0;
 }
 
-.chart-label {
-    margin-top: 24px;
-    font-size: 14px;
-    color: var(--primary-color, #a47bf6);
+.pie-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background-color: var(--background-color, #242428);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-container {
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    background-color: var(--modal-bg);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: modal-in 0.3s ease-out;
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
     font-weight: 500;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: var(--placeholder-color);
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close-button:hover {
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.modal-content {
+    padding: 24px;
+    overflow-y: auto;
+    max-height: calc(90vh - 80px);
+}
+
+.modal-score {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-score-label {
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 20px;
+    color: var(--text-color);
+}
+
+.modal-pie-chart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.modal-score-value {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.modal-progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.modal-progress-bar {
+    width: 100%;
+    height: 12px;
+    background-color: rgba(164, 123, 246, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Table Styles for Modal */
+.detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-table th,
+.detail-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-table th {
+    font-weight: 500;
+    color: var(--primary-color);
+    width: 40%;
+    font-size: 15px;
+}
+
+.detail-table td {
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.detail-table tbody tr:last-child th,
+.detail-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.detail-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Array Table Styles */
+.array-table {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.array-table thead {
+    background-color: rgba(164, 123, 246, 0.1);
+}
+
+.array-table th {
+    text-transform: capitalize;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: auto;
+}
+
+.array-table td {
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 12px;
+}
+
+.array-table td:last-child {
+    border-right: none;
+}
+
+/* Section Styles */
+.detail-section {
+    margin-bottom: 24px;
+}
+
+.detail-section-title {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 0 12px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(164, 123, 246, 0.2);
+}
+
+.empty-message {
+    color: var(--placeholder-color);
+    font-style: italic;
+    text-align: center;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: 6px;
+}
+
+.modal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.detail-value {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.array-item {
+    margin-bottom: 8px;
+    padding-left: 12px;
+    border-left: 2px solid rgba(164, 123, 246, 0.3);
+}
+
+.nested-item {
+    margin-bottom: 4px;
+}
+
+.nested-item:last-child {
+    margin-bottom: 0;
+}
+
+.nested-item strong {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    margin-right: 5px;
 }
 
 /* Ensure proper padding at the bottom for scrolling */
@@ -268,21 +521,69 @@ body {
         padding: 20px;
     }
 
-    .score-circle {
-        margin-right: 0;
+    .pie-chart-large {
         margin-bottom: 16px;
+        width: 120px;
+        height: 120px;
     }
 
-    .score-tags {
-        justify-content: center;
+    .score-info {
+        margin-left: 0;
     }
 
     .score-info h2 {
         text-align: center;
+        font-size: 20px;
     }
 
     .metrics-grid {
         grid-template-columns: 1fr;
+    }
+
+    .metric-header h3 {
+        font-size: 16px;
+    }
+
+    .metric-score {
+        font-size: 20px;
+    }
+
+    .pie-chart {
+        width: 70px;
+        height: 70px;
+    }
+
+    .modal-container {
+        width: 95%;
+        max-height: 80vh;
+    }
+
+    .modal-content {
+        padding: 16px;
+    }
+
+    .modal-score {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .detail-table th,
+    .detail-table td {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .detail-table th {
+        width: 45%;
+    }
+
+    .detail-section-title {
+        font-size: 16px;
+    }
+
+    .click-indicator {
+        opacity: 0.8;
     }
 }
 
@@ -297,5 +598,96 @@ body {
     .unicorn-dashboard {
         min-height: 700px;
         height: auto;
+    }
+
+    .modal-container {
+        max-height: 95vh;
+    }
+}
+
+/* Nested Table Styles */
+.nested-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nested-table th,
+.nested-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+}
+
+.nested-table th {
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: rgba(164, 123, 246, 0.07);
+}
+
+.nested-table thead th {
+    text-transform: capitalize;
+    background-color: rgba(164, 123, 246, 0.1);
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nested-table tbody tr:last-child th,
+.nested-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.nested-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+/* Ensure proper styling for tables inside tables */
+.detail-table td .nested-table {
+    margin: 8px 0;
+}
+
+/* Make the detail table more robust */
+.detail-table {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* This helps with managing column widths */
+}
+
+.detail-table th {
+    width: 30%;
+    vertical-align: top;
+    padding-top: 14px; /* Align with content when there are nested tables */
+}
+
+.detail-table td {
+    width: 70%;
+    vertical-align: top;
+}
+
+/* Handle long text in tables */
+.detail-table td,
+.nested-table td {
+    word-break: break-word;
+}
+
+/* Improve mobile styling */
+@media (max-width: 768px) {
+    .detail-table th {
+        width: 40%;
+    }
+
+    .detail-table td {
+        width: 60%;
+    }
+
+    .nested-table th,
+    .nested-table td {
+        padding: 6px 8px;
+        font-size: 13px;
     }
 }

@@ -176,6 +176,7 @@ const uploadStatus = ref(null)
 const analysisStatus = ref(null)
 const analysisData = ref(null)
 const analysisPollingInterval = ref(null)
+window.localStorage.setItem('business_data', JSON.stringify({}))
 
 // Base URL for the API - change as needed for your environment
 const API_BASE_URL = 'http://localhost:8000'
