@@ -449,7 +449,6 @@ Return ONLY the completed JSON.
 # -----------------------------
 
 def main(pdf_path=None):
-    pdf_path = os.path.join(os.path.dirname(__file__), "Uber.pdf")
     # if "airbnb" in pdf_path.lower() or pdf_path is None:
     #     mock_path = os.path.join(os.path.dirname(__file__), "MockOutput.json")
     #     with open(mock_path, "r") as f:
