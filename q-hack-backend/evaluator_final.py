@@ -2,7 +2,10 @@ import os
 import json
 import pandas as pd
 import numpy as np
+import torch
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import nltk
 import re
 import sys
 
@@ -47,28 +50,108 @@ def _load_all_csv_data():
     return data
 
 
-# Simple implementation of FinBERT sentiment (simulated)
+# Initialize NLTK for VADER
+def initialize_nltk():
+    try:
+        nltk.download('vader_lexicon', quiet=True)
+        return True
+    except Exception as e:
+        print(f"Error downloading NLTK resources: {e}")
+        return False
+
+
+# FinBERT sentiment analysis class
+class FinBERT:
+    def __init__(self):
+        try:
+            # Load FinBERT model and tokenizer
+            self.tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert")
+            self.model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert")
+            self.labels = ["negative", "neutral", "positive"]
+            self.initialized = True
+        except Exception as e:
+            print(f"Error initializing FinBERT: {e}")
+            self.initialized = False
+
+    def sentiment(self, text):
+        if not self.initialized or not text or not isinstance(text, str):
+            return 0.5
+
+        try:
+            # Truncate text if it's too long
+            max_length = self.tokenizer.model_max_length
+            if len(text) > max_length:
+                text = text[:max_length]
+
+            # Tokenize and get sentiment
+            inputs = self.tokenizer(text, return_tensors="pt", padding=True, truncation=True)
+            with torch.no_grad():
+                outputs = self.model(**inputs)
+
+            # Get probabilities with softmax
+            probabilities = torch.nn.functional.softmax(outputs.logits, dim=1)
+
+            # Calculate sentiment score (positive - negative + neutral/2)
+            neg_score = probabilities[0][0].item()
+            neu_score = probabilities[0][1].item()
+            pos_score = probabilities[0][2].item()
+
+            # Convert to 0-1 scale (0 = negative, 1 = positive)
+            sentiment_score = pos_score - neg_score + (neu_score / 2)
+            normalized_score = (sentiment_score + 1) / 2  # Convert from [-1,1] to [0,1]
+
+            return max(0.0, min(1.0, normalized_score))  # Clamp between 0 and 1
+
+        except Exception as e:
+            print(f"Error analyzing sentiment with FinBERT: {e}")
+            return 0.5
+
+
+# FinBERT sentiment function
 def finbert_sentiment(text):
-    # This is a simplified version since we don't have actual FinBERT
-    # In reality, you'd use a pretrained FinBERT model
-    if not text or not isinstance(text, str):
-        return 0.5
+    # Lazily initialize the model
+    if not hasattr(finbert_sentiment, "model"):
+        try:
+            finbert_sentiment.model = FinBERT()
+        except Exception as e:
+            print(f"Failed to initialize FinBERT: {e}")
+            # Fallback to simple sentiment
+            positive_words = ['innovative', 'growth', 'profitable', 'success', 'strong',
+                              'efficient', 'strategic', 'favorable', 'positive', 'excellent']
+            negative_words = ['risky', 'failure', 'loss', 'weak', 'inefficient',
+                              'declining', 'unfavorable', 'negative', 'poor']
 
-    positive_words = ['innovative', 'growth', 'profitable', 'success', 'strong',
-                      'efficient', 'strategic', 'favorable', 'positive', 'excellent']
-    negative_words = ['risky', 'failure', 'loss', 'weak', 'inefficient',
-                      'declining', 'unfavorable', 'negative', 'poor']
+            if not text or not isinstance(text, str):
+                return 0.5
 
-    text = text.lower()
+            text = text.lower()
+            pos_count = sum(1 for word in positive_words if word in text)
+            neg_count = sum(1 for word in negative_words if word in text)
+            total = pos_count + neg_count
+            if total == 0:
+                return 0.5
+            return (pos_count / total) * 0.8 + 0.2
 
-    pos_count = sum(1 for word in positive_words if word in text)
-    neg_count = sum(1 for word in negative_words if word in text)
+    # Use the model
+    if hasattr(finbert_sentiment, "model") and finbert_sentiment.model.initialized:
+        return finbert_sentiment.model.sentiment(text)
+    else:
+        # Fallback simple sentiment
+        if not text or not isinstance(text, str):
+            return 0.5
 
-    total = pos_count + neg_count
-    if total == 0:
-        return 0.5
+        positive_words = ['innovative', 'growth', 'profitable', 'success', 'strong',
+                          'efficient', 'strategic', 'favorable', 'positive', 'excellent']
+        negative_words = ['risky', 'failure', 'loss', 'weak', 'inefficient',
+                          'declining', 'unfavorable', 'negative', 'poor']
 
-    return (pos_count / total) * 0.8 + 0.2  # Scale between 0.2 and 1.0
+        text = text.lower()
+        pos_count = sum(1 for word in positive_words if word in text)
+        neg_count = sum(1 for word in negative_words if word in text)
+        total = pos_count + neg_count
+        if total == 0:
+            return 0.5
+        return (pos_count / total) * 0.8 + 0.2
 
 
 # Convert numeric values to scores
@@ -129,8 +212,8 @@ def evaluate_team(input_json, input_csvs):
     # Initialize VADER for sentiment analysis
     try:
         vader = SentimentIntensityAnalyzer()
-    except:
-        print("VADER not available, using simplified sentiment")
+    except Exception as e:
+        print(f"VADER not available: {e}. Using simplified sentiment.")
         vader = None
 
     # Process founders
@@ -374,17 +457,44 @@ def evaluate_product(input_json, input_csvs):
     return round(product_score / factors)
 
 
+# VADER wrapper class for sentiment analysis
+class VADERSentiment:
+    def __init__(self):
+        try:
+            self.analyzer = SentimentIntensityAnalyzer()
+            self.initialized = True
+        except Exception as e:
+            print(f"Error initializing VADER: {e}")
+            self.initialized = False
+
+    def sentiment(self, text):
+        if not self.initialized or not text or not isinstance(text, str):
+            return 0.0
+
+        try:
+            sentiment_scores = self.analyzer.polarity_scores(text)
+            # Return compound score normalized to 0-1 range
+            return (sentiment_scores['compound'] + 1) / 2
+        except Exception as e:
+            print(f"Error analyzing sentiment with VADER: {e}")
+            return 0.5
+
+
+# Get VADER analyzer (singleton pattern)
+def get_vader_analyzer():
+    if not hasattr(get_vader_analyzer, "instance"):
+        get_vader_analyzer.instance = VADERSentiment()
+    return get_vader_analyzer.instance
+
+
 # Evaluate traction metrics
 def evaluate_traction(input_json, input_csvs):
     traction_data = input_json.get('traction', {})
     traction_score = 0
     factors = 0
 
-    try:
-        vader = SentimentIntensityAnalyzer()
-    except:
-        print("VADER not available, using simplified sentiment")
-        vader = None
+    # Get VADER analyzer
+    vader = get_vader_analyzer()
 
     # MRR (Monthly Recurring Revenue)
     revenue_growth = traction_data.get('revenue_growth', {})
@@ -414,9 +524,8 @@ def evaluate_traction(input_json, input_csvs):
     # User engagement
     engagement = traction_data.get('engagement', '')
     engagement_score = 50
-    if engagement and vader:
-        sentiment = vader.polarity_scores(engagement)
-        engagement_score = (sentiment['compound'] + 1) * 50  # Convert -1 to 1 scale to 0-100
+    if engagement and vader.initialized:
+        engagement_score = vader.sentiment(engagement) * 100
     elif engagement:
         engagement_score = finbert_sentiment(engagement) * 100
     traction_score += engagement_score
@@ -428,10 +537,9 @@ def evaluate_traction(input_json, input_csvs):
     # Churn
     churn = validation.get('churn', '')
     churn_score = 50
-    if churn and vader:
+    if churn and vader.initialized:
         # For churn, lower is better, so we invert the score
-        sentiment = vader.polarity_scores(churn)
-        churn_score = 100 - ((sentiment['compound'] + 1) * 50)
+        churn_score = 100 - (vader.sentiment(churn) * 100)
     elif churn:
         # Invert FinBERT score since lower churn is better
         churn_score = 100 - (finbert_sentiment(churn) * 100)
@@ -443,12 +551,13 @@ def evaluate_traction(input_json, input_csvs):
     nps_score = 50
     if nps:
         # Combine FinBERT and VADER for more robust analysis
-        if vader:
-            vader_score = (vader.polarity_scores(nps)['compound'] + 1) * 50
-            finbert_score = finbert_sentiment(nps) * 100
+        finbert_score = finbert_sentiment(nps) * 100
+
+        if vader.initialized:
+            vader_score = vader.sentiment(nps) * 100
             nps_score = (vader_score + finbert_score) / 2
         else:
-            nps_score = finbert_sentiment(nps) * 100
+            nps_score = finbert_score
     traction_score += nps_score
     factors += 1
 
@@ -474,11 +583,8 @@ def evaluate_funding(input_json, input_csvs):
     funding_score = 0
     factors = 0
 
-    try:
-        vader = SentimentIntensityAnalyzer()
-    except:
-        print("VADER not available, using simplified sentiment")
-        vader = None
+    # Get VADER analyzer
+    vader = get_vader_analyzer()
 
     # Funding stage
     stage = funding_data.get('stage', '')
@@ -516,12 +622,13 @@ def evaluate_funding(input_json, input_csvs):
     cap_score = 50
     if cap_table:
         # Combine FinBERT and VADER
-        if vader:
-            vader_score = (vader.polarity_scores(cap_table)['compound'] + 1) * 50
-            finbert_score = finbert_sentiment(cap_table) * 100
+        finbert_score = finbert_sentiment(cap_table) * 100
+
+        if vader.initialized:
+            vader_score = vader.sentiment(cap_table) * 100
             cap_score = (vader_score + finbert_score) / 2
         else:
-            cap_score = finbert_sentiment(cap_table) * 100
+            cap_score = finbert_score
     funding_score += cap_score
     factors += 1
 
@@ -659,6 +766,9 @@ def calculate_unicorn_score(scores):
 
 # Main evaluation function
 def evaluate(filename):
+    # Initialize NLTK for VADER
+    initialize_nltk()
+
     # Load all CSV data
     csvs = _load_all_csv_data()
 
@@ -666,7 +776,7 @@ def evaluate(filename):
     jsons = get_json(filename)
 
     # Print loaded data for debugging
-    print(jsons)
+    #print(jsons)
 
     # Calculate all metrics
     metrics = {
