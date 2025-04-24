@@ -1,34 +1,73 @@
-Working prototype r MVP
-Demo video and GitHub repo
-Ui mockup or dashboard
-Scoring logic and evaluation framework
+# Q-Hack25
 
-Automatisierte anfragen per mail wenn Daten nicht verfügbar
+Q-Hack25 is a prototype platform designed to automate the evaluation of startup pitch decks. It extracts key metrics from PDF presentations, enriches them with external data sources, and computes scores across various dimensions to assist in investment decision-making.
 
+## 🚀 Features
 
-Metrics:
-Team -> Founder, team, network strength
-Market -> market size (TAM,SAM,SOM), growth rate
-Product -> stage, USP, customer acquisition 
-Traction -> revenue growth (MRR,ARR), user growth/engagement, customer validation (testimonials, churn, NPS)
-Funding -> stage/amount, cap table strength, investors on board (also type)
-Financials/Effieciency -> burn rate, CACvsLTV, Unit economics
-Miscellaneous -> regulatory risk, geographic focus, timing/fad risk
+- **Automated PDF Parsing**: Extracts structured information from startup pitch decks.
+- **Data Enrichment**: Integrates data from APIs such as Crunchbase, LinkedIn, and PitchBook.
+- **Metric Computation**: Calculates scores for:
+  - **Team**: Founders' backgrounds, team composition, network strength.
+  - **Market**: TAM, SAM, SOM, growth rates.
+  - **Product**: Development stage, unique selling proposition, customer acquisition strategies.
+  - **Traction**: Revenue growth (MRR, ARR), user engagement, customer validation (testimonials, churn, NPS).
+  - **Funding**: Funding stage and amount, cap table strength, investors involved.
+  - **Financial Efficiency**: Burn rate, CAC vs. LTV, unit economics.
+  - **Miscellaneous**: Regulatory risks, geographic focus, timing/fad risks.
+- **Scoring Framework**: Utilizes machine learning models (e.g., scikit-learn, XGBoost) and Bayesian methods for evaluation.
+- **User Interface**: Frontend dashboard for visualizing scores and insights.
+- **Automated Notifications**: Sends emails when specific data points are unavailable or require attention.
 
+## 🛠️ Tech Stack
 
-Tools:
-API -> Crunchbase, Linkedin, pitchBook, web scraping
-Libs -> pandas/numpy data wrangling ; requests/aiohttp api calls ; beautiful soup/scrapy scraping
-Scoring -> scikit-learn/XG boost scoring models ; bayesian scoring/weighted scoring for deterministic ; fastAPI/Flask expose scoring APIs ; Pydantic validate incoming data ; airflow/prefect schedule data pipelines
-Datapackaging/Structuring -> pydantic/marshmallow structured schemas ; JSON/Parquet serialize data ; Celery for asynchronous tasks
-Logging monitoring testing -> loguru/sentry backend logging ; pytest score logic ; prometheus/Grafana monitoring 
+- **Backend**: Python, FastAPI
+- **Frontend**: React.js
+- **Data Processing**: pandas, numpy
+- **API Calls**: requests, aiohttp
+- **Web Scraping**: BeautifulSoup, Scrapy
+- **Machine Learning**: scikit-learn, XGBoost
 
-Structure:
-Enter startup -> search for infos -> clean -> transform -> evaluate which scores can be made -> evaluate -> send out email for missing informations -> show evaluated scores & info
+## 📂 Repository Structure
 
+- `q-hack-backend/`: Backend services and API endpoints.
+- `qhack-frontend/`: Frontend React application.
+- `email_module/`: Handles automated email notifications.
+- `logs/`: Logging and monitoring data.
+- `requirements.txt`: Python dependencies.
+- `README`: Project overview and documentation.
 
-Potential:
-personalizing 
-Give informations that have been used in process 
+## 📈 Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Plotins-hunch/Q-Hack25.git
+   cd Q-Hack25
+   ```
+
+2. **Set up the backend**:
+   ```bash
+   cd q-hack-backend
+   pip install -r requirements.txt
+   uvicorn main:app --reload
+   ```
+
+3. **Set up the frontend**:
+   ```bash
+   cd ../qhack-frontend
+   npm install
+   npm start
+   ```
+
+4. **Access the application**:
+   - Frontend: `http://localhost:3000`
+   - Backend API: `http://localhost:8000`
+
+## 📬 Contact
+
+For questions or collaboration inquiries, please contact the repository maintainer through GitHub.
+
+---
+
+*Note: This project is a prototype developed for the Q-Hack25 hackathon and is intended for demonstration purposes only.*
 
 
