@@ -1,0 +1,119 @@
+{
+  "company_name": "MySQL AB",
+  "team": {
+    "founders": [
+      {
+        "name": "Michael Widenius",
+        "background": "Co-founder and CTO of MySQL, with experience in database programming",
+        "university": "University of Helsinki",
+        "network_strength": 1,
+        "Followers": 1,
+        "degree": "Master's in Computer Science",
+        "age": 58,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Tapio Laakso Oy",
+            "title": "Software Engineer",
+            "start": "Jan 1985",
+            "end": "Dec 1994",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "David Axmark",
+        "background": "Co-founder and open source evangelist",
+        "university": "Royal Institute of Technology",
+        "network_strength": 500,
+        "Followers": 705,
+        "degree": "Bachelor's in Computer Science",
+        "age": 60,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Trolltech",
+            "title": "Consultant",
+            "start": "Jan 1995",
+            "end": "Dec 1999",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Approx. 65 staff across 14 countries",
+    "network_strength": "Strong community involvement and partnerships with several technology companies"
+  },
+  "market": {
+    "TAM": "Global database market estimated at billions",
+    "SAM": "Focused market share in open-source and lower-cost segments",
+    "SOM": "Estimated 20% by installed base",
+    "growth_rate": "50-80%"
+  },
+  "product": {
+    "stage": "Production with ongoing R&D in version 4.1 and 5.0",
+    "USP": "Open-source model with dual licensing, high performance, and reliability",
+    "customer_acquisition": "Deploying GPL software to gain market penetration and reduce acquisition costs"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "Not specified",
+      "ARR": "Targeting \u20ac100m in revenues in 6-7 years"
+    },
+    "user_growth": "Significant growth with installations in major companies like Yahoo and Google",
+    "engagement": "High engagement with a large active open-source community",
+    "customer_validation": {
+      "testimonials": [
+        "Yahoo and Google run operations on MySQL",
+        "Used by major corporations like 7-Eleven and Amazon"
+      ],
+      "churn": "Not specified",
+      "NPS": "Not specified"
+    },
+    "google_trend_score": 0
+  },
+  "funding": {
+    "stage": "Series funding",
+    "amount": "Total of EUR 4m in external investments",
+    "cap_table_strength": "Well-diversified with several institutional investors",
+    "investors_on_board": [
+      {
+        "name": "ABN AMRO Alfred Berg Industrifinans",
+        "type": "Institution"
+      },
+      {
+        "name": "Scope Capital",
+        "type": "Venture Capital"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "Not specified directly, but focused on profitability",
+    "CAC_vs_LTV": "Low customer acquisition cost due to open-source strategy",
+    "unit_economics": "Strong, with dual licensing model balancing free and commercial offerings"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Minimal due to open-source licensing",
+    "geographic_focus": "Head office in Uppsala, Sweden",
+    "timing_fad_risk": "Open-source model mitigates timing and fad risks"
+  },
+  "metrics": {}
+}

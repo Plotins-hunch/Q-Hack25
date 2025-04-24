@@ -1,0 +1,141 @@
+{
+  "company_name": "LinkedIn",
+  "team": {
+    "founders": [
+      {
+        "name": "Reid Hoffman",
+        "background": "Background includes positions as COO of PayPal and EVP of PayPal, with early career roles at Apple and Fujitsu",
+        "university": "University of Southern Indiana",
+        "network_strength": 67,
+        "Followers": 68,
+        "degree": "Bachelor of Science in Symbolic Systems",
+        "age": 55,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Beyond Words Leadership",
+            "title": "Marketing Assistant",
+            "start": "May 2019",
+            "end": "Present"
+          },
+          {
+            "company": "Snider-Blake Personnel",
+            "title": "Staffing Coordinator",
+            "start": "Aug 2021",
+            "end": "Present"
+          },
+          {
+            "company": "Bath & Body Works",
+            "title": "Retail Sales Associate / Cash Lead",
+            "start": "Aug 2018",
+            "end": "Present"
+          },
+          {
+            "company": "McDonald's",
+            "title": "Crew Member / Shift Manager",
+            "start": "May 2013",
+            "end": "Jul 2020"
+          },
+          {
+            "company": "University of Southern Indiana",
+            "title": "USI Special Events Manager",
+            "start": "Aug 2019",
+            "end": "Mar 2020"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      },
+      {
+        "name": "Allen Blue",
+        "background": "Background in product design and strategy, co-founder roles",
+        "university": "Stanford University",
+        "network_strength": 500,
+        "Followers": 8895,
+        "degree": "Bachelor of Arts in Drama",
+        "age": 52,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "PayPal",
+            "title": "Product Manager",
+            "start": "Jan 2000",
+            "end": "Dec 2002",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          },
+          {
+            "company": "Stanford University",
+            "title": "Lecturer",
+            "start": "Sep 2003",
+            "end": "Jun 2005",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Strong leadership with experience in major tech companies",
+    "network_strength": "Extensive professional networks leveraged for business growth"
+  },
+  "market": {
+    "TAM": "$27 billion",
+    "SAM": "$6.3 billion",
+    "SOM": "$650 million",
+    "growth_rate": "4.5"
+  },
+  "product": {
+    "stage": "Growth stage with a focus on increasing market penetration",
+    "USP": "Professional networking platform with a focus on building professional connections and career opportunities",
+    "customer_acquisition": "Utilizing both organic growth through user invitation and strategic partnerships"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "Significantly increasing monthly recurring revenue",
+      "ARR": "Annual run rate indicating strong future earnings"
+    },
+    "user_growth": "User base growing consistently with a strong engagement rate",
+    "engagement": "High user engagement metrics",
+    "customer_validation": {
+      "testimonials": [
+        "Endorsements from key industry professionals and satisfied users"
+      ],
+      "churn": "Low churn rate indicating strong user retention",
+      "NPS": "High Net Promoter Score"
+    },
+    "google_trend_score": 0
+  },
+  "funding": {
+    "stage": "Series A completed",
+    "amount": "$10 million raised",
+    "cap_table_strength": "Strong cap table with strategic investors",
+    "investors_on_board": [
+      {
+        "name": "Sequoia Capital",
+        "type": "Venture Capital"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "Efficient burn rate ensuring sustainability",
+    "CAC_vs_LTV": "Favorable ratio indicating healthy customer acquisition cost versus lifetime value",
+    "unit_economics": "Positive with scalable business model"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Moderate with ongoing compliance strategies",
+    "geographic_focus": "United States",
+    "timing_fad_risk": "Low with increasing trends towards online professional networking"
+  },
+  "metrics": {}
+}

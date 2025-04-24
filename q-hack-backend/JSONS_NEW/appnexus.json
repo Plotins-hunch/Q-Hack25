@@ -1,0 +1,100 @@
+{
+  "company_name": "AppNexus",
+  "team": {
+    "founders": [
+      {
+        "name": "Brian O\u2019Kelley",
+        "background": "former CTO of Right Media",
+        "university": "Princeton University",
+        "network_strength": "Strong connections in the ad tech industry",
+        "Followers": 5000,
+        "degree": "Bachelor of Science in Computer Science",
+        "age": 45,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Right Media",
+            "title": "CTO",
+            "start": "Jan 2005",
+            "end": "Jun 2007",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "network_strength_source": "chatgpt",
+        "Followers_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Michiel Nolet",
+        "background": "former Director of Analytics at Right Media"
+      }
+    ],
+    "team_strength": "Strong team with a background in scalable systems and media technology",
+    "network_strength": "Leveraging a strong network effect with applications and services"
+  },
+  "market": {
+    "TAM": "Global cloud service market",
+    "SAM": "Not explicitly specified",
+    "SOM": "Not explicitly specified",
+    "growth_rate": "Expected high growth due to global integration and scalability"
+  },
+  "product": {
+    "stage": "Beta launch scheduled for January 2008",
+    "USP": "Robust cloud infrastructure with a global network",
+    "customer_acquisition": "Targeting platforms and services that are natural SOA consumers"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "Not explicitly specified",
+      "ARR": "Not explicitly specified"
+    },
+    "user_growth": "Expected growth through phase expansions and strategic partnerships",
+    "engagement": "High engagement expected through robust ops tools",
+    "customer_validation": {
+      "testimonials": [
+        "SOA consumers favor the platform"
+      ],
+      "churn": "Not specified",
+      "NPS": "Not explicitly specified"
+    },
+    "google_trend_score": 0
+  },
+  "funding": {
+    "stage": "Seed round",
+    "amount": "$2-3MM, with additional $2MM personally guaranteed debt",
+    "cap_table_strength": "Strong financial backing to scale and expand",
+    "investors_on_board": [
+      {
+        "name": "First Round Capital",
+        "investment": "$1MM",
+        "name_source": "chatgpt",
+        "investment_source": "chatgpt"
+      },
+      {
+        "name": "Venrock",
+        "investment": "$1MM",
+        "name_source": "chatgpt",
+        "investment_source": "chatgpt"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "$200,000 per month",
+    "CAC_vs_LTV": "3:1",
+    "unit_economics": "Not explicitly specified"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Handling global network compliance",
+    "geographic_focus": "United States initially, expanding globally",
+    "timing_fad_risk": "Positioned as a high-end cloud market provider"
+  },
+  "metrics": {}
+}

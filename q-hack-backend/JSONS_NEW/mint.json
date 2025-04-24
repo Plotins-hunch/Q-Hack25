@@ -1,0 +1,178 @@
+{
+  "company_name": "Mint",
+  "team": {
+    "founders": [
+      {
+        "name": "Aaron Patzer",
+        "background": "CEO & Founder",
+        "university": "Princeton University",
+        "network_strength": 500,
+        "Followers": 7214,
+        "degree": "Bachelor of Science in Electrical Engineering",
+        "age": 40,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "IBM",
+            "title": "Software Engineer",
+            "start": "Jun 2002",
+            "end": "Aug 2006",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "David Michaels",
+        "background": "VP Engineering",
+        "university": "New York University",
+        "network_strength": 500,
+        "Followers": 3830,
+        "degree": "Master of Science in Computer Science",
+        "age": 38,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Google",
+            "title": "Engineering Manager",
+            "start": "Jan 2008",
+            "end": "Dec 2012",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Dave McClure",
+        "background": "Director Marketing",
+        "university": "Stanford University",
+        "network_strength": 137,
+        "Followers": 138,
+        "degree": "Bachelor of Arts in Economics",
+        "age": 45,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "SSOE Group",
+            "title": "Senior Mechanical Designer",
+            "start": "Jan 2004",
+            "end": "Present"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      },
+      {
+        "name": "Jason Putorti",
+        "background": "Lead Designer",
+        "university": "Carnegie Mellon University",
+        "network_strength": 250,
+        "Followers": 1500,
+        "degree": "Bachelor of Design",
+        "age": 35,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Facebook",
+            "title": "Product Designer",
+            "start": "Feb 2010",
+            "end": "Jan 2015",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "network_strength_source": "chatgpt",
+        "Followers_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt",
+        "linkedin_posts_last_30d_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Highly experienced management team",
+    "network_strength": "Integration partnerships (TurboTax) and experienced advisors including First Round Capital, Felicis Ventures, Ron Conway, Scott Cook"
+  },
+  "market": {
+    "TAM": "$388 Million",
+    "SAM": "31 Million Prospective Mint Users",
+    "SOM": "22 to 35 age range with 64% using online banking",
+    "growth_rate": "16"
+  },
+  "product": {
+    "stage": "Product in market",
+    "USP": "Easy and intuitive user interface with AI-based auto-sorting and user-specific saving opportunities",
+    "customer_acquisition": "SEO, internet advertising, word of mouth, PR tactics, and distribution partners"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "not specified",
+      "ARR": "not specified"
+    },
+    "user_growth": "Projected to reach 510.2k by 2010",
+    "engagement": "High service switching costs and seamless integration",
+    "customer_validation": {
+      "testimonials": [
+        "Satisfied users have little incentive to switch"
+      ],
+      "churn": "not specified",
+      "NPS": "not specified"
+    },
+    "google_trend_score": 85
+  },
+  "funding": {
+    "stage": "Investment",
+    "amount": "$3.0 Million",
+    "cap_table_strength": "IRR: 25%",
+    "investors_on_board": [
+      {
+        "name": "First Round Capital",
+        "type": "Venture Capital"
+      },
+      {
+        "name": "Felicis Ventures",
+        "type": "Venture Capital"
+      },
+      {
+        "name": "Ron Conway",
+        "type": "Angel Investor"
+      },
+      {
+        "name": "Scott Cook",
+        "type": "Intuit Founder & CEO"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "not specified",
+    "CAC_vs_LTV": "not specified",
+    "unit_economics": "Projected revenue growth through targeted advertising"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Low barriers to entry",
+    "geographic_focus": "United States",
+    "timing_fad_risk": "Developing a brand to assure high market penetration and growth rates"
+  },
+  "metrics": {}
+}

@@ -1,0 +1,117 @@
+{
+  "company_name": "Tinder",
+  "team": {
+    "founders": [
+      {
+        "name": "Sean Rad",
+        "background": "Entrepreneur and product manager",
+        "university": "University of Southern California",
+        "network_strength": 42,
+        "Followers": 45,
+        "degree": "Bachelor of Business Administration",
+        "age": 37,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Church",
+            "title": "Associate Pastor",
+            "start": "Jan 2010",
+            "end": "Dec 2011",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          },
+          {
+            "company": "NGO",
+            "title": "Senior Pastor",
+            "start": "Sep 2022",
+            "end": "2023"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      },
+      {
+        "name": "Jonathan Badeen",
+        "background": "Co-Founder and creator of the swipe feature",
+        "university": "Creighton University",
+        "network_strength": 500,
+        "Followers": 2184,
+        "degree": "Bachelor of Science in Computer Science",
+        "age": 39,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "All Star Flooring",
+            "title": "Co-Owner",
+            "start": "Aug 2014",
+            "end": "Present",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Strong founding team with complementary skills",
+    "network_strength": "Extensive network in technology and social platforms"
+  },
+  "market": {
+    "TAM": "50 billion",
+    "SAM": "10 billion",
+    "SOM": "1 billion",
+    "growth_rate": "3.75"
+  },
+  "product": {
+    "stage": "Growth",
+    "USP": "Simplified user interaction with swipe right for like",
+    "customer_acquisition": "Viral loop leveraging social media"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "500,000",
+      "ARR": "6,000,000"
+    },
+    "user_growth": "100% year over year",
+    "engagement": "High daily active users",
+    "customer_validation": {
+      "testimonials": [
+        "Exciting new way to meet people",
+        "Changed online dating"
+      ],
+      "churn": "Low",
+      "NPS": "75"
+    },
+    "google_trend_score": 0
+  },
+  "funding": {
+    "stage": "Series A",
+    "amount": "10 million",
+    "cap_table_strength": "Strong with strategic investors",
+    "investors_on_board": [
+      {
+        "name": "VC Fund X",
+        "type": "venture capital"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "200,000 per month",
+    "CAC_vs_LTV": "1:4",
+    "unit_economics": "Positive"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Low due to compliance with privacy norms",
+    "geographic_focus": "United States",
+    "timing_fad_risk": "Low, addressing a constant social need"
+  },
+  "metrics": {}
+}

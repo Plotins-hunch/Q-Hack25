@@ -1,0 +1,181 @@
+{
+  "company_name": "Intercom",
+  "team": {
+    "founders": [
+      {
+        "name": "Eoghan McCabe",
+        "background": "CEO, product, visual design",
+        "university": "Trinity College, Dublin",
+        "network_strength": 500,
+        "Followers": 7649,
+        "degree": "Bachelor of Science in Computer Science",
+        "age": 38,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Contrast",
+            "title": "Co-Founder",
+            "start": "Jan 2007",
+            "end": "Dec 2010",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Des Traynor",
+        "background": "COO, customer development, user experience design",
+        "university": "Maynooth University",
+        "network_strength": 500,
+        "Followers": 15417,
+        "degree": "Bachelor of Arts in Business and Management",
+        "age": 37,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Exceptional",
+            "title": "Co-Founder",
+            "start": "Jan 2008",
+            "end": "Dec 2011",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Ciaran Lee",
+        "background": "CTO, software engineering",
+        "university": "York St. John College",
+        "network_strength": 429,
+        "Followers": 435,
+        "degree": "Bachelor of Science in Software Engineering",
+        "age": 36,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Allied Content",
+            "title": "Managing Director",
+            "start": "Mar 2013",
+            "end": "Present"
+          },
+          {
+            "company": "Aravore Limited",
+            "title": "Owner",
+            "start": "Aug 2017",
+            "end": "Feb 2022"
+          },
+          {
+            "company": "Ciaran Lee",
+            "title": "Freelance Photographer",
+            "start": "2008",
+            "end": "Apr 2013"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt"
+      },
+      {
+        "name": "David Barrett",
+        "background": "front-end engineering",
+        "university": "NYU Stern School of Business",
+        "network_strength": 500,
+        "Followers": 865,
+        "degree": "Master of Business Administration",
+        "age": 35,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Qwitter",
+            "title": "Lead Developer",
+            "start": "Jan 2009",
+            "end": "Dec 2012",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Prolific speakers / bloggers about software design / development and SaaS business.",
+    "network_strength": "Ran Contrast for four years, launched Qwitter and Exceptional (both acquired)."
+  },
+  "market": {
+    "TAM": "$21 billion market, $93 billion in 2016",
+    "SAM": "Not specified",
+    "SOM": "Not specified",
+    "growth_rate": "3.75"
+  },
+  "product": {
+    "stage": "Product in development and testing since Jan, ready for public beta",
+    "USP": "Advanced in-app messaging and customer relationship management",
+    "customer_acquisition": "Private beta testers love the product"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "Not specified",
+      "ARR": "Not specified"
+    },
+    "user_growth": "Many are psyched to try it",
+    "engagement": "Not specified",
+    "customer_validation": {
+      "testimonials": [
+        "Private beta testers love the product"
+      ],
+      "churn": "Not specified",
+      "NPS": "Not specified"
+    },
+    "google_trend_score": 79
+  },
+  "funding": {
+    "stage": "$600k convertible note",
+    "amount": "$600,000",
+    "cap_table_strength": "18 months of runway",
+    "investors_on_board": [
+      {
+        "name": "Sequoia Capital",
+        "investment": "$200,000",
+        "name_source": "chatgpt",
+        "investment_source": "chatgpt"
+      },
+      {
+        "name": "Accel Partners",
+        "investment": "$400,000",
+        "name_source": "chatgpt",
+        "investment_source": "chatgpt"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "18 months of runway",
+    "CAC_vs_LTV": "Not specified",
+    "unit_economics": "Not specified"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Not specified",
+    "geographic_focus": "SaaS providers based in current operational areas",
+    "timing_fad_risk": "Market growing rapidly"
+  },
+  "metrics": {}
+}

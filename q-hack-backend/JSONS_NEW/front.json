@@ -1,0 +1,117 @@
+{
+  "company_name": "Front",
+  "team": {
+    "founders": [
+      {
+        "name": "Mathilde Collin",
+        "background": "CEO, co-founder",
+        "university": "HEC School of Management",
+        "network_strength": 500,
+        "Followers": 21377,
+        "degree": "Master's in Management",
+        "age": 34,
+        "gender": "Female",
+        "previous_employments": [
+          {
+            "company": "Google",
+            "title": "Product Manager",
+            "start": "Jan 2010",
+            "end": "Jul 2014",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Laurent Perrin",
+        "background": "CTO, co-founder",
+        "university": "Cranfield University",
+        "network_strength": 205,
+        "Followers": 208,
+        "degree": "Master's in Computer Science",
+        "age": 36,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Microsoft",
+            "title": "Software Engineer",
+            "start": "Feb 2008",
+            "end": "Dec 2013",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Unfair access to pool of excellent French engineers",
+    "network_strength": "Supported by angel investors like Paul Buchheit, Elad Gil, among others"
+  },
+  "market": {
+    "TAM": "Not Clearly Defined",
+    "SAM": "Not Clearly Defined",
+    "SOM": "Not Clearly Defined",
+    "growth_rate": "54.00"
+  },
+  "product": {
+    "stage": "Collaborative Email Platform",
+    "USP": "Shared inboxes; integrated communication; open API",
+    "customer_acquisition": "Organic growth through sales, marketing, and word-of-mouth"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "5.4 times growth over 12 months",
+      "ARR": "Reached $1.4m"
+    },
+    "user_growth": "Consistent organic growth",
+    "engagement": "High customer satisfaction with testimonials",
+    "customer_validation": {
+      "testimonials": [
+        "\u2018Front has a great user experience!\u2019",
+        "\u2018A wonderfully useful tool that has saved us time and energy.\u2019"
+      ],
+      "churn": "~3% monthly user churn",
+      "NPS": "High satisfaction indicated but exact number not provided"
+    },
+    "google_trend_score": 87
+  },
+  "funding": {
+    "stage": "Series A",
+    "amount": "$10M",
+    "cap_table_strength": "Strong backing, including angel investors",
+    "investors_on_board": [
+      {
+        "name": "Stewart Butterfield",
+        "type": "Series Seed"
+      },
+      {
+        "name": "Eoghan McCabe",
+        "type": "Series Seed"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "$90k",
+    "CAC_vs_LTV": "Paid acquisition unit economics positive",
+    "unit_economics": "Product led with efficient growth"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Not explicitly described",
+    "geographic_focus": "France",
+    "timing_fad_risk": "Low, as email remains a critical business tool"
+  },
+  "metrics": {}
+}
