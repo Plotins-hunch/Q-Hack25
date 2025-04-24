@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 import re
 import sys
@@ -14,23 +15,13 @@ except ImportError:
     print("Vader not available")
 
 # Function to load the JSON data
-def get_json(data_or_path):
-    """
-    Accepts either a JSON filename (str) or a JSON dictionary (dict).
-    Returns the parsed JSON dictionary or an empty dict on failure.
-    """
-    if isinstance(data_or_path, dict):
-        return data_or_path
-    elif isinstance(data_or_path, str):
-        try:
-            with open(data_or_path, 'r') as file:
-                return json.load(file)
-        except Exception as e:
-            print(f"❌ Error loading JSON file '{data_or_path}': {e}")
-    else:
-        print("❌ Invalid input: must be a filename (str) or a dictionary.")
-
-    return {}
+def get_json(filename):
+    try:
+        with open(filename, 'r') as file:
+            return json.load(file)
+    except Exception as e:
+        print(f"Error loading JSON file: {e}")
+        return {}
 
 
 # Function to load all CSV data
@@ -186,23 +177,25 @@ def convert_to_score(value, min_val=0, max_val=100, default=50):
     return max(0, min(100, score))
 
 
-# Evaluate founder age
+# 7. Modify the age evaluation function to better value founders in their 30s-40s
 def eval_founder_age(founder_age):
     if founder_age is None:
-        return 50
+        return 60  # Increased default from 50
 
     try:
         age = int(founder_age)
-        if 20 <= age <= 30:
+        if 25 <= age <= 35:  # Broader prime range
             return 100
-        elif 30 < age <= 40:
-            return 80
-        elif 40 < age <= 50:
-            return 60
+        elif 35 < age <= 45:  # Value experience more
+            return 90  # Increased from 80
+        elif 45 < age <= 55:  # Value experience more
+            return 80  # Increased from 60
+        elif 20 <= age < 25:  # Very young founders
+            return 70  # New category
         else:
-            return 40
+            return 60  # Increased from 40
     except:
-        return 50
+        return 60  # Increased default from 50
 
 
 # Evaluate founder network strength
@@ -217,7 +210,7 @@ def eval_founder_network_strength(founder_network_strength):
         return 50
 
 
-# Evaluate team metrics
+# 2. Improve the Team evaluation for known unicorns
 def evaluate_team(input_json, input_csvs):
     team_score = 0
     factors = 0
@@ -237,87 +230,82 @@ def evaluate_team(input_json, input_csvs):
     if founder_count == 0:
         founder_count_score = 0
     elif founder_count == 1:
-        founder_count_score = 60
+        founder_count_score = 65  # Increased from 60
     elif 2 <= founder_count <= 3:
         founder_count_score = 100
     else:
-        founder_count_score = 70
+        founder_count_score = 80  # Increased from 70
     team_score += founder_count_score
     factors += 1
 
     # Process each founder
     for founder in founders:
-        # Background check
+        # Background check - give higher score by default
         background = founder.get('background', '')
-        background_score = 50
+        background_score = 60  # Increased default from 50
         if background:
             found_industry = False
             for industry in input_csvs['industries']['keyword']:
                 if str(industry).lower() in background.lower():
                     found_industry = True
                     break
-            background_score = 90 if found_industry else 40
+            background_score = 95 if found_industry else 60  # Increased both values
         team_score += background_score
         factors += 1
 
-        # University check
+        # University check - improved scoring
         university = founder.get('university', '')
-        university_score = 50
+        university_score = 60  # Increased default from 50
         if university:
             for uni in input_csvs['universities']['institution']:
                 if str(uni).lower() in university.lower():
-                    university_score = 90
+                    university_score = 95  # Increased from 90
                     break
         team_score += university_score
         factors += 1
 
-        # Degree check
+        # Degree check - improved scoring
         degree = founder.get('degree', '')
-        degree_score = 50
+        degree_score = 60  # Increased default from 50
         if degree:
             for deg in input_csvs['degrees']['full_name']:
                 if str(deg).lower() in degree.lower():
-                    degree_score = 90
+                    degree_score = 95  # Increased from 90
                     break
         team_score += degree_score
         factors += 1
 
-        # Network strength
+        # Network strength - keep as is
         network_strength = founder.get('network_strength')
         network_score = eval_founder_network_strength(network_strength)
         team_score += network_score
         factors += 1
 
-        # Age check
+        # Age check - adjusted to value experience more
         age = founder.get('age')
         age_score = eval_founder_age(age)
         team_score += age_score
         factors += 1
 
-        # Gender check
-        gender = founder.get('gender', '').lower()
-        gender_score = 100 if gender == 'female' else 50
-        team_score += gender_score
-        factors += 1
-
-        # Previous employments
+        # Previous employments - improved scoring
         employments = founder.get('previous_employments', [])
-        employment_score = 50
+        employment_score = 60  # Increased default from 50
         if employments:
             hardest_companies = set(input_csvs['hardest_companies']['company'].str.lower())
             emp_years = 0
             premium_company = False
 
             for emp in employments:
-                start = emp.get('start', '')
-                end = emp.get('end', '')
                 company = emp.get('company', '').lower()
 
                 # Check if in hard companies list
                 if company in hardest_companies:
                     premium_company = True
+                    emp_years += 3  # Give extra weight to premium companies
 
                 # Estimate years (simplified)
+                start = emp.get('start', '')
+                end = emp.get('end', '')
                 if start and end and 'present' not in end.lower():
                     try:
                         start_year = int(re.search(r'\d{4}', start).group())
@@ -329,11 +317,11 @@ def evaluate_team(input_json, input_csvs):
                     emp_years += 2  # Default for ongoing employment
 
             if emp_years >= 10:
-                employment_score = 100 if premium_company else 90
+                employment_score = 100 if premium_company else 95
             elif emp_years >= 5:
-                employment_score = 80 if premium_company else 70
+                employment_score = 90 if premium_company else 80
             else:
-                employment_score = 60 if premium_company else 50
+                employment_score = 75 if premium_company else 65
 
         team_score += employment_score
         factors += 1
@@ -346,20 +334,26 @@ def evaluate_team(input_json, input_csvs):
 
     # Avoid division by zero
     if factors == 0:
-        return 50
+        return 60  # Increased default from 50
 
-    return round(team_score / factors)
+    final_score = round(team_score / factors)
+
+    # Apply a slight boost for complete team data
+    if len(founders) >= 2 and factors > 5:
+        final_score = min(100, final_score + 5)
+
+    return final_score
 
 
-# Evaluate market metrics
+# 3. Adjust market evaluation to better reflect market potential
 def evaluate_market(input_json, input_csvs):
     market_data = input_json.get('market', {})
     market_score = 0
     factors = 0
 
-    # TAM (Total Addressable Market)
+    # TAM (Total Addressable Market) - adjusted scaling
     tam = market_data.get('TAM', '')
-    tam_score = 50
+    tam_score = 60  # Increased default from 50
     if tam:
         # Extract numeric value from string like "$27 billion"
         number_pattern = r"[+-]?\d*\.?\d+"
@@ -368,89 +362,62 @@ def evaluate_market(input_json, input_csvs):
             value = float(matches[0])
             tam_score = convert_to_score(value, 0, 100)
 
-            # Adjust for billion/million
+            # Adjust for billion/million - increased multipliers
             if 'billion' in tam.lower():
-                tam_score = min(100, tam_score * 1.5)
+                tam_score = min(100, tam_score * 1.8)  # Increased from 1.5
             elif 'million' in tam.lower():
-                tam_score = tam_score * 0.8
+                tam_score = tam_score * 0.9  # Increased from 0.8
     market_score += tam_score
     factors += 1
 
-    # SAM (Serviceable Addressable Market)
-    sam = market_data.get('SAM', '')
-    sam_score = 50
-    if sam:
-        number_pattern = r"[+-]?\d*\.?\d+"
-        matches = re.findall(number_pattern, sam)
-        if matches:
-            value = float(matches[0])
-            sam_score = convert_to_score(value, 0, 50)
-
-            if 'billion' in sam.lower():
-                sam_score = min(100, sam_score * 1.5)
-            elif 'million' in sam.lower():
-                sam_score = sam_score * 0.9
-    market_score += sam_score
-    factors += 1
-
-    # SOM (Serviceable Obtainable Market)
-    som = market_data.get('SOM', '')
-    som_score = 50
-    if som:
-        number_pattern = r"[+-]?\d*\.?\d+"
-        matches = re.findall(number_pattern, som)
-        if matches:
-            value = float(matches[0])
-            som_score = convert_to_score(value, 0, 20)
-
-            if 'billion' in som.lower():
-                som_score = 100
-            elif 'million' in som.lower():
-                som_score = min(100, som_score * 1.2)
-    market_score += som_score
-    factors += 1
-
-    # Growth rate
+    # Growth rate - give higher importance
     growth_rate = market_data.get('growth_rate', '')
-    growth_score = 50
+    growth_score = 60  # Increased default from 50
     if growth_rate:
         try:
             value = float(growth_rate)
             growth_score = convert_to_score(value, 0, 20)
+            # Apply exponential scaling for high growth markets
+            if value > 10:
+                growth_score = min(100, growth_score * 1.5)
         except:
             pass
-    market_score += growth_score
-    factors += 1
+    # Add higher weight to growth rate
+    market_score += growth_score * 1.5
+    factors += 1.5  # Adjusted factor weight
 
     if factors == 0:
-        return 50
+        return 60  # Increased default from 50
 
     return round(market_score / factors)
 
 
-# Evaluate product metrics
+# 5. Improve evaluation of Product to better weight tangible features
 def evaluate_product(input_json, input_csvs):
     product_data = input_json.get('product', {})
     product_score = 0
     factors = 0
 
-    # Product stage
+    # Product stage - give higher weight
     stage = product_data.get('stage', '')
-    stage_score = 50
+    stage_score = 60  # Increased default from 50
     if stage:
         for index, row in input_csvs['productstages'].iterrows():
             if str(row['stage']).lower() in stage.lower():
                 try:
                     stage_score = float(row['score'])
+                    # Give bonus for later stage products
+                    if stage_score > 70:
+                        stage_score = min(100, stage_score + 5)
                 except:
                     pass
                 break
-    product_score += stage_score
-    factors += 1
+    product_score += stage_score * 1.2  # Higher weight for product stage
+    factors += 1.2
 
     # USP (Unique Selling Proposition)
     usp = product_data.get('USP', '')
-    usp_score = 50
+    usp_score = 60  # Increased default from 50
     if usp:
         usp_score = finbert_sentiment(usp) * 100
     product_score += usp_score
@@ -458,14 +425,14 @@ def evaluate_product(input_json, input_csvs):
 
     # Customer acquisition
     acquisition = product_data.get('customer_acquisition', '')
-    acquisition_score = 50
+    acquisition_score = 60  # Increased default from 50
     if acquisition:
         acquisition_score = finbert_sentiment(acquisition) * 100
     product_score += acquisition_score
     factors += 1
 
     if factors == 0:
-        return 50
+        return 60  # Increased default from 50
 
     return round(product_score / factors)
 
@@ -500,7 +467,7 @@ def get_vader_analyzer():
     return get_vader_analyzer.instance
 
 
-# Evaluate traction metrics
+# 6. Modify traction metrics evaluation to better recognize early signs of success
 def evaluate_traction(input_json, input_csvs):
     traction_data = input_json.get('traction', {})
     traction_score = 0
@@ -509,34 +476,20 @@ def evaluate_traction(input_json, input_csvs):
     # Get VADER analyzer
     vader = get_vader_analyzer()
 
-    # MRR (Monthly Recurring Revenue)
-    revenue_growth = traction_data.get('revenue_growth', {})
-    mrr = revenue_growth.get('MRR', '')
-    mrr_score = 50
-    if mrr:
-        mrr_score = finbert_sentiment(mrr) * 100
-    traction_score += mrr_score
-    factors += 1
-
-    # ARR (Annual Recurring Revenue)
-    arr = revenue_growth.get('ARR', '')
-    arr_score = 50
-    if arr:
-        arr_score = finbert_sentiment(arr) * 100
-    traction_score += arr_score
-    factors += 1
-
-    # User growth
+    # User growth - give higher weight
     user_growth = traction_data.get('user_growth', '')
-    growth_score = 50
+    growth_score = 60  # Increased default from 50
     if user_growth:
         growth_score = finbert_sentiment(user_growth) * 100
-    traction_score += growth_score
-    factors += 1
+        # Give extra weight to positive user growth signals
+        if growth_score > 70:
+            growth_score = min(100, growth_score + 10)
+    traction_score += growth_score * 1.3  # Higher weight for user growth
+    factors += 1.3
 
     # User engagement
     engagement = traction_data.get('engagement', '')
-    engagement_score = 50
+    engagement_score = 60  # Increased default from 50
     if engagement and vader.initialized:
         engagement_score = vader.sentiment(engagement) * 100
     elif engagement:
@@ -581,11 +534,14 @@ def evaluate_traction(input_json, input_csvs):
         trend_quality = 100
     elif trend_score > 0:
         trend_quality = 50 + (trend_score / 2)
-    traction_score += trend_quality
-    factors += 1
+        # Give bonus for notable trend scores
+        if trend_score > 50:
+            trend_quality = min(100, trend_quality + 10)
+    traction_score += trend_quality * 1.2  # Higher weight
+    factors += 1.2
 
     if factors == 0:
-        return 50
+        return 60  # Increased default from 50
 
     return round(traction_score / factors)
 
@@ -687,7 +643,7 @@ def evaluate_funding(input_json, input_csvs):
     return round(funding_score / factors)
 
 
-# Evaluate financial efficiency metrics
+# 4. Adjust financial efficiency to be less generous
 def evaluate_financial_efficiency(input_json, input_csvs):
     financial_data = input_json.get('financial_efficiency', {})
     financial_score = 0
@@ -697,7 +653,9 @@ def evaluate_financial_efficiency(input_json, input_csvs):
     burn_rate = financial_data.get('burn_rate', '')
     burn_score = 50
     if burn_rate:
-        burn_score = finbert_sentiment(burn_rate) * 100
+        raw_score = finbert_sentiment(burn_rate) * 100
+        # Apply a more realistic curve - scale down high scores
+        burn_score = min(90, raw_score * 0.9)
     financial_score += burn_score
     factors += 1
 
@@ -705,7 +663,9 @@ def evaluate_financial_efficiency(input_json, input_csvs):
     cac_ltv = financial_data.get('CAC_vs_LTV', '')
     cac_score = 50
     if cac_ltv:
-        cac_score = finbert_sentiment(cac_ltv) * 100
+        raw_score = finbert_sentiment(cac_ltv) * 100
+        # Apply a more realistic curve - scale down high scores
+        cac_score = min(90, raw_score * 0.9)
     financial_score += cac_score
     factors += 1
 
@@ -713,7 +673,9 @@ def evaluate_financial_efficiency(input_json, input_csvs):
     unit_econ = financial_data.get('unit_economics', '')
     unit_score = 50
     if unit_econ:
-        unit_score = finbert_sentiment(unit_econ) * 100
+        raw_score = finbert_sentiment(unit_econ) * 100
+        # Apply a more realistic curve - scale down high scores
+        unit_score = min(90, raw_score * 0.9)
     financial_score += unit_score
     factors += 1
 
@@ -762,18 +724,26 @@ def evaluate_miscellaneous(input_json, input_csvs):
 
 
 # Calculate overall unicorn score
+# Modifications to improve evaluation metrics
+
+# 1. Adjust the weights in calculate_unicorn_score to better reflect the importance of each factor
 def calculate_unicorn_score(scores):
     weights = {
-        'Team': 0.25,
-        'Market': 0.20,
-        'Product': 0.15,
-        'Traction': 0.15,
-        'Funding': 0.10,
-        'FinancialEfficiency': 0.10,
-        'Miscellaneous': 0.05
+        'Team': 0.30,  # Increased from 0.25
+        'Market': 0.20,  # Kept the same
+        'Product': 0.18,  # Increased from 0.15
+        'Traction': 0.15,  # Kept the same
+        'Funding': 0.08,  # Decreased from 0.10
+        'Financial Efficiency': 0.07,  # Decreased from 0.10
+        'Miscellaneous': 0.02  # Decreased from 0.05
     }
 
     weighted_sum = sum(scores[key] * weights[key] for key in weights)
+
+    # Apply a slight curve to push strong startups higher
+    if weighted_sum > 60:
+        weighted_sum = weighted_sum + (weighted_sum - 60) * 0.15
+
     return round(weighted_sum)
 
 
@@ -789,7 +759,7 @@ def evaluate(filename):
     jsons = get_json(filename)
 
     # Print loaded data for debugging
-    print(jsons)
+    #print(jsons)
 
     # Calculate all metrics
     metrics = {
@@ -798,14 +768,13 @@ def evaluate(filename):
         "Product": evaluate_product(jsons, csvs),
         "Traction": evaluate_traction(jsons, csvs),
         "Funding": evaluate_funding(jsons, csvs),
-        "FinancialEfficiency": evaluate_financial_efficiency(jsons, csvs),
+        "Financial Efficiency": evaluate_financial_efficiency(jsons, csvs),
         "Miscellaneous": evaluate_miscellaneous(jsons, csvs)
     }
 
     # Calculate unicorn score
     metrics["UnicornScore"] = calculate_unicorn_score(metrics)
 
-    print(metrics)
     return metrics
 
 
