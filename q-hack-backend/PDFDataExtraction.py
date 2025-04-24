@@ -449,14 +449,7 @@ Return ONLY the completed JSON.
 # -----------------------------
 
 def main(pdf_path=None):
-    pdf_path = os.path.join(os.path.dirname(__file__), "Uber.pdf")
-
-    # if "airbnb" in pdf_path.lower() or pdf_path is None:
-    #     mock_path = os.path.join(os.path.dirname(__file__), "MockOutput.json")
-    #     with open(mock_path, "r") as f:
-    #         mock_data = json.load(f)
-    #     print("Mock data returned from MockOutput.json")
-    #     return mock_data
+    # pdf_path = os.path.join(os.path.dirname(__file__), "Tinder.pdf")
 
     # Define cache directory and output path
     os.makedirs("./PreviouslyCalculatedSlidedecks", exist_ok=True)
