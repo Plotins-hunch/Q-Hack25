@@ -7,6 +7,7 @@ from openai import OpenAI
 import datetime
 import copy
 import re
+from AnalyzeTrends import add_google_trend_score
 
 # -----------------------------
 # 0. Load Environment Variables
@@ -94,7 +95,8 @@ def structure_pdf_with_assistant(pdf_path: str) -> dict:
             "1. 'growth_rate' must be a real number formatted as a string (e.g., '3.75'). "
             "2. 'geographic_focus' must explicitly mention the country where the startup is based. "
             "3. The structure of the response must exactly match the schema provided by the user. "
-            "4. Do not include nulls or additional fields not present in the schema. "
+            "4. Do not add additional fields not present in the schema. "
+            "5. The Pitchdeck you are receiving is biased towards the company that created it. Please try to be objective when filling the JSON"
         ),
     )
 
@@ -302,22 +304,27 @@ def enrich_with_linkedin(data: dict) -> dict:
             continue
 
         # Score profiles
+        # Score all profiles
         scored_profiles = [
             (profile_match_score(p, company_name, first, last), p)
             for p in profiles
         ]
-        scored_profiles = [sp for sp in scored_profiles if sp[0] > 0]
 
         if scored_profiles:
-            # Best match found: extract real data
+            # Always select the best scoring profile — even if score is low
             best_score, prof = max(scored_profiles, key=lambda sp: sp[0])
-            print(f"[INFO] Selected profile {prof.get('url')} with score {best_score}")
+            if best_score <= 0:
+                print(f"[WARN] No confident match found for {founder['name']}, falling back to highest followers")
+            else:
+                print(f"[INFO] Selected profile {prof.get('url')} with score {best_score}")
 
             founder["university"] = (
-                prof.get("educations_details")
-                or (prof.get("education") or [{}])[0].get("title")
+                    prof.get("educations_details")
+                    or (prof.get("education") or [{}])[0].get("title")
             )
             founder["network_strength"] = prof.get("connections")
+            founder["Followers"] = prof.get("followers")
+            founder["degree"] = prof.get("degree")
             founder["age"] = prof.get("age")
             founder["gender"] = prof.get("gender")
             experience = prof.get("experience") or []
@@ -339,9 +346,10 @@ def enrich_with_linkedin(data: dict) -> dict:
             ]
             founder["linkedin_posts_last_30d"] = len(recent)
         else:
-            # No strong match: assign null defaults
-            print(f"[WARN] No strong match found for {founder['name']}")
+            # No profiles at all
+            print(f"[WARN] No profiles found for {founder['name']}")
             founder["university"] = None
+            founder["degree"] = None
             founder["network_strength"] = None
             founder["age"] = None
             founder["gender"] = None
@@ -435,14 +443,12 @@ Return ONLY the completed JSON.
     return refined
 
 
-
-
 # -----------------------------
 # 3. Main Pipeline
 # -----------------------------
 
 def main(pdf_path=None):
-    if "airbnb" in pdf_path.lower() or pdf_path.isNan:
+    if "airbnb" in pdf_path.lower() or pdf_path is None:
         mock_path = os.path.join(os.path.dirname(__file__), "MockOutput.json")
         with open(mock_path, "r") as f:
             mock_data = json.load(f)
@@ -460,6 +466,10 @@ def main(pdf_path=None):
 
     # Add metrics calculations
     refined["metrics"] = {}
+
+    # 🆕 Add Google Trends enrichment
+    company_name = refined.get("company_name", "Unknown")
+    refined = add_google_trend_score(refined, company_name)
 
     # If called as a module, return the data
     if pdf_path != "./airbnb.pdf":
