@@ -795,7 +795,7 @@ def evaluate(filename):
         "Product": evaluate_product(jsons, csvs),
         "Traction": evaluate_traction(jsons, csvs),
         "Funding": evaluate_funding(jsons, csvs),
-        "Financial Efficiency": evaluate_financial_efficiency(jsons, csvs),
+        "FinancialEfficiency": evaluate_financial_efficiency(jsons, csvs),
         "Miscellaneous": evaluate_miscellaneous(jsons, csvs)
     }
 
