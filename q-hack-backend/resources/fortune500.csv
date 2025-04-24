@@ -1,0 +1,501 @@
+name;rank
+Walmart;1
+Amazon;2
+Apple;3
+CVS;4
+UnitedHealth Group;5
+Berkshire Hathaway;6
+McKesson;7
+AmerisourceBergen;8
+Alphabet;9
+Exxon Mobil;10
+AT&T;11
+Costco;12
+Cigna;13
+Cardinal Health;14
+Microsoft;15
+Walgreens;16
+Kroger;17
+Home Depot;18
+J.P. Morgan;19
+Verizon;20
+Ford Motor;21
+General Motors;22
+Anthem;23
+Centene;24
+Fannie Mae;25
+Comcast;26
+Chevron;27
+Dell;28
+Bank of America;29
+Target;30
+Lowe's;31
+Marathon;32
+Citigroup;33
+Facebook;34
+United Parcel Service;35
+Johnson & Johnson;36
+Wells Fargo;37
+General Electric;38
+State Farm Insurance;39
+Intel;40
+Humana;41
+IBM;42
+Procter & Gamble;43
+PepsiCo;44
+FedEx;45
+MetLife;46
+Freddie Mac;47
+Phillips 66;48
+Lockheed Martin;49
+Walt Disney;50
+Archer Daniels Midland;51
+Albertsons;52
+Valero Energy;53
+Boeing;54
+Prudential Financial;55
+Hewlett-Packard;56
+Raytheon;57
+StoneX;58
+Goldman Sachs Group;59
+Sysco;60
+Morgan Stanley;61
+HCA;62
+Cisco Systems;63
+Charter;64
+Merck;65
+Best Buy;66
+New York Life Insurance;67
+AbbVie;68
+Publix Super Markets;69
+Allstate;70
+Liberty Mutual;71
+AIG;72
+Tyson Foods;73
+Progressive;74
+Bristol-Myers Squibb;75
+Nationwide;76
+Pfizer;77
+Caterpillar;78
+TIAA;79
+Oracle;80
+Energy Transfer;81
+Dow;82
+American Express;83
+General Dynamics;84
+Nike;85
+Northrop Grumman;86
+USAA;87
+Deere;88
+Abbott Laboratories;89
+Northwestern Mutual;90
+Dollar General;91
+Exelon;92
+Coca-Cola;93
+Honeywell International;94
+Thermo Fisher Scientific;95
+3M;96
+TJX;97
+Travelers;98
+Capital One;99
+Tesla;100
+Philip Morris International;101
+Arrow Electronics;102
+CHS;103
+Jabil;104
+Enterprise Products;105
+Hewlett Packard Enterprise;106
+United Natural Foods;107
+Mondelez International;108
+Viacom;109
+Kraft Heinz;110
+Dollar Tree;111
+Amgen;112
+U.S. Bancorp;113
+Performance Food Group;114
+Netflix;115
+Gilead Sciences;116
+Synnex;117
+Eli Lilly;118
+Truist Financial;119
+PNC Financial Services;120
+Broadcom;121
+CB Richard Ellis;122
+Massachusetts Mutual;123
+Qualcomm;124
+Starbucks;125
+Duke Energy;126
+Plains GP Holdings;127
+US Foods;128
+Lennar;129
+Danaher;130
+Aflac;131
+Rite Aid;132
+Visa;133
+PayPal;134
+Micron Technology;135
+CarMax;136
+Salesforce;137
+Altria Group;138
+Lumen Technologies;139
+Baker Hughes;140
+International Paper;141
+Hartford Financial Services;142
+Penske Automotive Group;143
+DuPont;144
+AutoNation;145
+Southern;146
+World Fuel Services;147
+D.R. Horton;148
+Nucor;149
+Cummins;150
+NGL Energy Partners;151
+DXC Technology;152
+Union Pacific;153
+Whirlpool;154
+Molina Healthcare;155
+ConocoPhillips;156
+McDonald's;157
+Kimberly-Clark;158
+Paccar;159
+PG&E;160
+CDW;161
+Sherwin-Williams;162
+L3Harris Technologies;163
+Macy's;164
+Manpower;165
+NextEra Energy;166
+Tenet Healthcare;167
+Avnet;168
+General Mills;169
+WestRock;170
+Carrier;171
+Lincoln National;172
+Genuine Parts;173
+American Airlines Group;174
+Marsh & McLennan;175
+Applied Materials;176
+Becton Dickinson;177
+Delta Air Lines;178
+Lear;179
+Bank of New York Mellon;180
+Emerson Electric;181
+Western Digital;182
+Occidental Petroleum;183
+Nvidia;184
+Cognizant;185
+Jones Lang LaSalle;186
+Synchrony Financial;187
+Colgate-Palmolive;188
+AECOM;189
+XPO Logistics;190
+CH Robinson;191
+BlackRock;192
+Dominion Energy;193
+Rocket Companies;194
+Kohl's;195
+Fluor;196
+DISH Network;197
+BJ's Wholesale Club;198
+Tenneco;199
+United Airlines;200
+Mastercard;201
+Waste Management;202
+PBF Energy;203
+American Electric Power;204
+Fiserv;205
+Principal Financial;206
+Reinsurance Group of America;207
+ADP;208
+Stanley Black & Decker;209
+Texas Instruments;210
+Halliburton;211
+Stryker;212
+Estee Lauder;213
+Corteva;214
+Freeport-McMoRan;215
+Qurate Retail;216
+Wayfair;217
+Laboratory of America;218
+Land O'Lakes;219
+PPG;220
+Gap;221
+Kellogg;222
+Parker Hannifin;223
+Core-Mark;224
+Jacobs Engineering Group;225
+Edison International;226
+Guardian Life of America;227
+Biogen;228
+Omnicom;229
+Unum Group;230
+Lithia Motors;231
+American Family Insurance;232
+Discover Financial Services;233
+Adobe;234
+Aramark;235
+Otis Worldwide;236
+Ecolab;237
+AutoZone;238
+Loews;239
+Illinois Tool Works;240
+Fidelity National Information Services;241
+Ross Stores;242
+Peter Kiewit Sons;243
+Equitable Holdings;244
+WESCO;245
+Goodyear Tire & Rubber;246
+Fox;247
+Leidos Holdings;248
+Consolidated Edison;249
+DTE Energy;250
+Charles Schwab;251
+State Street;252
+Ameriprise Financial;253
+Viatris;254
+Sempra Energy;255
+Farmers Insurance Exchange;256
+Bath & Body Works;257
+W.W. Grainger;258
+Community Health Systems;259
+Ball;260
+Berry Global Group;261
+Kinder Morgan;262
+VF;263
+Baxter International;264
+Textron;265
+LKQ;266
+Keurig Dr Pepper;267
+O'Reilly Automotive;268
+Crown Holdings;269
+Universal Health Services;270
+DaVita;271
+Xcel Energy;272
+Newmont;273
+Vistra Energy;274
+IQVIA Holdings;275
+eBay;276
+Corning;277
+Quanta Services;278
+HollyFrontier;279
+Bed Bath & Beyond;280
+Uber Technologies;281
+Mutual of Omaha;282
+Conagra Brands;283
+PulteGroup;284
+EOG Resources;285
+Group 1 Automotive;286
+Ally Financial;287
+Fidelity National Financial;288
+Nordstrom;289
+Discovery;290
+Tractor Supply;291
+CSX;292
+Marriott International;293
+FirstEnergy;294
+BorgWarner;295
+Edward Jones (Jones Financial Companies);295
+Republic Services;297
+Henry Schein;298
+Expeditors International of Washington;299
+Entergy;300
+Advance Auto Parts;301
+Assurant;302
+Pacific Life;303
+Lam Research;304
+Boston Scientific;305
+Altice USA;306
+Norfolk Southern;307
+Sonic Automotive;308
+AMD;309
+United States Steel;310
+Markel;311
+ODP;312
+AES;313
+Molson Coors;314
+J.B. Hunt;315
+KKR;316
+Hormel Foods;317
+Public Service Enterprise Group;318
+Steel Dynamics;319
+Dick's Sporting Goods;320
+Mohawk;321
+Murphy USA;322
+Square;323
+Quest Diagnostics;324
+Newell Brands;325
+Liberty Media;326
+Huntington Ingalls;327
+Cheniere Energy;328
+SpartanNash;329
+Alcoa;330
+AGCO;331
+Voya Financial;332
+NRG Energy;333
+Interpublic Group;334
+Campbell Soup;335
+Southwest Airlines;336
+News;337
+Eversource Energy;338
+Alleghany;339
+Air Products & Chemicals;340
+Auto-Owners Insurance;341
+CenterPoint Energy;342
+Reliance Steel & Aluminum;343
+EMCOR Group;344
+Owens & Minor;345
+Mosaic;346
+Erie Insurance Group;347
+Genworth Financial;348
+Amphenol;349
+Builders FirstSource;350
+Oneok;351
+United Rentals;352
+Brighthouse Financial;353
+Regeneron Pharmaceuticals;354
+Eastman Chemical;355
+CommScope Holding;356
+Ryder System;357
+Fifth Third Bancorp;358
+Constellation Brands;359
+Insight Enterprises;360
+Global Partners;361
+Univar Solutions;362
+Yum China Holdings;363
+Targa Resources;364
+Intercontinental Exchange;365
+Andersons;366
+Raymond James Financial;367
+Thor;368
+Thrivent Financial for Lutherans;369
+Hershey;370
+Casey's General Stores;371
+W.R. Berkley;372
+Activision Blizzard;373
+Western & Southern Financial Group;374
+American Tower;375
+American Financial Group;376
+Darden Restaurants;377
+J.M. Smucker;378
+Williams;379
+Intuit;380
+Citizens Financial Group;381
+PPL;382
+NVR;383
+Westinghouse Air Brake;384
+Foot Locker;385
+Cincinnati Financial;386
+Weyerhaeuser;387
+Westlake Chemical;388
+Navistar International;389
+Magellan Health;390
+Booz Allen Hamilton;391
+Autoliv;392
+S&P Global;393
+Global Payments;394
+Motorola;395
+KeyCorp;396
+Delek US Holdings;397
+Masco;398
+Graybar Electric;399
+WEC Energy Group;400
+Old Republic International;401
+Frontier Communications;402
+Chewy;403
+PVH;404
+Asbury;405
+Seaboard;406
+Polaris;407
+Dana;408
+First American;409
+Cintas;410
+Toll Brothers;411
+Science Applications International;412
+Owens Corning;413
+Zimmer Biomet Holdings;414
+Xerox;415
+Arthur J. Gallagher;416
+Avery Dennison;417
+Sanmina;418
+Jefferies Financial Group;419
+Beacon Roofing Supply;420
+Securian Financial Group;421
+Oshkosh;422
+FM Global;423
+Booking Holdings;424
+Williams-Sonoma;425
+Coty;426
+Clorox;427
+Pioneer Natural Resources;428
+Dover;429
+CMS Energy;430
+Zoetis;431
+Hanes;432
+Packaging of America;433
+Regions Financial;434
+Graphic Packaging Holding;435
+UGI;436
+Sprouts Farmers Market;437
+Avantor;438
+Veritiv;439
+Rockwell Automation;440
+MasTec;441
+DCP Midstream;442
+Northern Trust;443
+M&T Bank;444
+Realogy Holdings;445
+NCR;446
+T. Rowe Price;447
+Vertex Pharmaceuticals;448
+Big Lots;449
+Ralph Lauren;450
+Ulta Beauty;451
+Taylor Morrison Home;452
+Icahn Enterprises;453
+Blackstone Group;454
+O-I Glass;455
+Fortune Brands;456
+NOV;457
+Ovintiv;458
+Alexion Pharmaceuticals;459
+Huntsman;460
+Equinix;461
+ABM;462
+Ingredion;463
+Chipotle Mexican Grill;464
+Sinclair Broadcast Group;465
+LPL Financial Holdings;466
+Crown Castle International;467
+KLA;468
+Ameren;469
+KBR;470
+Burlington Stores;471
+Olin;472
+CACI International;473
+Post Holdings;474
+Academy Sports and Outdoors;475
+Arconic;476
+Celanese;477
+Yum Brands;478
+Fastenal;479
+Nasdaq;480
+Analog Devices;481
+McCormick;482
+Carvana;483
+Franklin Resources;484
+Electronic Arts;485
+MDU Resources Group;486
+Select Medical Holdings;487
+Roper;488
+RPM International;489
+Cerner;490
+Patterson;491
+Commercial Metals;492
+Boise Cascade Holdings L.L.C.;493
+Hasbro;494
+A-Mark Precious Metals;495
+Camping World Holdings;496
+NetApp;497
+Avis Budget Group;498
+R.R. Donnelley & Sons;499
+Moody's;500

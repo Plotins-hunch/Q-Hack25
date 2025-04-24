@@ -1,0 +1,501 @@
+investor_rank;investor_name
+1;Sequoia Capital
+2;SV Angel
+3;Accel
+4;a16z
+5;Tiger Global
+6;500 Global
+7;NEA
+8;Index Ventures
+9;Lightspeed
+10;SoftBank
+11;Khosla Ventures
+12;General Catalyst
+13;Bessemer VP
+14;Founders Fund
+15;FundersClub
+16;Kleiner Perkins
+17;IDG Capital
+18;Insight Partners
+19;First Round Capital
+20;BoxGroup
+21;Plug and Play
+22;Founder Collective
+23;DCVC (Data Collective)
+24;Coatue Management
+25;Felicis Ventures
+26;LocalGlobe
+27;HongShan
+28;Temasek
+29;ZhenFund
+30;Fidelity
+31;GV
+32;Point Nine
+33;Matrix Partners
+34;Bain Capital Ventures
+35;General Atlantic
+36;Initialized Capital
+37;Great Oaks Venture Capital
+38;Global Founders Capital
+39;FJ Labs
+40;Venrock
+41;Redpoint
+42;Greylock Partners
+43;Thrive Capital
+44;Salesforce Ventures
+45;Charles River Ventures
+46;Spark Capital
+47;Kima Ventures
+48;Battery Ventures
+49;GGV Capital
+50;BlackRock
+51;Liquid 2 Ventures
+52;Benchmark
+53;8VC
+54;DST Global
+55;Hillhouse Capital
+56;Coinbase Ventures
+57;Social Capital
+58;T. Rowe Price
+59;Lerer Hippeau
+60;HV Capital
+61;Ribbit Capital
+62;Lux Capital
+63;Wellington Management
+64;Innovation Endeavors
+65;Partech
+66;Slow Ventures
+67;Atlas Venture
+68;FirstMark Capital
+69;AME Cloud Ventures
+70;Intel Capital
+71;Seedcamp
+72;RRE Ventures
+73;Soma Capital
+74;Qualcomm Ventures
+75;Creandum
+76;Technology Crossover Ventures
+77;Tuesday Capital
+78;Institutional Venture Partners
+79;Threshold Ventures
+80;QED Investors
+81;Balderton Capital
+82;Norwest Venture Partners
+83;GIC
+84;Gaingels
+85;Uncork Capital (Formerly SoftTech VC)
+86;Qiming Venture Partners
+87;Dragoneer Investment Group
+88;Endeavor Catalyst
+89;Sapphire Ventures
+90;Sound Ventures
+91;OrbiMed
+92;Greycroft Partners
+93;Baillie Gifford
+94;Acequia Capital
+95;Foundation Capital
+96;Cherry Ventures
+97;F-Prime
+98;Canaan
+99;IA Ventures
+100;Quiet Capital
+101;Susa Ventures
+102;5Y Capital
+103;Speedinvest
+104;Collaborative Fund
+105;Bloomberg Beta
+106;ARCH Venture Partners
+107;Entrée Capital
+108;Caffeinated Capital
+109;Homebrew
+110;Headline
+111;Craft Ventures
+112;ICONIQ Capital
+113;Silver Lake Partners
+114;Eight Roads Ventures
+115;Streamlined Ventures
+116;True Ventures
+117;Meritech Capital Partners
+118;Alumni Ventures Group
+119;Nexus Venture Partners
+120;SAIF Partners
+121;ICONIQ Growth
+122;Monashees
+123;Eurazeo
+124;TSVC
+125;DCM Ventures
+126;Haystack
+127;G Squared
+128;Red Swan Ventures
+129;Union Square Ventures
+130;Vertex Ventures
+131;Floodgate
+132;Franklin Templeton Investments
+133;Boldstart Ventures
+134;ACE and Company
+135;Warburg Pincus
+136;Greenoaks Capital Partners
+137;ShunWei Capital Partners
+138;Matrix Partners China
+139;TPG
+140;Greenspring Associates
+141;Peak XV Partners
+142;Horizons Ventures
+143;D1 Capital Partners
+144;KKR
+145;Mangrove Capital Partners
+146;Accomplice
+147;Amplify Partners
+148;K9 Ventures
+149;Comcast Ventures
+150;Glynn Capital Management
+151;Right Side Capital Management
+152;Breyer Capital
+153;Fifty Years
+154;Bond
+155;Lakestar
+156;Shasta Ventures
+157;Blockchain Capital
+158;Mayfield Fund
+159;Microventures
+160;Menlo Ventures
+161;Madrona Venture Group
+162;Blackstone
+163;Kapor Capital
+164;NFX
+165;EQUIAM
+166;Eniac Ventures
+167;Upfront Ventures
+168;Northzone
+169;Small Business Innovation Research (SBIR)
+170;Maveron
+171;Harrison Metal
+172;SignalFire
+173;Formation 8
+174;Western Technology Investment
+175;Summit Partners
+176;Forerunner Ventures
+177;SOSV
+178;Polaris Partners
+179;Pantera Capital
+180;UpHonest Capital
+181;Atomico
+182;Storm Ventures
+183;Real Ventures
+184;Target Global
+185;Winklevoss Capital
+186;Baseline Ventures
+187;TriplePoint Capital
+188;Foresite Capital
+189;Zillionize
+190;Allen & Company
+191;AltaIR Capital
+192;M12
+193;Omidyar Network
+194;Bling Capital
+195;Bezos Expeditions
+196;Ulu Ventures
+197;Valar Ventures
+198;Endeavor
+199;FF Angel LLC
+200;Morningside Group
+201;Start Fund
+202;Maverick Ventures
+203;Draper Associates
+204;Sinovation Ventures
+205;GSR Ventures
+206;RA Capital Management
+207;Highland Capital Partners
+208;B Capital Group
+209;Picus Capital
+210;Alven
+211;Crosslink Capital
+212;Kinnevik
+213;Amino Capital
+214;Gaorong Capital
+215;TLV Partners
+216;CPP Investment
+217;Aleph
+218;Mubadala Capital
+219;American Express Ventures
+220;Flybridge Capital Partners
+221;Obvious Ventures
+222;Alibaba Group
+223;Queensbridge Venture Partners
+224;Perceptive Advisors
+225;Primary Venture Partners
+226;Trinity Ventures
+227;Bpifrance
+228;CSC Upshot
+229;KaszeK Ventures
+230;Cercano Management (Formerly Vulcan)
+231;Tribe Capital
+232;Legend Capital
+233;Pear Ventures
+234;Episode 1 Ventures
+235;137 Ventures
+236;Altimeter Capital
+237;83North
+238;The Chernin Group
+239;Versant Ventures
+240;BDC Capital (Canada)
+241;Album vc
+242;In-Q-Tel
+243;Altos Ventures
+244;Casdin Capital
+245;Freestyle Capital
+246;Digital Garage
+247;Compound
+248;Two Sigma Ventures
+249;Section 32
+250;Webb Investment Network
+251;Alpha Wave Global
+252;Industry Ventures
+253;Passion Capital
+254;Hercules Capital
+255;DFJ Growth
+256;Multicoin Capital
+257;Oak HC/FT
+258;Version One Ventures
+259;CapitalG
+260;Blumberg Capital
+261;Prosus
+262;Genesis Partners
+263;RTP Global
+264;Blume Ventures
+265;Contour Venture Partners
+266;Vast Ventures
+267;Wefunder
+268;Wavemaker Partners
+269;Paradigm
+270;CDH Investments
+271;Inovia Capital
+272;CICC
+273;StartCaps Ventures
+274;International Finance Corporation
+275;Source Code Capital
+276;Lowercase Capital
+277;Polychain Capital
+278;Rothenberg Ventures
+279;Goodwater Capital
+280;Clocktower Technology Ventures
+281;Galaxy Digital LP
+282;Zeev Ventures
+283;YunFeng Capital
+284;Valor Capital Group
+285;NextView Ventures
+286;Hack VC
+287;Dragonfly Capital Partners
+288;Fuel Capital
+289;Chicago Ventures
+290;Village Global
+291;Base10 Partners
+292;Cormorant Asset Management
+293;Bain Capital
+294;OurCrowd
+295;Viola Ventures
+296;Lightspeed China Partners
+297;Flucas Ventures
+298;Victory Park Capital
+299;Resolute Ventures
+300;Silicon Badia
+301;Anthemis Group
+302;GMO Venture Partners
+303;White Star Capital
+304;Conversion Capital
+305;Pitango Venture Capital
+306;Revolution
+307;Group 11
+308;Learn Capital
+309;Northern Light Venture Capital
+310;Eldridge
+311;S28 Capital
+312;Liberty City Ventures
+313;K2VC
+314;Square Peg Capital
+315;Dorm Room Fund
+316;Capital Today
+317;Pegasus Tech Ventures
+318;Flagship Pioneering
+319;Vista Equity Partners
+320;Cyberstarts
+321;IRIS
+322;MSA Capital
+323;Abstract Ventures
+324;Rise of the Rest
+325;Cowboy Ventures
+326;b2venture
+327;Future Perfect Ventures
+328;Signatures Capital
+329;Matrix Partners India
+330;Valor Equity Partners
+331;Binance Labs
+332;Tekton Ventures
+333;Graph Ventures
+334;Silverton Partners
+335;Thoma Bravo
+336;Addition VC
+337;North Bridge Venture Partners
+338;Emergence Capital Partners
+339;SIG China
+340;Sorenson Capital
+341;Trifecta Capital Advisors
+342;Marc Bell Ventures
+343;Tenaya Capital
+344;XG Ventures
+345;Sofinnova Partners
+346;Redalpine
+347;U.S. Venture Partners
+348;Foundry Group
+349;Merus Capital
+350;Genacast Ventures
+351;Capricorn Investment Group
+352;Boyu Capital
+353;InterWest Partners
+354;Morado Ventures
+355;Left Lane Capital
+356;Elefund
+357;Greyhound Capital
+358;Lead Edge Capital
+359;Fondation FIT
+360;Sutter Hill Ventures
+361;Rough Draft Ventures
+362;Acton Capital
+363;New York Angels
+364;Alkeon Capital
+365;Adams Street Partners
+366;GSV
+367;GE Ventures
+368;Redmile Group
+369;Octopus Ventures
+370;Access Industries
+371;Hyde Park Venture Partners
+372;BrandProject
+373;Otter Rock Capital
+374;Invus
+375;Sierra Ventures
+376;Heartcore Capital (Sunstone Capital)
+377;SGH Capital
+378;Beenext
+379;Stripes
+380;East Ventures
+381;Spectrum Equity
+382;Blackbird Ventures
+383;Qatar Investment Authority
+384;EDBI
+385;Sinai Ventures
+386;Francisco Partners
+387;Geodesic Capital
+388;Hone Capital
+389;Elaia Partners
+390;Hexa (eFounders)
+391;Recruit Strategic Partners
+392;Tusk Ventures
+393;Refactor Capital
+394;Javelin Venture Partners
+395;BlueRun Ventures
+396;Techammer
+397;Fifth Wall Ventures
+398;Eclipse Ventures
+399;Dell Technologies Capital
+400;Romulus Capital
+401;DAG Ventures
+402;Janus Henderson Investors
+403;Shenzhen Capital Group
+404;Earlybird Venture Capital
+405;Yonghua Capital
+406;SciFi VC
+407;Durable Capital Partners
+408;TTV Capital
+409;InnoVen Capital
+410;Expa
+411;Hard Yaka
+412;Investo
+413;Wing Venture Capital
+414;Lone Pine Capital
+415;Viking Global Investors
+416;Afore Capital
+417;Pritzker Group Venture Capital
+418;Citi Ventures
+419;MMC Ventures
+420;Dragonfly Capital
+421;A.Capital Ventures
+422;Precursor Ventures
+423;Ludlow Ventures
+424;Walden International
+425;Peak Ventures
+426;Scale Venture Partners
+427;Asset Management Ventures (Formerly Asset Management Company)
+428;Wonder Ventures
+429;Redpoint eventures
+430;Moore Strategic Ventures
+431;Aspect Ventures
+432;9Yards Capital
+433;Serena Ventures
+434;#Hashed
+435;Advent International
+436;Trident Capital
+437;Bullpen Capital
+438;Blue Horizon Corporation
+439;Structure Capital
+440;Soros Fund Management
+441;Lifeline Ventures
+442;Felix Capital
+443;Tectonic Capital
+444;Brainchild
+445;Aglaé Ventures
+446;Broadhaven Ventures
+447;Green Bay Ventures
+448;Premji Invest
+449;Cisco Investments
+450;ACME Capital
+451;August Capital
+452;645 Ventures
+453;Maven Ventures
+454;Ontario Teachers’ Pension Plan
+455;GP Bullhound
+456;Lightrock
+457;Highland Europe
+458;Drive Capital
+459;Third Kind Venture Capital
+460;ESO Fund
+461;Kakao Ventures
+462;Expansion Venture Capital
+463;Glade Brook Capital Partners
+464;DHVC (Danhua Capital)
+465;Correlation Ventures
+466;Deerfield
+467;Atlantic Labs
+468;DN Capital
+469;NSF - National Science Foundation
+470;Market One Capital
+471;Maverick Capital
+472;Samsung Ventures
+473;Gobi Partners
+474;Alameda Research
+475;HarbourVest Partners
+476;Insignia Ventures
+477;Eastern Bell Venture Capital
+478;Neuberger Berman Group
+479;Project A
+480;Rock Springs Capital
+481;Inertia Ventures
+482;Sherpa Capital
+483;Capital Factory
+484;Third Rock Ventures
+485;Alexandria Venture Investments
+486;Mucker Capital
+487;Chiratae Ventures
+488;Kortschak Investments
+489;Steadview Capital
+490;Golden Gate Ventures
+491;Costanoa Ventures
+492;PayPal Ventures
+493;Founders Co-Op
+494;ACrew Capital
+495;Indian Angel Network
+496;China Growth Capital
+497;1confirmation
+498;Variant
+499;CCB International
+500;Signia Venture Partners
