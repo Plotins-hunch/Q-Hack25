@@ -1,0 +1,1498 @@
+rank display;institution;location code
+2;University of Cambridge;UK
+3;University of Oxford;UK
+4;Harvard University;US
+5;Stanford University;US
+6;Imperial College London;UK
+7;ETH Zurich - Swiss Federal Institute of Technology;CH
+8;National University of Singapore (NUS);SG
+9;UCL;UK
+10;University of California, Berkeley (UCB);US
+11;University of Chicago;US
+12;University of Pennsylvania;US
+13;Cornell University;US
+14;The University of Melbourne;AU
+15;California Institute of Technology (Caltech);US
+16;Yale University;US
+17;Peking University;CN
+17;Princeton University;US
+19;The University of New South Wales (UNSW Sydney);AU
+19;The University of Sydney;AU
+21;University of Toronto;CA
+22;The University of Edinburgh;UK
+23;Columbia University;US
+24;Université PSL;FR
+25;Tsinghua University;CN
+26;Nanyang Technological University, Singapore (NTU);SG
+26;The University of Hong Kong;HK
+28;Johns Hopkins University;US
+28;The University of Tokyo;JP
+29;University of California, Los Angeles (UCLA);US
+30;McGill University;CA
+32;The University of Manchester;UK
+33;University of Michigan-Ann Arbor;US
+34;The Australian National University;AU
+34;University of British Columbia;CA
+36;EPFL;CH
+37;Technical University of Munich;DE
+38;Institut Polytechnique de Paris;FR
+38;New York University (NYU);US
+40;King's College London;UK
+41;Seoul National University;KR
+42;Monash University;AU
+43;The University of Queensland;AU
+44;Zhejiang University;CN
+45;The London School of Economics and Political Science (LSE);UK
+46;Kyoto University;JP
+47;Delft University of Technology;NL
+47;Northwestern University;US
+47;The Chinese University of Hong Kong (CUHK);HK
+50;Fudan University;CN
+51;Shanghai Jiao Tong University;CN
+52;Carnegie Mellon University;US
+53;University of Amsterdam;NL
+54;Ludwig-Maximilians-Universität München;DE
+55;University of Bristol;UK
+56;KAIST - Korea Advanced Institute of Science & Technology;KR
+57;Duke University;US
+58;University of Texas at Austin;US
+59;Sorbonne University;FR
+60;The Hong Kong University of Science and Technology;HK
+61;KU Leuven;BE
+62;University of California, San Diego (UCSD);US
+63;University of Washington;US
+64;University of Illinois at Urbana-Champaign;US
+65;The Hong Kong Polytechnic University;HK
+65;Universiti Malaya (UM);MY
+67;The University of Warwick;UK
+68;The University of Auckland;NZ
+69;National Taiwan University (NTU);TW
+70;City University of Hong Kong;HK
+71;Université Paris-Saclay;FR
+72;The University of Western Australia;AU
+73;Brown University;US
+73;KTH Royal Institute of Technology ;SE
+75;University of Leeds;UK
+76;University of Glasgow;UK
+76;Yonsei University;KR
+78;Durham University;UK
+79;Korea University;KR
+80;Osaka University;JP
+81;Trinity College Dublin, The University of Dublin;IE
+81;University of Southampton;UK
+83;Pennsylvania State University;US
+84;University of Birmingham;UK
+85;Lund University;SE
+85;Universidade de São Paulo;BR
+87;Lomonosov Moscow State University;RU
+87;Ruprecht-Karls-Universität Heidelberg;DE
+89;The University of Adelaide;AU
+90;University of Technology Sydney;AU
+91;Tokyo Institute of Technology (Tokyo Tech);JP
+91;University of Zurich;CH
+93;Boston University;US
+93;Universidad Nacional Autónoma de México (UNAM);MX
+95;Universidad de Buenos Aires (UBA);AR
+95;University of St Andrews;UK
+97;Georgia Institute of Technology;US
+98;Freie Universitaet Berlin;DE
+99;Purdue University;US
+100;Pohang University of Science And Technology (POSTECH);KR
+100;University of Nottingham;UK
+102;University of Wisconsin-Madison;US
+103;Pontificia Universidad Católica de Chile (UC);CL
+104;The University of Sheffield;UK
+105;Uppsala University;SE
+106;RWTH Aachen University;DE
+107;University of Copenhagen;DK
+107;Utrecht University;NL
+109;Aalto University;FI
+110;Newcastle University;UK
+111;University of Alberta;CA
+112;University of Waterloo;CA
+113;Tohoku University;JP
+114;Western University;CA
+115;University of Helsinki;FI
+116;University of Southern California;US
+117;University of Oslo;NO
+118;Stockholm University;SE
+119;KIT, Karlsruhe Institute of Technology;DE
+120;Humboldt-Universität zu Berlin;DE
+121;Technical University of Denmark;DK
+122;Lancaster University;UK
+123;Politecnico di Milano;IT
+124;Eindhoven University of Technology;NL
+124;University of Basel;CH
+126;Leiden University;NL
+126;University of Bern;CH
+128;University of Geneva;CH
+129;Chalmers University of Technology;SE
+130;Macquarie University;AU
+130;University of Vienna;AT
+132;University of California, Davis;US
+132;University of North Carolina, Chapel Hill;US
+134;Sapienza University of Rome;IT
+134;Texas A&M University;US
+136;Michigan State University;US
+137;Universiti Sains Malaysia (USM);MY
+137;University of Science and Technology of China;CN
+139;University of Groningen;NL
+140;RMIT University;AU
+141;Nanjing University;CN
+141;Université de Montréal ;CA
+143;Aarhus University;DK
+143;King Abdulaziz University (KAU);SA
+145;Queen Mary University of London;UK
+145;Rice University;US
+145;Sungkyunkwan University(SKKU);KR
+148;University of Bath;UK
+149;Indian Institute of Technology Bombay (IITB);IN
+149;Universitat Autònoma de Barcelona;ES
+151;The Ohio State University;US
+151;Wageningen University & Research;NL
+153;The University of Exeter;UK
+154;Alma Mater Studiorum - University of Bologna;IT
+154;Cardiff University;UK
+154;Technische Universität Berlin (TU Berlin);DE
+154;Washington University in St. Louis;US
+158;Universiti Putra Malaysia (UPM);MY
+159;Ghent University;BE
+159;Universidad de Chile;CL
+159;Universiti Kebangsaan Malaysia (UKM);MY
+162;University of Wollongong;AU
+163;University of California, Santa Barbara (UCSB);US
+164;Hanyang University;KR
+164;Kyushu University;JP
+164;Universitat de Barcelona;ES
+167;University of York;UK
+168;University of Florida;US
+169;University of Maryland, College Park;US
+169;University of Reading;UK
+171;Complutense University of Madrid;ES
+171;University College Dublin;IE
+173;Qatar University;QA
+173;The University of Newcastle, Australia (UON);AU
+173;University of Cape Town;ZA
+176;Erasmus University Rotterdam ;NL
+176;Nagoya University;JP
+176;University of Liverpool;UK
+179;Arizona State University;US
+180;King Fahd University of Petroleum & Minerals;SA
+180;Université catholique de Louvain (UCLouvain);BE
+182;University of Calgary;CA
+183;Curtin University;AU
+184;École Normale Supérieure de Lyon;FR
+184;Technische Universität Wien;AT
+184;Tecnológico de Monterrey;MX
+187;University of Gothenburg;SE
+188;Universiti Teknologi Malaysia ;MY
+189;McMaster University;CA
+189;Queensland University of Technology (QUT);AU
+189;Universite libre de Bruxelles;BE
+192;Albert-Ludwigs-Universitaet Freiburg;DE
+192;Ecole des Ponts ParisTech;FR
+194;Wuhan University;CN
+195;University of Minnesota Twin Cities;US
+196;Hokkaido University;JP
+197;Indian Institute of Technology Delhi (IITD);IN
+198;Universidad de los Andes;CO
+199;Emory University;US
+199;Universidad Autónoma de Madrid;ES
+199;Waseda University;JP
+202;Queen's University Belfast;UK
+203;King Saud University;SA
+203;University of Ottawa;CA
+205;Universität Hamburg;DE
+206;University of Otago;NZ
+207;Vrije Universiteit Amsterdam;NL
+208;University of Aberdeen;UK
+209;Queen's University at Kingston;CA
+210;University of Twente;NL
+211;Chulalongkorn University;TH
+212;Loughborough University;UK
+213;Eberhard Karls Universität Tübingen;DE
+214;Keio University;JP
+215;Tel Aviv University;IL
+216;Tongji University;CN
+217;National Yang Ming Chiao Tung University;TW
+218;University of Sussex;UK
+219;Università di Padova;IT
+220;Universidade Estadual de Campinas (Unicamp);BR
+220;University of Lausanne;CH
+222;Radboud University ;NL
+222;University of Pittsburgh;US
+224;University of Rochester;US
+225;Indian Institute of Science;IN
+226;American University of Beirut (AUB);LB
+226;Universidad Nacional de Colombia;CO
+228;National Cheng Kung University (NCKU);TW
+229;Friedrich-Alexander-Universität Erlangen-Nürnberg;DE
+230;Al-Farabi Kazakh National University;KZ
+230;Khalifa University of Science and Technology;AE
+232;University of Göttingen;DE
+233;Deakin University;AU
+233;National Tsing Hua University;TW
+235;Heriot-Watt University;UK
+236;Université de Paris-Cité;FR
+237;Dartmouth College;US
+237;Universitas Indonesia;ID
+239;Massey University;NZ
+239;Rheinische Friedrich-Wilhelms-Universität Bonn;DE
+241;Victoria University of Wellington;NZ
+242;La Trobe University;AU
+243;Griffith University;AU
+244;University of Surrey;UK
+245;University of Massachusetts Amherst;US
+246;Technical University of Darmstadt;DE
+246;Technische Universität Dresden;DE
+248;Charles University;CZ
+248;University of Antwerp;BE
+250;University of Waikato;NZ
+251;The Hebrew University of Jerusalem;IL
+252;Politecnico di Torino;IT
+253;University of Porto;PT
+254;University of Macau;MO
+255;Case Western Reserve University;US
+256;Harbin Institute of Technology;CN
+256;Maastricht University ;NL
+256;University of Canterbury | Te Whare Wānanga o Waitaha;NZ
+259;Vrije Universiteit Brussel (VUB);BE
+260;University of Virginia;US
+261;Vanderbilt University;US
+262;University of Warsaw ;PL
+263;Gadjah Mada University;ID
+264;University of Colorado Boulder;US
+264;University of Witwatersrand;ZA
+266;Ulsan National Institute of Science and Technology (UNIST);KR
+266;University of Lisbon ;PT
+268;Linköping University;SE
+268;University of California, Irvine;US
+268;University of Cologne;DE
+271;Indian Institute of Technology Kharagpur (IIT-KGP);IN
+272;Beijing Normal University ;CN
+272;University of Leicester;UK
+274;North Carolina State University;US
+275;Huazhong University of Science and Technology;CN
+276;University of Milan;IT
+276;University of Strathclyde;UK
+278;Indian Institute of Technology Kanpur (IITK);IN
+278;University of Miami;US
+280;University of Navarra;ES
+281;Bandung Institute of Technology (ITB);ID
+281;University of Bergen;NO
+283;Stellenbosch University;ZA
+284;Taylor's University;MY
+285;Indian Institute of Technology Madras (IITM);IN
+285;Swinburne University of Technology;AU
+285;The University of Arizona;US
+285;Tianjin University;CN
+289;University of Galway;IE
+290;United Arab Emirates University;AE
+291;Xi’an Jiaotong University;CN
+292;Norwegian University of Science And Technology;NO
+292;University College Cork;IE
+294;Université Grenoble Alpes;FR
+295;Hong Kong Baptist University;HK
+295;University of East Anglia (UEA);UK
+297;Georgetown University;US
+298;Dalhousie University;CA
+299;Rutgers University–New Brunswick;US
+300;UCSI University;MY
+301;Southern University of Science and Technology;CN
+302;Goethe-University Frankfurt am Main;DE
+302;Virginia Polytechnic Institute and State University;US
+304;Jagiellonian University;PL
+304;University of Notre Dame;US
+306;University of Johannesburg;ZA
+307;Daegu Gyeongbuk Institute of Science and Technology (DGIST);KR
+307;Swansea University;UK
+307;Universiti Teknologi PETRONAS (UTP);MY
+307;University of Tasmania;AU
+310;Hamad Bin Khalifa University;QA
+310;Universitat Pompeu Fabra (Barcelona);ES
+312;Universität Stuttgart;DE
+313;Indiana University Bloomington;US
+313;University of Oulu;FI
+315;Quaid-i-Azam University;PK
+315;Saint Petersburg State University;RU
+315;University of Turku;FI
+318;Simon Fraser University;CA
+319;Bauman Moscow State Technical University;RU
+319;Sciences Po ;FR
+319;Universidad Carlos III de Madrid (UC3M);ES
+322;University of Victoria (UVic);CA
+323;Sun Yat-sen University;CN
+323;University of Illinois at Chicago (UIC);US
+323;University of Pretoria;ZA
+326;University of South Australia;AU
+326;University of Southern Denmark (SDU);DK
+328;City, University of London;UK
+328;Gwangju Institute of Science and Technology (GIST);KR
+328;Université Paris 1 Panthéon-Sorbonne;FR
+328;USI - Università della Svizzera italiana;CH
+332;Kyung Hee University;KR
+332;University of California, Santa Cruz;US
+334;Sharif University of Technology;IR
+335;University of Naples - Federico II;IT
+336;Aalborg University;DK
+336;Middle East Technical University;TR
+336;Pontificia Universidad Católica del Perú;PE
+336;University of Kent;UK
+340;Beijing Institute of Technology;CN
+340;George Washington University;US
+342;RUDN University;RU
+343;Brunel University London;UK
+344;University of Aveiro;PT
+345;Airlangga University;ID
+345;University of Saskatchewan;CA
+347;National Technical University of Athens;GR
+347;Pontificia Universidad Javeriana;CO
+349;Universidad Politécnica de Madrid (UPM);ES
+349;University of Pisa;IT
+351;Lappeenranta-Lahti University of Technology LUT;FI
+351;University of Coimbra;PT
+353;York University;CA
+354;Universitat Politècnica de Catalunya · BarcelonaTech (UPC);ES
+355;L.N. Gumilyov Eurasian National University (ENU);KZ
+355;Sichuan University;CN
+355;University of Tsukuba;JP
+358;University of Florence;IT
+358;University of Tartu;EE
+360;Shandong University;CN
+360;University of Tehran;IR
+362;Lincoln University ;NZ
+362;Universität Innsbruck;AT
+364;American University of Sharjah;AE
+364;Indian Institute of Technology Guwahati (IITG);IN
+364;University of Turin;IT
+367;National University of Sciences And Technology (NUST) Islamabad;PK
+368;University of Cyprus (UCY);CY
+369;Indian Institute of Technology Roorkee (IITR);IN
+369;Yeshiva University;US
+371;Cairo University;EG
+371;Tilburg University;NL
+371;Universidade Federal do Rio de Janeiro;BR
+374;Birkbeck, University of London;UK
+375; Western Sydney University;AU
+375;Amirkabir University of Technology;IR
+375;Northeastern University;US
+375;Ruhr-Universität Bochum;DE
+379;Tufts University;US
+380;Flinders University;AU
+381;University of Luxembourg;LU
+382;Mahidol University;TH
+382;Université de Montpellier;FR
+384;Nankai University;CN
+384;Westfälische Wilhelms-Universität Münster ;DE
+386;University of Hawaiʻi at Mānoa;US
+387;Aix-Marseille University;FR
+387;Belarusian State University;BY
+387;Concordia University;CA
+387;National Taiwan University of Science and Technology (Taiwan Tech);TW
+387;Universiti Brunei Darussalam (UBD);BN
+392;Institut National des Sciences Appliquées de Lyon (INSA);FR
+392;South China University of Technology;CN
+392;Technion - Israel Institute of Technology;IL
+392;Xiamen University;CN
+396;Justus-Liebig-University Giessen;DE
+396;Kazan (Volga region) Federal University;RU
+396;Stony Brook University, State University of New York;US
+399;HSE University;RU
+400;Iowa State University;US
+400;Masaryk University;CZ
+400;Universidade Nova de Lisboa;PT
+403;University of Granada;ES
+404;Istanbul Technical University;TR
+404;University of California, Riverside;US
+404;University of the Philippines;PH
+407;Auckland University of Technology (AUT);NZ
+407;University of Delhi;IN
+409;Colorado State University;US
+410;Universidad de Santiago de Chile (USACH);CL
+410;University of Kansas;US
+410;University of Southern Queensland ;AU
+413;Oxford Brookes University;UK
+413;Royal Holloway University of London;UK
+415;James Cook University;AU
+415;Moscow Institute of Physics and Technology (MIPT / Moscow Phystech);RU
+415;The American University in Cairo;EG
+418;Tomsk State University;RU
+419;UNESP;BR
+419;Washington State University;US
+421;Graz University of Technology;AT
+421;Novosibirsk State University;RU
+421;Université de Liège;BE
+421;Université de Strasbourg;FR
+421;University of Canberra ;AU
+426;University of Limerick;IE
+427;Anna University;IN
+428;IE University;ES
+429;Singapore University of Technology and Design;SG
+429;University of Trento;IT
+431;Koç University;TR
+431;Murdoch University;AU
+431;National Taipei University of Technology;TW
+431;National Taiwan Normal University;TW
+431;University of Stirling;UK
+436;Dublin City University;IE
+436;Sejong University ;KR
+436;Tampere University;FI
+436;University of Science and Technology Beijing;CN
+436;University of St.Gallen (HSG);CH
+440;Julius-Maximilians-Universität Würzburg;DE
+441; University of Dundee;UK
+441;Université Laval;CA
+441;University of Utah;US
+444;National and Kapodistrian University of Athens;GR
+444;University of Connecticut;US
+446;Aston University;UK
+446;Johannes Kepler University Linz;AT
+446;The University of Tennessee, Knoxville;US
+446;Toyota Technological Institute in Japan;JP
+446;University of Jyväskylä;FI
+451;Iran University of Science and Technology;IR
+452;Central South University;CN
+452;Université Claude Bernard Lyon 1;FR
+454;Czech Technical University in Prague;CZ
+454;Indian Institute of Technology Indore (IIT Indore);IN
+454;Southeast University;CN
+454;Sultan Qaboos University;OM
+454;Universität Mannheim;DE
+459;Essex, University of;UK
+460;Universität Potsdam;DE
+461;Florida State University;US
+461;National Research Nuclear University MEPhI (Moscow Engineering Physics Institute);RU
+461;Universität Jena;DE
+464;Johannes Gutenberg Universität Mainz;DE
+465;Colorado School of Mines;US
+465;Umea University;SE
+465;University of Bordeaux;FR
+465;University of Sharjah;AE
+469;Ben-Gurion University of The Negev;IL
+469;Illinois Institute of Technology;US
+469;Università degli Studi di Pavia;IT
+472;Hiroshima University;JP
+473;Beihang University (former BUAA);CN
+473;Ural Federal University - UrFU;RU
+473;Vilnius University ;LT
+476;Kobe University;JP
+476;Universitat Politècnica de València;ES
+478;Universität Konstanz;DE
+479;Universität Leipzig;DE
+480;Missouri University of Science and Technology;US
+481;University of Milano-Bicocca ;IT
+481;Bangor University;UK
+481;Hitotsubashi University;JP
+481;Leibniz University Hannover;DE
+481;Satbayev University;KZ
+485;Universitat de Valencia;ES
+486;University of Electronic Science and Technology of China;CN
+486;University of Guelph;CA
+489;IPB University (a.k.a. Bogor Agricultural University);ID
+489;"University of Rome ""Tor Vergata""";IT
+491;Dalian University of Technology;CN
+491;University at Buffalo SUNY;US
+491;University of Iowa;US
+494;Chung-Ang University (CAU);KR
+494;Hunan University ;CN
+494;Rensselaer Polytechnic Institute;US
+494;Universidad de Sevilla;ES
+498;Ewha Womans University;KR
+498;Ulster University;UK
+498;University of Delaware;US
+498;University of Jordan;JO
+502;Bilkent University;TR
+502;Jilin University;CN
+502;University of Portsmouth;UK
+505;Macau University of Science and Technology;MO
+505;National Sun Yat-sen University;TW
+505;Oregon State University;US
+505;Università Cattolica del Sacro Cuore;IT
+509;Sogang University;KR
+509;University of Bayreuth;DE
+511;East China Normal University;CN
+511;SOAS University of London ;UK
+511;Université Paul Sabatier Toulouse III;FR
+514;Boğaziçi University;TR
+514;Duy Tan University;VN
+514;Pontificia Universidad Católica Argentina;AR
+514;Shanghai University;CN
+514;The University of Georgia;US
+514;Universität Bremen;DE
+520;Kyungpook National University;KR
+520;Universidad Austral;AR
+520;University of Texas Dallas;US
+523;Universidad de Zaragoza;ES
+523;University of Hull;UK
+525;Universiti Teknologi Brunei;BN
+526;MGIMO University;RU
+526;Sabanci University;TR
+526;University of Madras;IN
+529;Edith Cowan University ;AU
+530;Aristotle University of Thessaloniki;GR
+530;Christian-Albrechts-University zu Kiel;DE
+530;Universidad de Palermo (UP);AR
+530;University of Genoa;IT
+534;China Agricultural University ;CN
+534;Peter the Great St. Petersburg Polytechnic University;RU
+534;University of Crete;GR
+534;University of Salamanca;ES
+538;Universidad de Alcalá;ES
+538;Universiti Utara Malaysia (UUM);MY
+540;Lahore University of Management Sciences (LUMS);PK
+540;Universidad Nacional de La Plata (UNLP);AR
+542;ITMO University;RU
+542;University Ulm;DE
+544;Universidad de Costa Rica;CR
+545;Bar-Ilan University;IL
+545;City University of New York;US
+545;Singapore Management University;SG
+548;Lehigh University;US
+548;Northumbria University at Newcastle;UK
+548;University of Eastern Finland;FI
+551;Ajman University;AE
+551;Canadian University Dubai;AE
+551;Hasselt University ;BE
+551;University of Nebraska - Lincoln;US
+555;Universiti Teknologi MARA - UiTM;MY
+556;Florida International University;US
+556;INTI International University;MY
+556;Politecnico di Bari;IT
+556;Renmin (People's) University of China;CN
+556;University of Chemistry and Technology, Prague;CZ
+561;Chongqing University;CN
+561;University of Plymouth;UK
+563;Ateneo de Manila University;PH
+563;Université de Fribourg;CH
+563;University of South Florida;US
+567;Bond University;AU
+567;National Chengchi University;TW
+567;Universidad Adolfo Ibáñez;CL
+567;University of Huddersfield;UK
+571;Chiang Mai University;TH
+571;Coventry University;UK
+571;Indian Institute of Technology (BHU) Varanasi;IN
+571;Warsaw University of Technology;PL
+575;HUFS - Hankuk (Korea) University of Foreign Studies ;KR
+575;University of South Carolina;US
+577;Lebanese University;LB
+577;Taipei Medical University (TMU);TW
+577;University of Tromsø The Arctic University of Norway;NO
+580;Abu Dhabi University;AE
+580;University of Klagenfurt;AT
+582;Applied Science University - Bahrain;BH
+582;Universidad Católica Andres Bello;VE
+582;Universidad Pontificia Comillas;ES
+586;National Research Tomsk Polytechnic University;RU
+586;Sunway University;MY
+586;University of Missouri, Columbia;US
+590;Central Queensland University (CQUniversity Australia);AU
+590;Manchester Metropolitan University (MMU);UK
+590;Prince Mohammad Bin Fahd university;SA
+593;Goldsmiths, University of London;UK
+593;University of Central Florida;US
+595;Imam Abdulrahman Bin Faisal University (IAU) (formerly UNIVERSITY OF DAMMAM);SA
+595;Nottingham Trent University;UK
+595;Pontifícia Universidade Católica do Rio de Janeiro;BR
+595;Shenzhen University;CN
+595;Università Vita-Salute San Raffaele;IT
+600;Nanjing University of Science and Technology;CN
+600;Thammasat University;TH
+600;Tulane University;US
+600;Universität des Saarlandes;DE
+1;Massachusetts Institute of Technology (MIT) ;US
+601-610;Abo Akademi University;FI
+601-610;American University in Dubai;AE
+601-610;Charles Darwin University ;AU
+601-610;Drexel University;US
+601-610;Jawaharlal Nehru University;IN
+601-610;Kingston University, London;UK
+601-610;Umm Al-Qura University ;SA
+601-610;Universidad de Concepción;CL
+601-610;University of Szeged;HU
+611-620;Al Ain University;AE
+611-620;Auezov South Kazakhstan University (SKU);KZ
+611-620;Brno University of Technology;CZ
+611-620;Martin-Luther-Universität Halle-Wittenberg;DE
+611-620;National Central University;TW
+611-620;Pusan National University;KR
+611-620;Tokyo Medical and Dental University (TMDU);JP
+611-620;University of Minho;PT
+621-630;Asia Pacific University of Technology and Innovation (APU);MY
+621-630;Chang Gung University;TW
+621-630;Institut Teknologi Sepuluh Nopember (ITS Surabaya);ID
+621-630;Management and Science University;MY
+621-630;Northwestern Polytechnical University;CN
+621-630;Stevens Institute of Technology;US
+621-630;Universitat Ramon Llull;ES
+621-630;University of Kwazulu-Natal;ZA
+621-630;University of Ljubljana;SI
+621-630;University of the Basque Country;ES
+621-630;Zhengzhou University;CN
+631-640;Ajou University ;KR
+631-640;Boston College;US
+631-640;Jinan University (China);CN
+631-640;Palacký University Olomouc;CZ
+631-640;Ritsumeikan University;JP
+631-640;Saint Joseph University of Beirut (USJ) ;LB
+631-640;Universidad Central de Venezuela;VE
+631-640;Université de Lille;FR
+631-640;University of New Mexico;US
+641-650;Far Eastern Federal University;RU
+641-650;Free University of Bozen-Bolzano;IT
+641-650;Kazakh National Agrarian University KazNAU;KZ
+641-650;Lingnan University, Hong Kong;HK
+641-650;Memorial University of Newfoundland;CA
+641-650;New Jersey Institute of Technology (NJIT);US
+641-650;Pakistan Institute of Engineering and Applied Sciences (PIEAS);PK
+641-650;The New School;US
+641-650;Universidad de La Habana;CU
+641-650;University of Bradford;UK
+641-650;University of Houston;US
+641-650;University of Modena and Reggio Emilia;IT
+641-650;University of Oklahoma;US
+641-650;University of Windsor;CA
+651-660;COMSATS University Islamabad;PK
+651-660;Instituto Tecnológico Autónomo de México (ITAM);MX
+651-660;Southern Cross University ;AU
+651-660;Tallinn University of Technology (TalTech);EE
+651-660;Universidad de Montevideo (UM);UY
+651-660;University of Haifa;IL
+651-660;University of Hohenheim;DE
+661-670;Aberystwyth University;UK
+661-670;Brandeis University;US
+661-670;Ca' Foscari University of Venice ;IT
+661-670;Holy Spirit University of Kaslik ;LB
+661-670;Karl-Franzens-Universitaet Graz;AT
+661-670;Lebanese American University;LB
+661-670;Middlesex University;UK
+661-670;National Chung Hsing University;TW
+661-670;Princess Nourah bint Abdulrahman University;SA
+661-670;Tokyo University of Science;JP
+661-670;Universidad Panamericana (UP);MX
+661-670;Università degli Studi di Perugia;IT
+661-670;Universitas Padjadjaran;ID
+661-670;Universitat Rovira i Virgili;ES
+671-680;American University of the Middle East;KW
+671-680;Carleton University;CA
+671-680;Dongguk University ;KR
+671-680;University of Debrecen;HU
+671-680;University of Greenwich;UK
+671-680;University of Manitoba;CA
+681-690;Abai Kazakh National Pedagogical University;KZ
+681-690;Colegio de México;MX
+681-690;De La Salle University;PH
+681-690;East China University of Science and Technology;CN
+681-690;Paris Lodron University of Salzburg;AT
+681-690;Pontificia Universidad Católica de Valparaíso;CL
+681-690;Shiraz University;IR
+681-690;Soochow University;CN
+681-690;Taras Shevchenko National University of Kyiv;UA
+681-690;The National University of Science and Technology MISIS;RU
+681-690;University of Kentucky;US
+691-700;Indian Institute of Technology Hyderabad;IN
+691-700;Inha University;KR
+691-700;Universidad Iberoamericana IBERO;MX
+691-700;Universidade Federal de Minas Gerais      ;BR
+691-700;Universidade Federal do Rio Grande Do Sul ;BR
+691-700;University of Cincinnati;US
+691-700;University of Dhaka;BD
+691-700;University of Mons ;BE
+691-700;University of Trieste;IT
+691-700;V. N. Karazin Kharkiv National University;UA
+701-710;Altai State University;RU
+701-710;Chiba University;JP
+701-710;Czech University of Life Sciences in Prague;CZ
+701-710;Eötvös Loránd University;HU
+701-710;Universidad de Antioquia;CO
+701-710;Universidade de Santiago de Compostela;ES
+701-710;Wake Forest University;US
+701-710;Zayed University;AE
+711-720;Beirut Arab University ;LB
+711-720;China University of Petroleum;CN
+711-720;International Islamic University Malaysia (IIUM);MY
+711-720;Istanbul University;TR
+711-720;Savitribai Phule Pune University;IN
+711-720;Universidad del Rosario;CO
+711-720;Université de Rennes 1 (University of Rennes);FR
+711-720;University of Maryland, Baltimore County;US
+711-720;University of New Brunswick;CA
+711-720;University of Westminster;UK
+711-720;Victoria University ;AU
+721-730;Ain Shams University ;EG
+721-730;Beijing University of Chemical Technology;CN
+721-730;Jeonbuk National University;KR
+721-730;Temple University;US
+721-730;Ton Duc Thang University;VN
+721-730;Universita' Politecnica delle Marche;IT
+721-730;Université Côte d\'Azur;FR
+721-730;Université de Lorraine;FR
+721-730;University of Belgrade;RS
+721-730;University of Colorado, Denver ;US
+721-730;University of Oregon;US
+731-740;Adam Mickiewicz University, Poznań;PL
+731-740;Alfaisal University;SA
+731-740;Bournemouth University;UK
+731-740;Indian Institute of Technology Bhubaneswar;IN
+731-740;Jordan University of Science & Technology;JO
+731-740;"National Technical University of Ukraine ""Igor Sikorsky Kyiv Polytechnic Institute""";UA
+731-740;Universidad EAFIT;CO
+731-740;Universidade Federal de São Paulo;BR
+731-740;University of Siena;IT
+741-750;Budapest University of Technology and Economics;HU
+741-750;Instituto Politécnico Nacional (IPN);MX
+741-750;Jadavpur University;IN
+741-750;"Sofia University ""St. Kliment Ohridski""";BG
+741-750;Swarthmore College;US
+741-750;Universität Regensburg;DE
+741-750;University of Agriculture, Faisalabad ;PK
+741-750;University of Bari;IT
+741-750;University of the Punjab;PK
+741-750;University of the West of England;UK
+751-760;Ahlia University;BH
+751-760;ISCTE - Instituto Universitario de Lisboa;PT
+751-760;Kasetsart University;TH
+751-760;Liverpool John Moores University;UK
+751-760;Riga Technical University;LV
+751-760;Technische Universität Braunschweig;DE
+751-760;Universidad Externado de Colombia ;CO
+751-760;Université du Québec;CA
+751-760;University of Mumbai;IN
+751-760;University of Ulsan ;KR
+751-760;University of Zagreb;HR
+751-760;Wayne State University;US
+761-770;Hacettepe University ;TR
+761-770;King Khalid University;SA
+761-770;Philipps-Universität Marburg ;DE
+761-770;Universidad de Belgrano;AR
+761-770;Universität Rostock;DE
+761-770;Universiti Tenaga Nasional (UNITEN);MY
+761-770;Virginia Commonwealth University;US
+771-780;Chandigarh University;IN
+771-780;Comenius University Bratislava;SK
+771-780;Rutgers University–Newark;US
+771-780;Sechenov University;RU
+771-780;Shoolini University of Biotechnology and Management Sciences;IN
+771-780;Universidad Anáhuac México;MX
+771-780;Universidad ORT Uruguay;UY
+771-780;Universität Duisburg-Essen;DE
+771-780;Université de Nantes;FR
+771-780;University at Albany SUNY;US
+771-780;University of Brighton;UK
+781-790;University of Northern British Columbia;CA
+781-790;China University of Mining and Technology;CN
+781-790;Keele University ;UK
+781-790;Khoja Akhmet Yassawi International Kazakh-Turkish University;KZ
+781-790;Nanjing Agricultural University;CN
+781-790;National Institute of Technology Tiruchirappalli;IN
+781-790;Syracuse University;US
+781-790;The Catholic University of Korea ;KR
+781-790;Universiti Malaysia Pahang;MY
+781-790;University of Alaska Fairbanks;US
+791-800;American University;US
+791-800;Clarkson University;US
+791-800;Diponegoro University;ID
+791-800;Instituto Tecnológico de Buenos Aires (ITBA);AR
+791-800;Lanzhou University;CN
+791-800;Plekhanov Russian University of Economics;RU
+791-800;Universidad de La Sabana;CO
+791-800;University of Brescia;IT
+791-800;University of Engineering & Technology (UET) Lahore;PK
+791-800;University of Patras;GR
+801-850;Al-Ahliyya Amman University;JO
+801-850;Almaty Technological University;KZ
+801-850;Auburn University;US
+801-850;Australian Catholic University;AU
+801-850;Babes-Bolyai University;RO
+801-850;Bangladesh University of Engineering and Technology;BD
+801-850;Beijing University of Technology;CN
+801-850;Belarusian National Technical University (BNTU);BY
+801-850;Charles Sturt University ;AU
+801-850;China University of Geosciences;CN
+801-850;Clark University;US
+801-850;De Montfort University;UK
+801-850;Edinburgh Napier University;UK
+801-850;Immanuel Kant Baltic Federal University;RU
+801-850;Ivane Javakhishvili Tbilisi State University;GE
+801-850;Jouf University;SA
+801-850;Kaunas University of Technology;LT
+801-850;Konkuk University ;KR
+801-850;Louisiana State University;US
+801-850;Maynooth University;IE
+801-850;Nagasaki University;JP
+801-850;Nanjing University of Aeronautics and Astronautics;CN
+801-850;North-West University;ZA
+801-850;Poznan University of Life Sciences;PL
+801-850;Ritsumeikan Asia Pacific University;JP
+801-850;Texas Tech University;US
+801-850;Tokyo University of Agriculture and Technology ;JP
+801-850;Universidad de la República (Udelar);UY
+801-850;Universidad de San Andrés - UdeSA;AR
+801-850;Universidad Pontificia Bolivariana ;CO
+801-850;Universidad San Francisco de Quito (USFQ);EC
+801-850;Universidad Técnica Federico Santa María (USM);CL
+801-850;Universidade de Brasília;BR
+801-850;Universidade Federal de Santa Catarina ;BR
+801-850;Universitas Brawijaya ;ID
+801-850;Université de Sherbrooke;CA
+801-850;Universiti Tunku Abdul Rahman (UTAR);MY
+801-850;University Duesseldorf;DE
+801-850;University of Alicante;ES
+801-850;University of Balamand;LB
+801-850;University of Calcutta;IN
+801-850;University of Dubai;AE
+801-850;University of Hyderabad;IN
+801-850;University of Latvia;LV
+801-850;University of Massachusetts Boston;US
+801-850;University of Pecs;HU
+801-850;University of Salerno;IT
+801-850;University of Santo Tomas;PH
+801-850;Verona University;IT
+801-850;Vilnius Gediminas Technical University;LT
+801-850;Vytautas Magnus University;LT
+801-850;Yokohama City University;JP
+801-850;Karaganda State Technical University;KZ
+851-900;Addis Ababa University;ET
+851-900;Beijing University of Posts and Telecommunications;CN
+851-900;Catania University;IT
+851-900;Chonnam National University;KR
+851-900;Chungnam National University;KR
+851-900;Clemson University;US
+851-900;CY Cergy Paris University;FR
+851-900;Gdańsk University of Technology;PL
+851-900;Georgia State University;US
+851-900;Gulf University for Science and Technology;KW
+851-900;Huazhong Agricultural University;CN
+851-900;Kanazawa University;JP
+851-900;Kansas State University ;US
+851-900;Karaganda Buketov University;KZ
+851-900;King Faisal University;SA
+851-900;Kuwait University;KW
+851-900;Kyrgyz-Turkish Manas University;KG
+851-900;London South Bank University;UK
+851-900;Michigan Technological University;US
+851-900;National Research Saratov State University;RU
+851-900;Niigata University;JP
+851-900;North South University;BD
+851-900;Oklahoma State University ;US
+851-900;Pavol Jozef Šafárik University in Košice;SK
+851-900;Queen Margaret University , Edinburgh;UK
+851-900;Ryerson University;CA
+851-900;Southern Federal University;RU
+851-900;Technological University Dublin;IE
+851-900;TU Dortmund University;DE
+851-900;Universidad Católica del Uruguay (UCU);UY
+851-900;"Universidad Central ""Marta Abreu"" de Las Villas";CU
+851-900;Universidad de Guadalajara (UDG);MX
+851-900;Universidad Torcuato Di Tella;AR
+851-900;Universita' degli Studi di Ferrara;IT
+851-900;University of Bucharest;RO
+851-900;University of East London;UK
+851-900;University of Hertfordshire;UK
+851-900;University of Lincoln;UK
+851-900;University of Malta;MT
+851-900;University of Maribor;SI
+851-900;University of Messina (UniME);IT
+851-900;University of Palermo;IT
+851-900;University of Parma;IT
+851-900;University of Salford;UK
+851-900;University of South Africa;ZA
+851-900;University Paris 2 Panthéon-Assas;FR
+851-900;Vellore Institute of Technology (VIT);IN
+851-900;Wesleyan University;US
+851-900;Worcester Polytechnic Institute;US
+851-900;Wuhan University of Technology;CN
+901-950;AGH University of Science and Technology;PL
+901-950;Alexandria University ;EG
+901-950;Ankara Üniversitesi;TR
+901-950;Asia University Taiwan;TW
+901-950;Athens University of Economics and Business;GR
+901-950;Beijing Jiaotong University;CN
+901-950;College of William and Mary;US
+901-950;D. Serikbayev East Kazakhstan state technical university;KZ
+901-950;Donghua University;CN
+901-950;Hallym University ;KR
+901-950;Kumamoto University;JP
+901-950;London Metropolitan University;UK
+901-950;Loyola University Chicago;US
+901-950;Mendel University in Brno;CZ
+901-950;National Chung Cheng University;TW
+901-950;"National Technical University ""Kharkiv Polytechnic Institute""";UA
+901-950;Nicolaus Copernicus University ;PL
+901-950;Northern Borders University;SA
+901-950;Notre Dame University-Louaize NDU;LB
+901-950;Ocean University of China;CN
+901-950;Okayama University;JP
+901-950;Pontificia Universidad Católica del Ecuador (PUCE);EC
+901-950;Prince of Songkla University;TH
+901-950;Princess Sumaya University for Technology;JO
+901-950;Qassim University;SA
+901-950;Rhodes University ;ZA
+901-950;Riga Stradins University;LV
+901-950;Robert Gordon University;UK
+901-950;S.D. Asfendiyarov Kazakh National Medical University;KZ
+901-950;Samara National Research University (Samara University);RU
+901-950;Sophia University ;JP
+901-950;St. Louis University;US
+901-950;Sungshin Women's University;KR
+901-950;Universidad Autónoma Metropolitana (UAM);MX
+901-950;Universidad ICESI;CO
+901-950;Universidad Nacional Mayor de San Marcos;PE
+901-950;Universidade Católica Portuguesa - UCP;PT
+901-950;Universidade de Vigo;ES
+901-950;Università degli studi Roma Tre;IT
+901-950;University of Alabama, Birmingham;US
+901-950;University of Central Lancashire;UK
+901-950;University of Denver;US
+901-950;University of Murcia;ES
+901-950;University of Petroleum and Energy Studies (UPES);IN
+901-950;University of Vermont;US
+901-950;University of Wroclaw;PL
+901-950;West Virginia University;US
+901-950;Wroclaw University of Science and Technology (WRUST);PL
+951-1000;Bielefeld University;DE
+951-1000;Birla Institute of Technology and Science, Pilani;IN
+951-1000;George Mason University;US
+951-1000;Gifu University;JP
+951-1000;Gunma University;JP
+951-1000;Indiana University–Purdue University Indianapolis;US
+951-1000;Islamic University of Madinah;SA
+951-1000;Jamia Millia Islamia;IN
+951-1000;Khon Kaen University;TH
+951-1000;King Mongkut's University of Technology Thonburi ;TH
+951-1000;Lviv Polytechnic National University;UA
+951-1000;Makerere University;UG
+951-1000;Manipal Academy of Higher Education, Manipal, Karnataka, India;IN
+951-1000;NJSC KIMEP University;KZ
+951-1000;Northwest Agriculture and Forestry University;CN
+951-1000;O.P. Jindal Global University;IN
+951-1000;Saint Petersburg Electrotechnical University ETU-LETI;RU
+951-1000;Shahid Beheshti University (SBU);IR
+951-1000;South Ural State University (National Research University);RU
+951-1000;Sumy State University;UA
+951-1000;Tecnológico de Costa Rica -TEC;CR
+951-1000;Thapar Institute of Engineering & Technology;IN
+951-1000;The University of Alabama;US
+951-1000;Tokyo Metropolitan University;JP
+951-1000;Universidad de Castilla-La Mancha;ES
+951-1000;Universidad de las Américas Puebla (UDLAP);MX
+951-1000;Universidad de los Andes - Chile;CL
+951-1000;Universidad de Valladolid;ES
+951-1000;Universidad Diego Portales (UDP);CL
+951-1000;Universidad Nacional de Córdoba - UNC;AR
+951-1000;Universidad Nacional de Ingeniería Peru;PE
+951-1000;Universidad Nacional de Rosario (UNR);AR
+951-1000;Universidad Peruana Cayetano Heredia (UPCH);PE
+951-1000;Universidad Rey Juan Carlos;ES
+951-1000;Universidad Simón Bolívar (USB);VE
+951-1000;Universidad Tecnológica de Panamá (UTP);PA
+951-1000;Université de Tunis El Manar;TN
+951-1000;Université Toulouse 1 Capitole;FR
+951-1000;Universiti Pendidikan Sultan Idris (UPSI);MY
+951-1000;University of Baghdad;IQ
+951-1000;University of Bahrain;BH
+951-1000;University of Calabria;IT
+951-1000;UNIVERSITY OF GDANSK;PL
+951-1000;University of Ghana;GH
+951-1000;University of Lodz;PL
+951-1000;University of New England Australia;AU
+951-1000;University of Peshawar;PK
+951-1000;University of Seoul ;KR
+951-1000;University of the Western Cape;ZA
+951-1000;Viet Nam National University Ho Chi Minh City (VNU-HCM);VN
+951-1000;Vietnam National University, Hanoi ;VN
+951-1000;Yeungnam University ;KR
+951-1000;Yildiz Technical University;TR
+951-1000;Yokohama National University;JP
+1001-1200;Università del Salento;IT
+1001-1200;University of Ioannina;GR
+1001-1200;Vancouver Island University;CA
+1001-1200;Al Quds University The Arab University in Jerusalem;PS
+1001-1200;Aligarh Muslim University;IN
+1001-1200;Amity University;IN
+1001-1200;Amrita Vishwa Vidyapeetham;IN
+1001-1200;An-Najah National University;PS
+1001-1200;Arab Academy for Science, Technology and Maritime Transport;EG
+1001-1200;Assiut University ;EG
+1001-1200;Azerbaijan State University of Economics;AZ
+1001-1200;Baku State University;AZ
+1001-1200;Banaras Hindu University;IN
+1001-1200;Baylor University;US
+1001-1200;Beijing Foreign Studies University;CN
+1001-1200;Beijing University of Chinese Medicine;CN
+1001-1200;Bina Nusantara University (BINUS);ID
+1001-1200;Binghamton University SUNY;US
+1001-1200;Birmingham City University ;UK
+1001-1200;BRAC University;BD
+1001-1200;Brigham Young University;US
+1001-1200;Canterbury Christ Church University;UK
+1001-1200;Chang Jung Christian University;TW
+1001-1200;Chung Yuan Christian University;TW
+1001-1200;Chungbuk National University;KR
+1001-1200;Corvinus University of Budapest;HU
+1001-1200;Cracow University of Technology (Politechnika Krakowska);PL
+1001-1200;Dankook University ;KR
+1001-1200;Doshisha University;JP
+1001-1200;EGE UNIVERSITY;TR
+1001-1200;Escuela Politécnica Nacional;EC
+1001-1200;Escuela Superior Politécnica del Litoral (ESPOL);EC
+1001-1200;Ferdowsi University of Mashhad;IR
+1001-1200;Financial University under the Government of the Russian Federation;RU
+1001-1200;Fordham University ;US
+1001-1200;Fundación CEU San Pablo;ES
+1001-1200;Future University in Egypt;EG
+1001-1200;Gazi Üniversitesi;TR
+1001-1200;German Jordanian University;JO
+1001-1200;Glasgow Caledonian University;UK
+1001-1200;Harbin Engineering University;CN
+1001-1200;Harper Adams University;UK
+1001-1200;Howard University;US
+1001-1200;Hungarian University of Agriculture and Life Sciences;HU
+1001-1200;Imam Mohammad Ibn Saud Islamic University – IMSIU;SA
+1001-1200;Instituto Tecnológico de Santo Domingo (INTEC);DO
+1001-1200;International Christian University;JP
+1001-1200;ITESO, Universidad Jesuita de Guadalajara;MX
+1001-1200;Jiangnan University;CN
+1001-1200;Kagoshima University;JP
+1001-1200;Kangwon National University ;KR
+1001-1200;Kazakh Ablai Khan University of International Relations and World Languages;KZ
+1001-1200;Kazakh-British Technical University;KZ
+1001-1200;Kazan National Research Technological University;RU
+1001-1200;Kent State University;US
+1001-1200;Kookmin University ;KR
+1001-1200;Kyoto Institute of Technology;JP
+1001-1200;Kyushu Institute of Technology ;JP
+1001-1200;Leeds Beckett University;UK
+1001-1200;Lobachevsky University;RU
+1001-1200;Lodz University of Technology;PL
+1001-1200;Mansoura University;EG
+1001-1200;Meiji University;JP
+1001-1200;Mississippi State University;US
+1001-1200;Multimedia University (MMU);MY
+1001-1200;Mustansiriyah University;IQ
+1001-1200;Mutah University;JO
+1001-1200;Mykolas Romeris University;LT
+1001-1200;Nanjing Normal University;CN
+1001-1200;National University of Kyiv-Mohyla Academy (NaUKMA);UA
+1001-1200;Northern Arizona University;US
+1001-1200;Northwest University (China);CN
+1001-1200;Novosibirsk State Technical University;RU
+1001-1200;Odessa I.I. Mechnikov National University;UA
+1001-1200;Ohio University;US
+1001-1200;Panjab University;IN
+1001-1200;Paul Valéry University Montpellier;FR
+1001-1200;Pontifícia Universidade Católica de São Paulo;BR
+1001-1200;Poznań University of Technology;PL
+1001-1200;Rochester Institute of Technology (RIT);US
+1001-1200;Russian Presidential Academy of National Economy and Public Administration;RU
+1001-1200;Saint-Petersburg Mining University;RU
+1001-1200;San Diego State University;US
+1001-1200;Sathyabama Institute of Science and Technology (deemed to be university);IN
+1001-1200;Seoul National University of Science and Technology;KR
+1001-1200;Shanghai International Studies University;CN
+1001-1200;Sheffield Hallam University;UK
+1001-1200;Shinshu University ;JP
+1001-1200;Siberian Federal University, SibFU;RU
+1001-1200;Silesian University of Technology;PL
+1001-1200;Slovak University of Technology in Bratislava;SK
+1001-1200;Soonchunhyang University;KR
+1001-1200;Southern Methodist University;US
+1001-1200;Southwest University;CN
+1001-1200;Széchenyi István University;HU
+1001-1200;Taibah University;SA
+1001-1200;Tallinn University ;EE
+1001-1200;Technical University of Kosice;SK
+1001-1200;Technical University of Liberec;CZ
+1001-1200;Telkom University;ID
+1001-1200;The University of Lahore;PK
+1001-1200;The University of Northampton;UK
+1001-1200;The University of Texas at Arlington;US
+1001-1200;Tokai University;JP
+1001-1200;Tokushima University;JP
+1001-1200;Tomas Bata University in Zlin;CZ
+1001-1200;Ufa State Aviation Technical University ;RU
+1001-1200;Universidad Andrés Bello;CL
+1001-1200;Universidad Austral de Chile;CL
+1001-1200;Universidad Autónoma Chapingo;MX
+1001-1200;Universidad Autónoma de Guadalajara (UAG);MX
+1001-1200;Universidad Autónoma de Nuevo León;MX
+1001-1200;Universidad Autónoma del Estado de Hidalgo (UAEH);MX
+1001-1200;Universidad Autónoma del Estado de México (UAEMex);MX
+1001-1200;Universidad de Córdoba - España;ES
+1001-1200;Universidad de León;ES
+1001-1200;Universidad de Lima;PE
+1001-1200;Universidad de Los Andes - (ULA) Mérida;VE
+1001-1200;Universidad de Monterrey (UDEM);MX
+1001-1200;Universidad de Oriente Santiago de Cuba;CU
+1001-1200;Universidad de Oviedo;ES
+1001-1200;Universidad de Puerto Rico;PR
+1001-1200;Universidad de Talca;CL
+1001-1200;Universidad del Norte ;CO
+1001-1200;Universidad del Pacífico;PE
+1001-1200;Universidad del Valle;CO
+1001-1200;Universidad Industrial de Santander - UIS;CO
+1001-1200;Universidad La Salle (ULSA);MX
+1001-1200;Universidad Metropolitana;VE
+1001-1200;Universidad Nacional de Cuyo;AR
+1001-1200;Universidad Nacional de la Asunción;PY
+1001-1200;Universidad Nacional de San Luis;AR
+1001-1200;Universidad Nacional del Centro de la Provincia de Buenos Aires (UNICEN);AR
+1001-1200;Universidad Nacional, Costa Rica;CR
+1001-1200;Universidad Peruana de Ciencias Aplicadas;PE
+1001-1200;Universidad Tecnológica Nacional (UTN);AR
+1001-1200;Universidade da Coruña ;ES
+1001-1200;Universidade Federal de Pernambuco (UFPE) ;BR
+1001-1200;Universidade Federal de São Carlos (UFSCar);BR
+1001-1200;Universidade Federal do Paraná - UFPR;BR
+1001-1200;"Universita' degli Studi ""G. d'Annunzio"" Chieti Pescara";IT
+1001-1200;Università degli Studi della Tuscia (University of Tuscia);IT
+1001-1200;Università degli Studi di Udine;IT
+1001-1200;Universitas Hasanuddin;ID
+1001-1200;Universitas Sebelas Maret;ID
+1001-1200;Universitat de Lleida;ES
+1001-1200;Universität Siegen;DE
+1001-1200;Université de Caen Normandie;FR
+1001-1200;Université de Poitiers;FR
+1001-1200;Université de Sfax;TN
+1001-1200;Université de Sousse;TN
+1001-1200;Université de Toulouse II-Le Mirail;FR
+1001-1200;Université Lumière Lyon 2;FR
+1001-1200;Universiti Kuala Lumpur (UniKL);MY
+1001-1200;Universiti Malaysia Perlis;MY
+1001-1200;Universiti Malaysia Sabah (UMS);MY
+1001-1200;Universiti Malaysia Sarawak (UNIMAS);MY
+1001-1200;Universiti Malaysia Terengganu (UMT);MY
+1001-1200;Universiti Tun Hussein Onn University of Malaysia (UTHM);MY
+1001-1200;University of Arkansas Fayetteville ;US
+1001-1200;University of Colombo;LK
+1001-1200;University of Derby;UK
+1001-1200;University of Deusto;ES
+1001-1200;University of Hradec Kralove;CZ
+1001-1200;University of Idaho;US
+1001-1200;University of Karachi;PK
+1001-1200;University of Louisville;US
+1001-1200;University of Mississippi;US
+1001-1200;University of Missouri, Kansas City;US
+1001-1200;University of Nairobi;KE
+1001-1200;University of Naples Parthenope;IT
+1001-1200;University of New Hampshire;US
+1001-1200;University of North Carolina at Charlotte;US
+1001-1200;University of North Texas;US
+1001-1200;University of Novi Sad;RS
+1001-1200;University of Pardubice;CZ
+1001-1200;University of Primorska;SI
+1001-1200;University of Regina;CA
+1001-1200;University of Rhode Island ;US
+1001-1200;University of San Francisco;US
+1001-1200;University of South Bohemia;CZ
+1001-1200;University of Texas at San Antonio;US
+1001-1200;University of Texas El Paso ;US
+1001-1200;University of the Free State;ZA
+1001-1200;University of the Sunshine Coast ;AU
+1001-1200;University of Toledo;US
+1001-1200;University of Tulsa;US
+1001-1200;University of Tyumen;RU
+1001-1200;University of Wisconsin Milwaukee ;US
+1001-1200;University of Wolverhampton;UK
+1001-1200;University of Wyoming;US
+1001-1200;University of Žilina;SK
+1001-1200;Utah State University ;US
+1001-1200;VSB - Technical University of Ostrava;CZ
+1001-1200;Warsaw University of Life Sciences – SGGW (WULS-SGGW);PL
+1001-1200;Western Michigan University;US
+1001-1200;Xi'an Jiaotong Liverpool University;CN
+1001-1200;Yamaguchi University ;JP
+1001-1200;Yarmouk University;JO
+1001-1200;Yerevan State University;AM
+1201-1400;Lucian Blaga University of Sibiu;RO
+1201-1400; Don State Technical University;RU
+1201-1400;Al-Azhar University;EG
+1201-1400;Alexandru Ioan Cuza University;RO
+1201-1400;Anadolu University;TR
+1201-1400;Aoyama Gakuin University;JP
+1201-1400;Atma Jaya Catholic University Jakarta;ID
+1201-1400;Azerbaijan State Oil and Industry University;AZ
+1201-1400;Bahauddin Zakariya University ;PK
+1201-1400;Belarusian State University of Informatics and Radioelectronics;BY
+1201-1400;Benemérita Universidad Autónoma de Puebla;MX
+1201-1400;Birzeit university;PS
+1201-1400;British University in Egypt;EG
+1201-1400;Brock University;CA
+1201-1400;California Polytechnic State University;US
+1201-1400;Católica de Córdoba;AR
+1201-1400;Central Michigan University;US
+1201-1400;Chaoyang University of Technology;TW
+1201-1400;China University of Political Science and Law;CN
+1201-1400;Chitkara University;IN
+1201-1400;Chittagong University of Engineering and Technology;BD
+1201-1400;Cleveland State University;US
+1201-1400;CUNY The City College of New York;US
+1201-1400;Daffodil International University;BD
+1201-1400;Damascus University;SY
+1201-1400;Dokuz Eylül Üniversitesi;TR
+1201-1400;East West University;BD
+1201-1400;Erciyes Üniversitesi;TR
+1201-1400;Feng Chia University;TW
+1201-1400;Florida Atlantic University - Boca Raton;US
+1201-1400;Fu Jen Catholic University;TW
+1201-1400;Fundación Universidad De Bogotá-Jorge Tadeo Lozano;CO
+1201-1400;Gebze Yüksek Teknoloji Enstitüsü (GYTE);TR
+1201-1400;German University in Cairo;EG
+1201-1400;Hanoi University of Science and Technology;VN
+1201-1400;Helwan University ;EG
+1201-1400;Hohai University;CN
+1201-1400;Hongik University ;KR
+1201-1400;Indiana State University;US
+1201-1400;International Islamic University Islamabad (IIU);PK
+1201-1400;Istanbul Aydin University  ;TR
+1201-1400;Istanbul Bilgi Üniversitesi;TR
+1201-1400;Ivan Franko National University of Lviv;UA
+1201-1400;Izmir Institute of Technology (IZTECH);TR
+1201-1400;Jahangirnagar University;BD
+1201-1400;Jamia Hamdard;IN
+1201-1400;Jeju National University ;KR
+1201-1400;Kenyatta University;KE
+1201-1400;Kharkiv National University of Radio Electronics ;UA
+1201-1400;Khulna University of Engineering and Technology;BD
+1201-1400;Kindai University (Kinki University);JP
+1201-1400;King Mongkut\'s Institute of Technology Ladkrabang;TH
+1201-1400;King Mongkut's University of Technology North Bangkok;TH
+1201-1400;Korkyt Ata Kyzylorda University;KZ
+1201-1400;Kwansei Gakuin University;JP
+1201-1400;M.Kh. Dulaty Taraz Regional University;KZ
+1201-1400;Marmara University;TR
+1201-1400;Marquette University;US
+1201-1400;Mendeleev University of Chemical Technology;RU
+1201-1400;Miami University;US
+1201-1400;Moscow Pedagogical State University;RU
+1201-1400;Nagoya Institute of Technology (NIT);JP
+1201-1400;Naresuan University;TH
+1201-1400;National Dong Hwa University;TW
+1201-1400;National Research University Moscow Power Engineering Institute (MPEI);RU
+1201-1400;National Taipei University;TW
+1201-1400;National Taiwan Ocean University;TW
+1201-1400;National University of Life and Environmental Sciences of Ukraine;UA
+1201-1400;National University of Modern Languages (NUML), Islamabad;PK
+1201-1400;Norwegian University of Life Sciences (UMB);NO
+1201-1400;Nova Southeastern University;US
+1201-1400;Óbuda University;HU
+1201-1400;OSMANIA UNIVERSITY;IN
+1201-1400;Perm State National Research University;RU
+1201-1400;Pondicherry University;IN
+1201-1400;Pontificia Universidad Catolica Madre y Maestra;DO
+1201-1400;Pontifícia Universidade Católica do Rio Grande do Sul (PUCRS);BR
+1201-1400;Portland State University;US
+1201-1400;Pukyong National University ;KR
+1201-1400;Rikkyo University;JP
+1201-1400;Russian State Agrarian University - Moscow Timiryazev Agricultural Academy;RU
+1201-1400;Russian State University for the Humanities ;RU
+1201-1400;Rutgers, The State University of New Jersey, Camden;US
+1201-1400;Saitama University;JP
+1201-1400;Saken Seifullin Kazakh Agrotechnical University;KZ
+1201-1400;San Francisco State University;US
+1201-1400;Seattle University;US
+1201-1400;Shanghai Normal University;CN
+1201-1400;Shanghai University of Finance and Economics;CN
+1201-1400;Shibaura Institute of Technology;JP
+1201-1400;Siksha 'O' Anusandhan (Deemed to be University);IN
+1201-1400;Silpakorn University;TH
+1201-1400;Sookmyung Women's University ;KR
+1201-1400;Soongsil University;KR
+1201-1400;SRM INSTITUTE OF SCIENCE AND TECHNOLOGY;IN
+1201-1400;Stefan cel Mare University of Suceava;RO
+1201-1400;Suez Canal University;EG
+1201-1400;Suleyman Demirel University;TR
+1201-1400;Suleyman Demirel University, Kazakhstan;KZ
+1201-1400;Suranaree University of Technology ;TH
+1201-1400;Tamkang University;TW
+1201-1400;Tanta University ;EG
+1201-1400;Technical University of Cluj-Napoca;RO
+1201-1400;Technical University of Lublin;PL
+1201-1400;"The ""Gheorghe Asachi"" Technical University of Iasi";RO
+1201-1400;The Hashemite University;JO
+1201-1400;The Herzen State Pedagogical University of Russia;RU
+1201-1400;The Josip Juraj Strossmayer University of Osijek;HR
+1201-1400;"The National Research University ""Belgorod State University""";RU
+1201-1400;Toraighyrov University;KZ
+1201-1400;Transilvania University of Brasov;RO
+1201-1400;Tunghai University;TW
+1201-1400;United International University;BD
+1201-1400;Universidad Alberto Hurtado;CL
+1201-1400;Universidad Autónoma de Aguascalientes;MX
+1201-1400;Universidad Autónoma de Baja California;MX
+1201-1400;Universidad Bernardo O'Higgins;CL
+1201-1400;Universidad Católica de Temuco;CL
+1201-1400;Universidad Católica del Norte;CL
+1201-1400;Universidad Central del Ecuador;EC
+1201-1400;Universidad de Carabobo;VE
+1201-1400;Universidad de Cartagena;CO
+1201-1400;Universidad de Córdoba - Colombia;CO
+1201-1400;Universidad de Guanajuato;MX
+1201-1400;Universidad de La Frontera (UFRO);CL
+1201-1400;Universidad de Las Américas (UDLA) Ecuador;EC
+1201-1400;Universidad de las Fuerzas Armadas ESPE (Ex - Escuela Politécnica del Ejército);EC
+1201-1400;Universidad de Medellín;CO
+1201-1400;Universidad de Panama;PA
+1201-1400;Universidad de Piura;PE
+1201-1400;Universidad de San Carlos de Guatemala - USAC;GT
+1201-1400;Universidad de Valparaíso (UV);CL
+1201-1400;Universidad del Bío-Bío;CL
+1201-1400;Universidad del Cauca;CO
+1201-1400;Universidad del Desarrollo (UDD);CL
+1201-1400;Universidad del Salvador;AR
+1201-1400;Universidad del Zulia;VE
+1201-1400;Universidad Mayor de San Andrés (UMSA);BO
+1201-1400;Universidad Nacional Agraria la Molina;PE
+1201-1400;Universidad Nacional de Mar del Plata;AR
+1201-1400;Universidad Nacional de Río Cuarto - UNRC;AR
+1201-1400;Universidad Nacional de San Martín (UNSAM);AR
+1201-1400;Universidad Nacional del Comahue;AR
+1201-1400;Universidad Nacional del Litoral;AR
+1201-1400;Universidad Popular Autónoma del Estado de Puebla (UPAEP);MX
+1201-1400;Universidad San Ignacio de Loyola;PE
+1201-1400;Universidad Tecnológica de la Habana José Antonio Echeverría, Cujae;CU
+1201-1400;Universidad Veracruzana;MX
+1201-1400;Universidade do Estado do Rio de Janeiro (UERJ);BR
+1201-1400;Universidade Federal da Bahia;BR
+1201-1400;Universidade Federal de Juiz de Fora- (UFJF);BR
+1201-1400;Universidade Federal de Pelotas ;BR
+1201-1400;Universidade Federal de Santa Maria;BR
+1201-1400;Universidade Federal de Viçosa (UFV);BR
+1201-1400;Universidade Federal do Ceará (UFC);BR
+1201-1400;Universidade Federal Fluminense ;BR
+1201-1400;Universidade Presbiteriana Mackenzie;BR
+1201-1400;Università degli studi di Bergamo;IT
+1201-1400;Universitas Islam Indonesia;ID
+1201-1400;Universitas Muhammadiyah Yogyakarta;ID
+1201-1400;Universitas Pendidikan Indonesia;ID
+1201-1400;Universitas Sumatera Utara;ID
+1201-1400;Universitatea de Vest din Timisoara / West University of Timisoara;RO
+1201-1400;Université de Franche-Comté;FR
+1201-1400;Université de Limoges;FR
+1201-1400;Université de Tunis;TN
+1201-1400;Université Jean Moulin Lyon 3;FR
+1201-1400;Université Mohammed V de Rabat;MA
+1201-1400;Université Paris-Nanterre;FR
+1201-1400;Universiti Sains Islam Malaysia;MY
+1201-1400;Universiti Teknikal Malaysia Melaka;MY
+1201-1400;University of Babylon;IQ
+1201-1400;University of Basrah;IQ
+1201-1400;University of Bialystok;PL
+1201-1400;University of Central Oklahoma;US
+1201-1400;University of Iceland;IS
+1201-1400;University of International Business and Economics;CN
+1201-1400;University of Khartoum;SD
+1201-1400;University of Kufa;IQ
+1201-1400;University of Memphis;US
+1201-1400;University of Miskolc ;HU
+1201-1400;University of Missouri Saint Louis;US
+1201-1400;University of Montana Missoula ;US
+1201-1400;University of Niš;RS
+1201-1400;University of North Carolina at Greensboro;US
+1201-1400;University of Ostrava;CZ
+1201-1400;University of Pannonia;HU
+1201-1400;University of Peradeniya ;LK
+1201-1400;University of Rijeka;HR
+1201-1400;University of Rzeszów;PL
+1201-1400;University of San Carlos;PH
+1201-1400;University of San Diego;US
+1201-1400;University of Sarajevo ;BA
+1201-1400;University of Silesia in Katowice;PL
+1201-1400;University of South Alabama (USA);US
+1201-1400;University of Split;HR
+1201-1400;University of the Pacific;US
+1201-1400;University of Warmia and Mazury in Olsztyn;PL
+1201-1400;University of West Bohemia ;CZ
+1201-1400;University POLITEHNICA of Bucharest;RO
+1201-1400;Voronezh State University;RU
+1201-1400;Yogyakarta State University;ID
+1201-1400;Youngsan University;KR
+1201-1400;Yuan Ze University;TW
+1201-1400;Zagazig University;EG
+1201-1400;Narxoz University;KZ
+1401;Akdeniz Üniversitesi;TR
+1401;Al-Balqa Applied University;JO
+1401;Ataturk University;TR
+1401;California State University - Los Angeles;US
+1401;California State University Long Beach;US
+1401;Cukurova University;TR
+1401;Georgian Technical University;GE
+1401;Guru Gobind Singh Indraprastha University;IN
+1401;Humboldt State University;US
+1401;Illinois State University;US
+1401;Indian Statistical Institute;IN
+1401;International University of Business, Agriculture and Technology (IUBAT);BD
+1401;Irkutsk State University;RU
+1401;Khulna University;BD
+1401;Kwame Nkrumah University of Science and Technology;GH
+1401;MIREA - Russian Technological University;RU
+1401;Moscow City University;RU
+1401;Nara Institute of Science and Technology;JP
+1401;Pontificia Universidade Católica do Campinas - PUC Campinas;BR
+1401;Pontificia Universidade Católica do Minas Gerais - PUC Minas;BR
+1401;Pontifícia Universidade Católica do Paraná;BR
+1401;Rajshahi University;BD
+1401;Sakarya University;TR
+1401;Shahjalal University of Science and Technology;BD
+1401;Soochow University (Taiwan);TW
+1401;Stamford University Bangladesh;BD
+1401;State University of Malang;ID
+1401;Sudan University of Science and Technology;SD
+1401;Technical University of Crete;GR
+1401;Technische Universität Bergakademie Freiberg;DE
+1401;Technische Universität Hamburg-Harburg;DE
+1401;Technische Universität Kaiserslautern;DE
+1401;The University of Notre Dame, Australia;AU
+1401;Udayana University;ID
+1401;Universidad Autónoma de Chile;CL
+1401;Universidad Autónoma de Querétaro (UAQ);MX
+1401;Universidad Autónoma de San Luis de Potosí;MX
+1401;Universidad Autonoma de Yucatan;MX
+1401;Universidad Autónoma del Estado de Morelos (UAEM);MX
+1401;"Universidad Católica Boliviana ""San Pablo""";BO
+1401;Universidad Católica de Colombia ;CO
+1401;Universidad Católica de La Santísima Concepción - UCSC;CL
+1401;Universidad Católica de Santiago de Guayaquil;EC
+1401;Universidad Central de Chile;CL
+1401;Universidad de Caldas;CO
+1401;Universidad de Cuenca;EC
+1401;Universidad de La Salle;CO
+1401;Universidad de La Serena;CL
+1401;Universidad de Santander - UDES;CO
+1401;Universidad de Sonora;MX
+1401;Universidad de Tarapaca;CL
+1401;Universidad del Magdalena;CO
+1401;Universidad del Valle de Mexico (UVM);MX
+1401;Universidad Mayor de San Simón Cochabamba;BO
+1401;Universidad Michoacana de San Nicolás de Hidalgo;MX
+1401;Universidad Nacional Autónoma de Honduras (UNAH);HN
+1401;Universidad Nacional de Quilmes;AR
+1401;Universidad Nacional de Tucumán;AR
+1401;Universidad Nacional del Sur;AR
+1401;UNIVERSIDAD POLITECNICA SALESIANA;EC
+1401;Universidad Tecnica Particular De Loja (UTPL);EC
+1401;Universidad Tecnológica de Bolívar;CO
+1401;Universidad Tecnológica de Pereira;CO
+1401;Universidade do Estado de Santa Catarina;BR
+1401;Universidade Estadual de Londrina;BR
+1401;Universidade Federal da Paraíba;BR
+1401;Universidade Federal de Goiás;BR
+1401;Universidade Federal de Uberlândia;BR
+1401;Universidade Federal do Estado do Rio de Janeiro - UNIRIO;BR
+1401;Universidade Federal do Parà - UFPA;BR
+1401;Universidade Federal do Rio Grande Do Norte;BR
+1401;Universitas Andalas;ID
+1401;Universitas Kristen Petra;ID
+1401;Universitas Muhammadiyah Surakarta;ID
+1401;Université Sorbonne Paris Nord;FR
+1401;University of Craiova;RO
+1401;University of Ibadan;NG
+1401;University of Kragujevac;RS
+1401;University of Lagos;NG
+1401;University of Lampung;ID
+1401;University of Mataram;ID
+1401;University of Oradea;RO
+1401;University of Stavanger;NO
+1401;University Politehnica of Timisoara, UPT;RO
+1401;Western Washington University;US
+1401;Zürcher Hochschule Winterthur;CH

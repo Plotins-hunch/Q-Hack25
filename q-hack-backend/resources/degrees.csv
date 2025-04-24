@@ -1,0 +1,45 @@
+abbreviation;full_name;score
+HS;High School Diploma;1
+GED;General Educational Development;1
+AS;Associate of Science;2
+AA;Associate of Arts;2
+AAS;Associate of Applied Science;2
+BA;Bachelor of Arts;4
+BS;Bachelor of Science;5
+BSc;Bachelor of Science;5
+BE;Bachelor of Engineering;5
+BBA;Bachelor of Business Administration;4
+BFA;Bachelor of Fine Arts;4
+BEd;Bachelor of Education;4
+LLB;Bachelor of Laws;5
+MA;Master of Arts;6
+MS;Master of Science;6
+MSc;Master of Science;6
+MEng;Master of Engineering;6
+MBA;Master of Business Administration;6
+MEd;Master of Education;6
+MPH;Master of Public Health;6
+LLM;Master of Laws;6
+MFin;Master of Finance;6
+PGDip;Postgraduate Diploma;5
+GradCert;Graduate Certificate;5
+Cert;Professional Certification;5
+MD;Doctor of Medicine;8
+DDS;Doctor of Dental Surgery;8
+DVM;Doctor of Veterinary Medicine;8
+PharmD;Doctor of Pharmacy;8
+OD;Doctor of Optometry;8
+DPT;Doctor of Physical Therapy;8
+DNP;Doctor of Nursing Practice;8
+PhD;Doctor of Philosophy;10
+EdD;Doctor of Education;9
+ScD;Doctor of Science;10
+JD;Juris Doctor;8
+Postdoc;Postdoctoral Fellow;10
+Habil;Habilitation;10
+TechDip;Technical Diploma;3
+Voc;Vocational Training;2
+ExecMBA;Executive MBA;7
+CertProg;Certificate Program;2
+Trade;Trade School Degree;2
+Dp;Diploma;5

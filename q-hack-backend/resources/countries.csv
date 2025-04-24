@@ -1,0 +1,200 @@
+country;country_name;table_name;country_long_name;name_short_original;country_original_x;country_x;country_y;country_original_y;country_code_iso3;country_code_alpha2;wb_region;income_group;cpi_region;corruption_score;corruption_rank;crime_rank;crime_index;safety_index
+venezuela;venezuela;Venezuela, RB;República Bolivariana de Venezuela;Venezuela;Venezuela;venezuela;venezuela;Venezuela;VEN;VE;Latin America & Caribbean;Upper middle income;AME;10;178;1;81;20
+papua new guinea;papua new guinea;Papua New Guinea;The Independent State of Papua New Guinea;Papua New Guinea;Papua New Guinea;papua new guinea;papua new guinea;Papua New Guinea;PNG;PG;East Asia & Pacific;Lower middle income;AP;31;127;2;81;20
+haiti;haiti;Haiti;Republic of Haiti;Haiti;Haiti;haiti;haiti;Haiti;HTI;HT;Latin America & Caribbean;Low income;AME;16;168;3;79;22
+afghanistan;afghanistan;Afghanistan;Islamic State of Afghanistan;Afghanistan;Afghanistan;afghanistan;afghanistan;Afghanistan;AFG;AF;South Asia;Low income;AP;17;165;4;76;25
+south africa;south africa;South Africa;Republic of South Africa;South Africa;South Africa;south africa;south africa;South Africa;ZAF;ZA;Sub-Saharan Africa;Upper middle income;SSA;41;82;5;75;26
+honduras;honduras;Honduras;Republic of Honduras;Honduras;Honduras;honduras;honduras;Honduras;HND;HN;Latin America & Caribbean;Lower middle income;AME;22;154;6;72;28
+trinidad and tobago;trinidad and tobago;Trinidad and Tobago;Republic of Trinidad and Tobago;Trinidad and Tobago;Trinidad and Tobago;trinidad and tobago;trinidad and tobago;Trinidad And Tobago;TTO;TT;Latin America & Caribbean;High income;AME;41;82;7;71;30
+syrian arab republic;syrian arab republic;Syrian Arab Republic;Syrian Arab Republic;Syrian Arab Republic;Syria;syria;syria;Syria;SYR;SY;Middle East & North Africa;Low income;MENA;12;177;8;69;32
+jamaica;jamaica;Jamaica;Jamaica;Jamaica;Jamaica;jamaica;jamaica;Jamaica;JAM;JM;Latin America & Caribbean;Upper middle income;AME;44;73;9;68;33
+peru;peru;Peru;Republic of Peru;Peru;Peru;peru;peru;Peru;PER;PE;Latin America & Caribbean;Upper middle income;AME;31;127;10;68;33
+nigeria;nigeria;Nigeria;Federal Republic of Nigeria;Nigeria;Nigeria;nigeria;nigeria;Nigeria;NGA;NG;Sub-Saharan Africa;Lower middle income;SSA;26;140;11;67;34
+guyana;guyana;Guyana;Co-operative Republic of Guyana;Guyana;Guyana;guyana;guyana;Guyana;GUY;GY;Latin America & Caribbean;Upper middle income;AME;39;92;12;67;34
+angola;angola;Angola;People's Republic of Angola;Angola;Angola;angola;angola;Angola;AGO;AO;Sub-Saharan Africa;Lower middle income;SSA;32;121;13;67;34
+cameroon;cameroon;Cameroon;Republic of Cameroon;Cameroon;Cameroon;cameroon;cameroon;Cameroon;CMR;CM;Sub-Saharan Africa;Lower middle income;SSA;26;140;14;66;35
+bolivia;bolivia;Bolivia;Plurinational State of Bolivia;Bolivia;Bolivia;bolivia;bolivia;Bolivia;BOL;BO;Latin America & Caribbean;Lower middle income;AME;28;133;15;65;35
+brazil;brazil;Brazil;Federative Republic of Brazil;Brazil;Brazil;brazil;brazil;Brazil;BRA;BR;Latin America & Caribbean;Upper middle income;AME;34;107;16;65;36
+somalia;somalia;Somalia;Somali Democratic Republic;Somalia;Somalia;somalia;somalia;Somalia;SOM;SO;Sub-Saharan Africa;Low income;SSA;9;179;17;64;37
+yemen;yemen;Yemen, Rep.;Republic of Yemen;Yemen;Yemen;yemen;yemen;Yemen;YEM;YE;Middle East & North Africa;Low income;MENA;13;173;18;64;37
+namibia;namibia;Namibia;Republic of Namibia;Namibia;Namibia;namibia;namibia;Namibia;NAM;;Sub-Saharan Africa;Upper middle income;SSA;49;59;19;64;37
+argentina;argentina;Argentina;Argentine Republic;Argentina;Argentina;argentina;argentina;Argentina;ARG;AR;Latin America & Caribbean;Upper middle income;AME;37;99;20;64;37
+ecuador;ecuador;Ecuador;Republic of Ecuador;Ecuador;Ecuador;ecuador;ecuador;Ecuador;ECU;EC;Latin America & Caribbean;Upper middle income;AME;32;121;21;63;38
+bangladesh;bangladesh;Bangladesh;People's Republic of Bangladesh;Bangladesh;Bangladesh;bangladesh;bangladesh;Bangladesh;BGD;BD;South Asia;Lower middle income;AP;23;151;22;62;39
+puerto rico;puerto rico;Puerto Rico;Puerto Rico;Puerto Rico;Puerto Rico;puerto rico;puerto rico;Puerto Rico;PRI;PR;Latin America & Caribbean;High income;;;;23;62;39
+colombia;colombia;Colombia;Republic of Colombia;Colombia;Colombia;colombia;colombia;Colombia;COL;CO;Latin America & Caribbean;Upper middle income;AME;39;92;24;61;40
+zimbabwe;zimbabwe;Zimbabwe;Republic of Zimbabwe;Zimbabwe;Zimbabwe;zimbabwe;zimbabwe;Zimbabwe;ZWE;ZW;Sub-Saharan Africa;Lower middle income;SSA;21;158;25;61;40
+dominican republic;dominican republic;Dominican Republic;Dominican Republic;Dominican Republic;Dominican Republic;dominican republic;dominican republic;Dominican Republic;DOM;DO;Latin America & Caribbean;Upper middle income;AME;36;104;26;61;40
+chile;chile;Chile;Republic of Chile;Chile;Chile;chile;chile;Chile;CHL;CL;Latin America & Caribbean;High income;AME;63;32;27;61;40
+mozambique;mozambique;Mozambique;Republic of Mozambique;Mozambique;Mozambique;mozambique;mozambique;Mozambique;MOZ;MZ;Sub-Saharan Africa;Low income;SSA;25;146;28;61;40
+us virgin islands;us virgin islands;US Virgin Islands;US Virgin Islands;US Virgin Islands;US Virgin Islands;us virgin islands;us virgin islands;Us Virgin Islands;VIR;VI;Latin America & Caribbean;High income;;;;29;60;41
+paraguay;paraguay;Paraguay;Republic of Paraguay;Paraguay;Paraguay;paraguay;paraguay;Paraguay;PRY;PY;Latin America & Caribbean;Upper middle income;AME;24;149;30;60;41
+el salvador;el salvador;El Salvador;Republic of El Salvador;El Salvador;El Salvador;el salvador;el salvador;El Salvador;SLV;SV;Latin America & Caribbean;Lower middle income;AME;30;130;31;59;42
+guatemala;guatemala;Guatemala;Republic of Guatemala;Guatemala;Guatemala;guatemala;guatemala;Guatemala;GTM;GT;Latin America & Caribbean;Upper middle income;AME;25;146;32;58;43
+the bahamas;the bahamas;Bahamas, The;Commonwealth of The Bahamas;The Bahamas;Bahamas;bahamas;bahamas;Bahamas;BHS;BS;Latin America & Caribbean;High income;AME;65;28;33;57;44
+fiji;fiji;Fiji;Republic of Fiji;Fiji;Fiji;fiji;fiji;Fiji;FJI;FJ;East Asia & Pacific;Upper middle income;AP;55;50;34;57;44
+côte d'ivoire;côte d'ivoire;Côte d'Ivoire;Republic of Côte d'Ivoire;Côte d'Ivoire;Côte d'Ivoire;côte d'ivoire;ivory coast;Ivory Coast;CIV;CI;Sub-Saharan Africa;Lower middle income;SSA;45;69;35;57;44
+libya;libya;Libya;Socialist People's Libyan Arab Jamahiriya;Libya;Libya;libya;libya;Libya;LBY;LY;Middle East & North Africa;Upper middle income;MENA;13;173;36;57;44
+kenya;kenya;Kenya;Republic of Kenya;Kenya;Kenya;kenya;kenya;Kenya;KEN;KE;Sub-Saharan Africa;Lower middle income;SSA;32;121;37;56;44
+france;france;France;French Republic;France;France;france;france;France;FRA;FR;Europe & Central Asia;High income;WE/EU;67;25;38;56;45
+kyrgyz republic;kyrgyz republic;Kyrgyz Republic;Kyrgyz Republic;Kyrgyz Republic;Kyrgyzstan;kyrgyzstan;kyrgyzstan;Kyrgyzstan;KGZ;KG;Europe & Central Asia;Lower middle income;ECA;25;146;39;55;46
+north korea;north korea;North Korea;Democratic People’s Republic of Korea;North Korea;Korea, North;korea, north;korea, democratic people's republic of;North Korea;PRK;;East Asia & Pacific;Low income;AP;15;170;40;55;46
+maldives;maldives;Maldives;Republic of Maldives;Maldives;Maldives;maldives;maldives;Maldives;MDV;MV;South Asia;Upper middle income;AP;38;96;41;55;46
+uganda;uganda;Uganda;Republic of Uganda;Uganda;Uganda;uganda;uganda;Uganda;UGA;UG;Sub-Saharan Africa;Low income;SSA;26;140;42;55;46
+costa rica;costa rica;Costa Rica;Republic of Costa Rica;Costa Rica;Costa Rica;costa rica;costa rica;Costa Rica;CRI;CR;Latin America & Caribbean;Upper middle income;AME;58;42;43;55;46
+tanzania;tanzania;Tanzania;United Republic of Tanzania;Tanzania;Tanzania;tanzania;tanzania;Tanzania;TZA;TZ;Sub-Saharan Africa;Low income;SSA;41;82;44;54;47
+mexico;mexico;Mexico;United Mexican States;Mexico;Mexico;mexico;mexico;Mexico;MEX;MX;Latin America & Caribbean;Upper middle income;AME;26;140;45;54;47
+belize;belize;Belize;Belize;Belize;Belize;belize;belize;Belize;BLZ;BZ;Latin America & Caribbean;Upper middle income;;;;46;53;48
+botswana;botswana;Botswana;Republic of Botswana;Botswana;Botswana;botswana;botswana;Botswana;BWA;BW;Sub-Saharan Africa;Upper middle income;SSA;57;43;47;53;48
+algeria;algeria;Algeria;People's Democratic Republic of Algeria;Algeria;Algeria;algeria;algeria;Algeria;DZA;DZ;Middle East & North Africa;Upper middle income;MENA;34;107;48;53;48
+mongolia;mongolia;Mongolia;Mongolia;Mongolia;Mongolia;mongolia;mongolia;Mongolia;MNG;MN;East Asia & Pacific;Lower middle income;AP;33;114;49;53;48
+uruguay;uruguay;Uruguay;Oriental Republic of Uruguay;Uruguay;Uruguay;uruguay;uruguay;Uruguay;URY;UY;Latin America & Caribbean;High income;AME;76;13;50;52;48
+cambodia;cambodia;Cambodia;Kingdom of Cambodia;Cambodia;Cambodia;cambodia;cambodia;Cambodia;KHM;KH;East Asia & Pacific;Lower middle income;AP;21;158;51;52;49
+myanmar;myanmar;Myanmar;Republic of the Union of Myanmar;Myanmar;Myanmar;myanmar;myanmar;Myanmar;MMR;MM;East Asia & Pacific;Lower middle income;AP;16;168;52;51;50
+nicaragua;nicaragua;Nicaragua;Republic of Nicaragua;Nicaragua;Nicaragua;nicaragua;nicaragua;Nicaragua;NIC;NI;Latin America & Caribbean;Lower middle income;AME;14;172;53;51;50
+ethiopia;ethiopia;Ethiopia;Federal Democratic Republic of Ethiopia;Ethiopia;Ethiopia;ethiopia;ethiopia;Ethiopia;ETH;ET;Sub-Saharan Africa;Low income;SSA;37;99;54;51;50
+iran;iran;Iran, Islamic Rep.;Islamic Republic of Iran;Iran;Iran;iran;iran;Iran;IRN;IR;Middle East & North Africa;Upper middle income;MENA;23;151;55;51;50
+mauritius;mauritius;Mauritius;Republic of Mauritius;Mauritius;Mauritius;mauritius;mauritius;Mauritius;MUS;MU;Sub-Saharan Africa;Upper middle income;SSA;51;56;56;50;50
+belarus;belarus;Belarus;Republic of Belarus;Belarus;Belarus;belarus;belarus;Belarus;BLR;BY;Europe & Central Asia;Upper middle income;ECA;33;114;57;50;51
+belgium;belgium;Belgium;Kingdom of Belgium;Belgium;Belgium;belgium;belgium;Belgium;BEL;BE;Europe & Central Asia;High income;WE/EU;69;22;58;50;51
+united states of america;united states of america;United States;United States of America;United States;United States;united states of america;united states of america;United States;USA;US;North America;High income;AME;65;28;59;50;51
+malaysia;malaysia;Malaysia;Malaysia;Malaysia;Malaysia;malaysia;malaysia;Malaysia;MYS;MY;East Asia & Pacific;Upper middle income;AP;50;57;60;49;52
+united kingdom;united kingdom;United Kingdom;United Kingdom of Great Britain and Northern Ireland;United Kingdom;United Kingdom;united kingdom;united kingdom;United Kingdom;GBR;GB;Europe & Central Asia;High income;WE/EU;71;20;61;49;52
+new zealand;new zealand;New Zealand;New Zealand;New Zealand;New Zealand;new zealand;new zealand;New Zealand;NZL;NZ;East Asia & Pacific;High income;AP;83;4;62;49;52
+sweden;sweden;Sweden;Kingdom of Sweden;Sweden;Sweden;sweden;sweden;Sweden;SWE;SE;Europe & Central Asia;High income;WE/EU;80;8;63;48;52
+morocco;morocco;Morocco;Kingdom of Morocco;Morocco;Morocco;morocco;morocco;Morocco;MAR;MA;Middle East & North Africa;Lower middle income;MENA;37;99;64;48;53
+ireland;ireland;Ireland;Ireland;Ireland;Ireland;ireland;ireland;Ireland;IRL;IE;Europe & Central Asia;High income;WE/EU;77;10;65;48;53
+egypt;egypt;Egypt, Arab Rep.;Arab Republic of Egypt;Egypt;Egypt;egypt;egypt;Egypt;EGY;EG;Middle East & North Africa;Lower middle income;MENA;30;130;66;48;53
+australia;australia;Australia;Commonwealth of Australia;Australia;Australia;australia;australia;Australia;AUS;AU;East Asia & Pacific;High income;AP;77;10;67;48;53
+ukraine;ukraine;Ukraine;Ukraine;Ukraine;Ukraine;ukraine;ukraine;Ukraine;UKR;UA;Europe & Central Asia;Lower middle income;ECA;35;105;68;47;53
+italy;italy;Italy;Italian Republic;Italy;Italy;italy;italy;Italy;ITA;IT;Europe & Central Asia;High income;WE/EU;54;52;69;47;54
+lebanon;lebanon;Lebanon;Lebanese Republic;Lebanon;Lebanon;lebanon;lebanon;Lebanon;LBN;LB;Middle East & North Africa;Upper middle income;MENA;22;154;70;47;54
+greece;greece;Greece;Hellenic Republic;Greece;Greece;greece;greece;Greece;GRC;GR;Europe & Central Asia;High income;WE/EU;49;59;71;47;54
+indonesia;indonesia;Indonesia;Republic of Indonesia;Indonesia;Indonesia;indonesia;indonesia;Indonesia;IDN;ID;East Asia & Pacific;Lower middle income;AP;37;99;72;46;54
+canada;canada;Canada;Canada;Canada;Canada;canada;canada;Canada;CAN;CA;North America;High income;AME;75;15;73;46;55
+zambia;zambia;Zambia;Republic of Zambia;Zambia;Zambia;zambia;zambia;Zambia;ZMB;ZM;Sub-Saharan Africa;Lower middle income;SSA;39;92;74;46;55
+sudan;sudan;Sudan;Republic of the Sudan;Sudan;Sudan;sudan;sudan;Sudan;SDN;SD;Sub-Saharan Africa;Lower middle income;SSA;15;170;75;46;55
+ghana;ghana;Ghana;Republic of Ghana;Ghana;Ghana;ghana;ghana;Ghana;GHA;GH;Sub-Saharan Africa;Lower middle income;SSA;42;80;76;46;55
+kazakhstan;kazakhstan;Kazakhstan;Republic of Kazakhstan;Kazakhstan;Kazakhstan;kazakhstan;kazakhstan;Kazakhstan;KAZ;KZ;Europe & Central Asia;Upper middle income;ECA;40;88;77;46;55
+tunisia;tunisia;Tunisia;Republic of Tunisia;Tunisia;Tunisia;tunisia;tunisia;Tunisia;TUN;TN;Middle East & North Africa;Lower middle income;MENA;39;92;78;46;55
+barbados;barbados;Barbados;Barbados;Barbados;Barbados;barbados;barbados;Barbados;BRB;BB;Latin America & Caribbean;High income;AME;68;23;79;45;56
+albania;albania;Albania;Republic of Albania;Albania;Albania;albania;albania;Albania;ALB;AL;Europe & Central Asia;Upper middle income;ECA;42;80;80;45;56
+india;india;India;Republic of India;India;India;india;india;India;IND;IN;South Asia;Lower middle income;AP;38;96;81;45;56
+moldova;moldova;Moldova;Republic of Moldova;Moldova;Moldova;moldova;moldova;Moldova;MDA;MD;Europe & Central Asia;Lower middle income;ECA;43;76;82;45;56
+pakistan;pakistan;Pakistan;Islamic Republic of Pakistan;Pakistan;Pakistan;pakistan;pakistan;Pakistan;PAK;PK;South Asia;Lower middle income;AP;27;135;83;44;57
+philippines;philippines;Philippines;Republic of the Philippines;Philippines;Philippines;philippines;philippines;Philippines;PHL;PH;East Asia & Pacific;Lower middle income;AP;33;114;84;44;57
+iraq;iraq;Iraq;Republic of Iraq;Iraq;Iraq;iraq;iraq;Iraq;IRQ;IQ;Middle East & North Africa;Upper middle income;MENA;26;140;85;44;57
+malta;malta;Malta;Republic of Malta;Malta;Malta;malta;malta;Malta;MLT;MT;Middle East & North Africa;High income;WE/EU;46;65;86;43;57
+west bank and gaza;west bank and gaza;West Bank and Gaza;West Bank and Gaza;West Bank and Gaza;Palestine;palestine;palestine;Palestine;PSE;PS;Middle East & North Africa;Lower middle income;;;;87;43;58
+panama;panama;Panama;Republic of Panama;Panama;Panama;panama;panama;Panama;PAN;PA;Latin America & Caribbean;High income;AME;33;114;88;43;58
+sri lanka;sri lanka;Sri Lanka;Democratic Socialist Republic of Sri Lanka;Sri Lanka;Sri Lanka;sri lanka;sri lanka;Sri Lanka;LKA;LK;South Asia;Upper middle income;AP;32;121;89;43;58
+bosnia and herzegovina;bosnia and herzegovina;Bosnia and Herzegovina;Bosnia and Herzegovina;Bosnia and Herzegovina;Bosnia and Herzegovina;bosnia and herzegovina;bosnia and herzegovina;Bosnia And Herzegovina;BIH;BA;Europe & Central Asia;Upper middle income;ECA;33;114;90;42;59
+turkey;turkey;Turkey;Republic of Turkey;Turkey;Turkey;turkey;turkey;Turkey;TUR;TR;Europe & Central Asia;Upper middle income;ECA;34;107;91;42;59
+north macedonia;north macedonia;North Macedonia;Republic of North Macedonia;North Macedonia;North Macedonia;north macedonia;north macedonia;North Macedonia;MKD;MK;Europe & Central Asia;Upper middle income;ECA;40;88;92;42;59
+kosovo;kosovo;Kosovo;Republic of Kosovo;Kosovo;Kosovo;kosovo;kosovo (disputed territory);Kosovo (Disputed Territory);KSV;XK;Europe & Central Asia;Upper middle income;ECA;44;73;93;41;60
+vietnam;vietnam;Vietnam;Socialist Republic of Vietnam;Vietnam;Vietnam;vietnam;vietnam;Vietnam;VNM;VN;East Asia & Pacific;Lower middle income;AP;40;88;94;41;60
+jordan;jordan;Jordan;Hashemite Kingdom of Jordan;Jordan;Jordan;jordan;jordan;Jordan;JOR;JO;Middle East & North Africa;Upper middle income;MENA;49;59;95;40;60
+germany;germany;Germany;Federal Republic of Germany;Germany;Germany;germany;germany;Germany;DEU;DE;Europe & Central Asia;High income;WE/EU;75;15;96;40;61
+russian federation;russian federation;Russian Federation;Russian Federation;Russia;Russia;russian federation;russian federation;Russia;RUS;RU;Europe & Central Asia;Upper middle income;ECA;22;154;97;39;62
+thailand;thailand;Thailand;Kingdom of Thailand;Thailand;Thailand;thailand;thailand;Thailand;THA;TH;East Asia & Pacific;Upper middle income;AP;34;107;98;38;63
+serbia;serbia;Serbia;Republic of Serbia;Serbia;Serbia;serbia;serbia;Serbia;SRB;RS;Europe & Central Asia;Upper middle income;ECA;35;105;99;38;63
+latvia;latvia;Latvia;Republic of Latvia;Latvia;Latvia;latvia;latvia;Latvia;LVA;LV;Europe & Central Asia;High income;WE/EU;59;38;100;38;63
+nepal;nepal;Nepal;Nepal;Nepal;Nepal;nepal;nepal;Nepal;NPL;NP;South Asia;Low income;AP;34;107;101;37;64
+spain;spain;Spain;Kingdom of Spain;Spain;Spain;spain;spain;Spain;ESP;ES;Europe & Central Asia;High income;WE/EU;56;46;102;37;64
+bulgaria;bulgaria;Bulgaria;Republic of Bulgaria;Bulgaria;Bulgaria;bulgaria;bulgaria;Bulgaria;BGR;BG;Europe & Central Asia;Upper middle income;WE/EU;43;76;103;37;64
+montenegro;montenegro;Montenegro;Montenegro;Montenegro;Montenegro;montenegro;montenegro;Montenegro;MNE;ME;Europe & Central Asia;Upper middle income;ECA;46;65;104;36;65
+cuba;cuba;Cuba;Republic of Cuba;Cuba;Cuba;cuba;cuba;Cuba;CUB;CU;Latin America & Caribbean;Low income;AME;41;82;105;35;66
+luxembourg;luxembourg;Luxembourg;Grand Duchy of Luxembourg;Luxembourg;Luxembourg;luxembourg;luxembourg;Luxembourg;LUX;LU;Europe & Central Asia;High income;WE/EU;81;5;106;35;66
+hungary;hungary;Hungary;Hungary;Hungary;Hungary;hungary;hungary;Hungary;HUN;HU;Europe & Central Asia;High income;WE/EU;41;82;107;34;67
+cyprus;cyprus;Cyprus;Republic of Cyprus;Cyprus;Cyprus;cyprus;cyprus;Cyprus;CYP;CY;Europe & Central Asia;High income;WE/EU;56;46;108;34;67
+norway;norway;Norway;Kingdom of Norway;Norway;Norway;norway;norway;Norway;NOR;NO;Europe & Central Asia;High income;WE/EU;81;5;109;33;67
+kuwait;kuwait;Kuwait;State of Kuwait;Kuwait;Kuwait;kuwait;kuwait;Kuwait;KWT;KW;Middle East & North Africa;High income;MENA;46;65;110;33;68
+lithuania;lithuania;Lithuania;Republic of Lithuania;Lithuania;Lithuania;lithuania;lithuania;Lithuania;LTU;LT;Europe & Central Asia;High income;WE/EU;63;32;111;33;68
+romania;romania;Romania;Romania;Romania;Romania;romania;romania;Romania;ROU;RO;Europe & Central Asia;Upper middle income;WE/EU;46;65;112;33;68
+portugal;portugal;Portugal;Portuguese Republic;Portugal;Portugal;portugal;portugal;Portugal;PRT;PT;Europe & Central Asia;High income;WE/EU;57;43;113;33;68
+azerbaijan;azerbaijan;Azerbaijan;Republic of Azerbaijan;Azerbaijan;Azerbaijan;azerbaijan;azerbaijan;Azerbaijan;AZE;AZ;Europe & Central Asia;Upper middle income;ECA;22;154;114;32;69
+israel;israel;Israel;State of Israel;Israel;Israel;israel;israel;Israel;ISR;IL;Middle East & North Africa;High income;MENA;64;30;115;32;69
+slovak republic;slovak republic;Slovak Republic;Slovak Republic;Slovak Republic;Slovakia;slovakia;slovakia;Slovakia;SVK;SK;Europe & Central Asia;High income;WE/EU;49;59;116;31;69
+cayman islands;cayman islands;Cayman Islands;Cayman Islands;Cayman Islands;Cayman Island;cayman islands;cayman islands;Cayman Islands;CYM;KY;Latin America & Caribbean;High income;;;;117;31;70
+austria;austria;Austria;Republic of Austria;Austria;Austria;austria;austria;Austria;AUT;AT;Europe & Central Asia;High income;WE/EU;67;25;118;30;71
+brunei;brunei;Brunei Darussalam;Brunei Darussalam;Brunei;Brunei;brunei;brunei;Brunei;BRN;BN;East Asia & Pacific;High income;;;;119;30;71
+poland;poland;Poland;Republic of Poland;Poland;Poland;poland;poland;Poland;POL;PL;Europe & Central Asia;High income;WE/EU;53;53;120;29;71
+uzbekistan;uzbekistan;Uzbekistan;Republic of Uzbekistan;Uzbekistan;Uzbekistan;uzbekistan;uzbekistan;Uzbekistan;UZB;UZ;Europe & Central Asia;Lower middle income;ECA;32;121;121;28;73
+rwanda;rwanda;Rwanda;Republic of Rwanda;Rwanda;Rwanda;rwanda;rwanda;Rwanda;RWA;RW;Sub-Saharan Africa;Low income;SSA;57;43;122;27;74
+netherlands;netherlands;Netherlands;Kingdom of the Netherlands;Netherlands;Netherlands;netherlands;netherlands;Netherlands;NLD;NL;Europe & Central Asia;High income;WE/EU;78;9;123;27;74
+finland;finland;Finland;Republic of Finland;Finland;Finland;finland;finland;Finland;FIN;FI;Europe & Central Asia;High income;WE/EU;88;2;124;27;74
+czechia;czechia;Czech Republic;Czech Republic;Czech Republic;Czechia;czechia;czechia;Czech Republic;CZE;CZ;Europe & Central Asia;High income;WE/EU;56;46;125;27;74
+switzerland;switzerland;Switzerland;Switzerland;Switzerland;Switzerland;switzerland;switzerland;Switzerland;CHE;CH;Europe & Central Asia;High income;WE/EU;81;5;126;27;74
+georgia;georgia;Georgia;Georgia;Georgia;Georgia;georgia;georgia;Georgia;GEO;GE;Europe & Central Asia;Upper middle income;ECA;53;53;127;27;74
+denmark;denmark;Denmark;Kingdom of Denmark;Denmark;Denmark;denmark;denmark;Denmark;DNK;DK;Europe & Central Asia;High income;WE/EU;90;1;128;26;74
+iceland;iceland;Iceland;Republic of Iceland;Iceland;Iceland;iceland;iceland;Iceland;ISL;IS;Europe & Central Asia;High income;WE/EU;77;10;129;26;75
+croatia;croatia;Croatia;Republic of Croatia;Croatia;Croatia;croatia;croatia;Croatia;HRV;HR;Europe & Central Asia;High income;WE/EU;47;63;130;26;75
+korea;korea;Korea, Rep.;Republic of Korea;Korea;Korea, South;korea, south;korea, republic of;South Korea;KOR;KR;East Asia & Pacific;High income;AP;64;30;131;25;76
+bahrain;bahrain;Bahrain;Kingdom of Bahrain;Bahrain;Bahrain;bahrain;bahrain;Bahrain;BHR;BH;Middle East & North Africa;High income;MENA;53;53;132;25;76
+china;china;China;People's Republic of China;China;China;china;china;China;CHN;CN;East Asia & Pacific;Upper middle income;AP;43;76;133;24;76
+saudi arabia;saudi arabia;Saudi Arabia;Kingdom of Saudi Arabia;Saudi Arabia;Saudi Arabia;saudi arabia;saudi arabia;Saudi Arabia;SAU;SA;Middle East & North Africa;High income;MENA;59;38;134;24;77
+slovenia;slovenia;Slovenia;Republic of Slovenia;Slovenia;Slovenia;slovenia;slovenia;Slovenia;SVN;SI;Europe & Central Asia;High income;WE/EU;60;36;135;24;77
+estonia;estonia;Estonia;Republic of Estonia;Estonia;Estonia;estonia;estonia;Estonia;EST;EE;Europe & Central Asia;High income;WE/EU;76;13;136;24;77
+monaco;monaco;Monaco;Principality of Monaco;Monaco;Monaco;monaco;monaco;Monaco;MCO;MC;Europe & Central Asia;High income;;;;137;24;77
+japan;japan;Japan;Japan;Japan;Japan;japan;japan;Japan;JPN;JP;East Asia & Pacific;High income;AP;71;20;138;23;78
+singapore;singapore;Singapore;Republic of Singapore;Singapore;Singapore;singapore;singapore;Singapore;SGP;SG;East Asia & Pacific;High income;AP;84;3;139;23;78
+armenia;armenia;Armenia;Republic of Armenia;Armenia;Armenia;armenia;armenia;Armenia;ARM;AM;Europe & Central Asia;Upper middle income;ECA;47;63;140;23;78
+hong kong sar, china;hong kong sar, china;Hong Kong SAR, China;Hong Kong Special Administrative Region of the People's Republic of China;Hong Kong SAR, China;Hong Kong;hong kong;hong kong (china);Hong Kong (China);HKG;HK;East Asia & Pacific;High income;AP;74;17;141;22;79
+isle of man;isle of man;Isle of Man;Isle of Man;Isle of Man;Isle of Man;isle of man;isle of man;Isle Of Man;IMN;IM;Europe & Central Asia;High income;;;;142;21;79
+oman;oman;Oman;Sultanate of Oman;Oman;Oman;oman;oman;Oman;OMN;OM;Middle East & North Africa;High income;MENA;55;50;143;19;82
+taiwan, china;taiwan, china;Taiwan, China;Taiwan, China;Taiwan, China;Taiwan;taiwan;taiwan;Taiwan;TWN;TW;East Asia & Pacific;High income;AP;67;25;144;18;83
+qatar;qatar;Qatar;State of Qatar;Qatar;Qatar;qatar;qatar;Qatar;QAT;QA;Middle East & North Africa;High income;MENA;59;38;145;16;85
+united arab emirates;united arab emirates;United Arab Emirates;United Arab Emirates;United Arab Emirates;United Arab Emirates;united arab emirates;united arab emirates;United Arab Emirates;ARE;AE;Middle East & North Africa;High income;MENA;68;23;146;16;85
+andorra;andorra;Andorra;Principality of Andorra;Andorra;Andorra;andorra;andorra;Andorra;AND;AD;Europe & Central Asia;High income;;;;147;16;85
+bhutan;bhutan;Bhutan;Kingdom of Bhutan;Bhutan;Bhutan;bhutan;bhutan;Bhutan;BTN;BT;South Asia;Lower middle income;AP;72;18;;;
+seychelles;seychelles;Seychelles;Republic of Seychelles;Seychelles;Seychelles;seychelles;seychelles;Seychelles;SYC;SC;Sub-Saharan Africa;High income;SSA;72;18;;;
+st. vincent and the grenadines;st. vincent and the grenadines;St. Vincent and the Grenadines;St. Vincent and the Grenadines;St. Vincent and the Grenadines;Saint Vincent and the Grenadines;saint vincent and the grenadines;saint vincent and the grenadines;Saint Vincent and the Grenadines;VCT;VC;Latin America & Caribbean;Upper middle income;AME;63;32;;;
+cabo verde;cabo verde;Cabo Verde;Republic of Cabo Verde;Cabo Verde;Cabo Verde;cabo verde;cap verde;Cap Verde;CPV;CV;Sub-Saharan Africa;Lower middle income;SSA;62;35;;;
+dominica;dominica;Dominica;Commonwealth of Dominica;Dominica;Dominica;dominica;dominica;Dominica;DMA;DM;Latin America & Caribbean;Upper middle income;AME;60;36;;;
+st. lucia;st. lucia;St. Lucia;St. Lucia;St. Lucia;Saint Lucia;saint lucia;saint lucia;Saint Lucia;LCA;LC;Latin America & Caribbean;Upper middle income;AME;59;38;;;
+grenada;grenada;Grenada;Grenada;Grenada;Grenada;grenada;grenada;Grenada;GRD;GD;Latin America & Caribbean;Upper middle income;AME;56;46;;;
+vanuatu;vanuatu;Vanuatu;Republic of Vanuatu;Vanuatu;Vanuatu;vanuatu;vanuatu;Vanuatu;VUT;VU;East Asia & Pacific;Lower middle income;AP;50;57;;;
+benin;benin;Benin;Republic of Benin;Benin;Benin;benin;benin;Benin;BEN;BJ;Sub-Saharan Africa;Low income;SSA;45;69;;;
+são tomé and principe;são tomé and principe;São Tomé and Principe;Democratic Republic of São Tomé and Principe;São Tomé and Principe;Sao Tome and Principe;sao tome and principe;sao tome and principe;Sao Tome and Principe;STP;ST;Sub-Saharan Africa;Lower middle income;SSA;45;69;;;
+senegal;senegal;Senegal;Republic of Senegal;Senegal;Senegal;senegal;senegal;Senegal;SEN;SN;Sub-Saharan Africa;Lower middle income;SSA;45;69;;;
+timor-leste;timor-leste;Timor-Leste;Democratic Republic of Timor-Leste;Timor-Leste;Timor-Leste;timor-leste;timor-leste;Timor-Leste;TLS;TL;East Asia & Pacific;Lower middle income;AP;44;73;;;
+solomon islands;solomon islands;Solomon Islands;Solomon Islands;Solomon Islands;Solomon Islands;solomon islands;solomon islands;Solomon Islands;SLB;SB;East Asia & Pacific;Lower middle income;AP;43;76;;;
+burkina faso;burkina faso;Burkina Faso;Burkina Faso;Burkina Faso;Burkina Faso;burkina faso;burkina faso;Burkina Faso;BFA;BF;Sub-Saharan Africa;Low income;SSA;41;82;;;
+suriname;suriname;Suriname;Republic of Suriname;Suriname;Suriname;suriname;suriname;Suriname;SUR;SR;Latin America & Caribbean;Upper middle income;AME;40;88;;;
+the gambia;the gambia;Gambia, The;Republic of The Gambia;The Gambia;Gambia;gambia;gambia;Gambia;GMB;GM;Sub-Saharan Africa;Low income;SSA;38;96;;;
+lesotho;lesotho;Lesotho;Kingdom of Lesotho;Lesotho;Lesotho;lesotho;lesotho;Lesotho;LSO;LS;Sub-Saharan Africa;Lower middle income;SSA;37;99;;;
+malawi;malawi;Malawi;Republic of Malawi;Malawi;Malawi;malawi;malawi;Malawi;MWI;MW;Sub-Saharan Africa;Low income;SSA;34;107;;;
+niger;niger;Niger;Republic of Niger;Niger;Niger;niger;niger;Niger;NER;NE;Sub-Saharan Africa;Low income;SSA;34;107;;;
+lao pdr;lao pdr;Lao PDR;Lao People's Democratic Republic;Lao PDR;Laos;laos;laos;Laos;LAO;LA;East Asia & Pacific;Lower middle income;AP;33;114;;;
+sierra leone;sierra leone;Sierra Leone;Republic of Sierra Leone;Sierra Leone;Sierra Leone;sierra leone;sierra leone;Sierra Leone;SLE;SL;Sub-Saharan Africa;Low income;SSA;33;114;;;
+togo;togo;Togo;Republic of Togo;Togo;Togo;togo;togo;Togo;TGO;TG;Sub-Saharan Africa;Low income;SSA;32;121;;;
+djibouti;djibouti;Djibouti;Republic of Djibouti;Djibouti;Djibouti;djibouti;djibouti;Djibouti;DJI;DJ;Middle East & North Africa;Lower middle income;SSA;31;127;;;
+mauritania;mauritania;Mauritania;Islamic Republic of Mauritania;Mauritania;Mauritania;mauritania;mauritania;Mauritania;MRT;MR;Sub-Saharan Africa;Lower middle income;SSA;30;130;;;
+guinea;guinea;Guinea;Republic of Guinea;Guinea;Guinea;guinea;guinea;Guinea;GIN;GN;Sub-Saharan Africa;Low income;SSA;28;133;;;
+liberia;liberia;Liberia;Republic of Liberia;Liberia;Liberia;liberia;liberia;Liberia;LBR;LR;Sub-Saharan Africa;Low income;SSA;27;135;;;
+mali;mali;Mali;Republic of Mali;Mali;Mali;mali;mali;Mali;MLI;ML;Sub-Saharan Africa;Low income;SSA;27;135;;;
+eswatini;eswatini;Eswatini;Kingdom of Eswatini;Eswatini;Eswatini;eswatini;eswatini;Eswatini;SWZ;SZ;Sub-Saharan Africa;Lower middle income;SSA;27;135;;;
+gabon;gabon;Gabon;Gabonese Republic;Gabon;Gabon;gabon;gabon;Gabon;GAB;GA;Sub-Saharan Africa;Upper middle income;SSA;27;135;;;
+madagascar;madagascar;Madagascar;Republic of Madagascar;Madagascar;Madagascar;madagascar;madagascar;Madagascar;MDG;MG;Sub-Saharan Africa;Low income;SSA;26;140;;;
+central african republic;central african republic;Central African Republic;Central African Republic;Central African Republic;Central African Republic;central african republic;central africa;Central Africa;CAF;CF;Sub-Saharan Africa;Low income;SSA;24;149;;;
+congo;congo;Congo, Rep.;Republic of Congo;Congo;Congo;congo;congo;Congo;COG;CG;Sub-Saharan Africa;Lower middle income;SSA;23;151;;;
+chad;chad;Chad;Republic of Chad;Chad;Chad;chad;chad;Chad;TCD;TD;Sub-Saharan Africa;Low income;SSA;21;158;;;
+guinea-bissau;guinea-bissau;Guinea-Bissau;Republic of Guinea-Bissau;Guinea-Bissau;Guinea-Bissau;guinea-bissau;guinea-bissau;Guinea-Bissau;GNB;GW;Sub-Saharan Africa;Low income;SSA;21;158;;;
+comoros;comoros;Comoros;Union of the Comoros;Comoros;Comoros;comoros;comoros;Comoros;COM;KM;Sub-Saharan Africa;Lower middle income;SSA;21;158;;;
+dem. rep. congo;dem. rep. congo;Congo, Dem. Rep.;Democratic Republic of the Congo;Dem. Rep. Congo;Democratic Republic of the Congo;democratic republic of the congo;democratic republic of congo;Democratic Republic of Congo;COD;CD;Sub-Saharan Africa;Low income;SSA;20;163;;;
+tajikistan;tajikistan;Tajikistan;Republic of Tajikistan;Tajikistan;Tajikistan;tajikistan;tajikistan;Tajikistan;TJK;TJ;Europe & Central Asia;Low income;ECA;19;164;;;
+turkmenistan;turkmenistan;Turkmenistan;Turkmenistan;Turkmenistan;Turkmenistan;turkmenistan;turkmenistan;Turkmenistan;TKM;TM;Europe & Central Asia;Upper middle income;ECA;17;165;;;
+burundi;burundi;Burundi;Republic of Burundi;Burundi;Burundi;burundi;burundi;Burundi;BDI;BI;Sub-Saharan Africa;Low income;SSA;17;165;;;
+eritrea;eritrea;Eritrea;State of Eritrea;Eritrea;Eritrea;eritrea;eritrea;Eritrea;ERI;ER;Sub-Saharan Africa;Low income;SSA;13;173;;;
+equatorial guinea;equatorial guinea;Equatorial Guinea;Republic of Equatorial Guinea;Equatorial Guinea;Equatorial Guinea;equatorial guinea;equatorial guinea;Equatorial Guinea;GNQ;GQ;Sub-Saharan Africa;Upper middle income;SSA;13;173;;;
+south sudan;south sudan;South Sudan;Republic of South Sudan;South Sudan;South Sudan;south sudan;south sudan;South Sudan;SSD;SS;Sub-Saharan Africa;Low income;SSA;8;180;;;
+antigua and barbuda;antigua and barbuda;Antigua and Barbuda;Antigua and Barbuda;Antigua and Barbuda;Antigua and Barbuda;antigua and barbuda;antigua and barbuda;Antigua and Barbuda;ATG;AG;Latin America & Caribbean;High income;;;;;;
+liechtenstein;liechtenstein;Liechtenstein;Principality of Liechtenstein;Liechtenstein;Liechtenstein;liechtenstein;liechtenstein;Liechtenstein;LIE;LI;Europe & Central Asia;High income;;;;;;
+palau;palau;Palau;Republic of Palau;Palau;Palau;palau;palau;Palau;PLW;PW;East Asia & Pacific;High income;;;;;;
+san marino;san marino;San Marino;Republic of San Marino;San Marino;San Marino;san marino;san marino;San Marino;SMR;SM;Europe & Central Asia;High income;;;;;;
+st. kitts and nevis;st. kitts and nevis;St. Kitts and Nevis;St. Kitts and Nevis;St. Kitts and Nevis;St. Kitts and Nevis;st. kitts and nevis;st. kitts and nevis;St. Kitts and Nevis;KNA;KN;Latin America & Caribbean;High income;;;;;;
+kiribati;kiribati;Kiribati;Republic of Kiribati;Kiribati;Kiribati;kiribati;kiribati;Kiribati;KIR;KI;East Asia & Pacific;Lower middle income;;;;;;
+micronesia;micronesia;Micronesia, Fed. Sts.;Federated States of Micronesia;Micronesia;Micronesia;micronesia;micronesia;Micronesia;FSM;FM;East Asia & Pacific;Lower middle income;;;;;;
+marshall islands;marshall islands;Marshall Islands;Republic of the Marshall Islands;Marshall Islands;Marshall Islands;marshall islands;marshall islands;Marshall Islands;MHL;MH;East Asia & Pacific;Upper middle income;;;;;;
+samoa;samoa;Samoa;Samoa;Samoa;Samoa;samoa;samoa;Samoa;WSM;WS;East Asia & Pacific;Upper middle income;;;;;;
+tonga;tonga;Tonga;Kingdom of Tonga;Tonga;Tonga;tonga;tonga;Tonga;TON;TO;East Asia & Pacific;Upper middle income;;;;;;
