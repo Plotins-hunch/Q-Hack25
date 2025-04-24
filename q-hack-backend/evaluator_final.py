@@ -766,7 +766,7 @@ def calculate_unicorn_score(scores):
         'Product': 0.15,
         'Traction': 0.15,
         'Funding': 0.10,
-        'Financial Efficiency': 0.10,
+        'FinancialEfficiency': 0.10,
         'Miscellaneous': 0.05
     }
 
