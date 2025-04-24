@@ -66,10 +66,3 @@ Q-Hack25 is a prototype platform designed to automate the evaluation of startup 
 
 For questions or collaboration inquiries, please contact the repository maintainer through GitHub.
 
----
-
-*Note: This project is a prototype developed for the Q-Hack25 hackathon and is intended for demonstration purposes only.*
-
-*Note: This project is a prototype developed for the Q-Hack25 hackathon and is intended for demonstration purposes only.*
-
-
