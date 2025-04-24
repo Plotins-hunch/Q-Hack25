@@ -449,36 +449,41 @@ Return ONLY the completed JSON.
 # -----------------------------
 
 def main(pdf_path=None):
-    if "airbnb" in pdf_path.lower() or pdf_path is None:
-        mock_path = os.path.join(os.path.dirname(__file__), "MockOutput.json")
-        with open(mock_path, "r") as f:
-            mock_data = json.load(f)
-        print("Mock data returned from MockOutput.json")
-        return mock_data
+    pdf_path = os.path.join(os.path.dirname(__file__), "Uber.pdf")
+    # if "airbnb" in pdf_path.lower() or pdf_path is None:
+    #     mock_path = os.path.join(os.path.dirname(__file__), "MockOutput.json")
+    #     with open(mock_path, "r") as f:
+    #         mock_data = json.load(f)
+    #     print("Mock data returned from MockOutput.json")
+    #     return mock_data
 
-    # Extract data from the PDF
+    # Define cache directory and output path
+    os.makedirs("./PreviouslyCalculatedSlidedecks", exist_ok=True)
+    filename = os.path.splitext(os.path.basename(pdf_path))[0]
+    cached_path = os.path.join("PreviouslyCalculatedSlidedecks", f"{filename}.json")
+
+    # 🔁 Return cached version if available
+    if os.path.exists(cached_path):
+        print(f"📂 Cached JSON found for {filename}, loading from {cached_path}")
+        with open(cached_path, "r") as f:
+            return json.load(f)
+
+    # 🧠 Run full pipeline
+    print(f"🔄 Processing new pitch deck: {pdf_path}")
     structured = structure_pdf_with_assistant(pdf_path)
-
-    # Enrich the data with LinkedIn information
     enriched = enrich_with_linkedin(structured)
-
-    # Refine the data by filling in any missing information
     refined = refine_with_chatgpt_holes(enriched)
 
-    # 🆕 Add Google Trends enrichment
     company_name = refined.get("company_name", "Unknown")
     refined = add_google_trend_score(refined, company_name)
 
     refined["metrics"] = evaluate_metrics(refined)
-    # If called as a module, return the data
-    if pdf_path != "./airbnb.pdf":
-        return refined
 
-    # If run as a script, write to output file
-    out = "./output.json"
-    with open(out, "w") as f:
+    # 💾 Save result to cache directory
+    with open(cached_path, "w") as f:
         json.dump(refined, f, indent=2)
-    print(f"Pipeline complete. Output written to {out}")
+    print(f"✅ Output written to {cached_path}")
+
     return refined
 
 

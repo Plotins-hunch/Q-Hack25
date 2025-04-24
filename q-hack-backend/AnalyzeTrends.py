@@ -12,7 +12,7 @@ PROXIES = [
     # Add more if available
 ]
 
-def safe_trend_request(pytrends, keyword, retries=3):
+def safe_trend_request(pytrends, keyword, retries=1):
     for attempt in range(retries):
         try:
             pytrends.build_payload([keyword], timeframe='today 12-m')
