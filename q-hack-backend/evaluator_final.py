@@ -4,11 +4,14 @@ import pandas as pd
 import numpy as np
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import nltk
 import re
 import sys
 
+try:
+    from nltk.sentiment.vader import SentimentIntensityAnalyzer
+except ImportError:
+    print("Vader not available")
 
 # Function to load the JSON data
 def get_json(data_or_path):
