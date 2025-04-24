@@ -73,8 +73,8 @@ Our startup evaluation tool employs sophisticated natural language processing, s
 
 ## Technical Framework and Tools
 
-### Metrics
-## Natural Language Processing & Sentiment Analysis
+# Metrics
+### Natural Language Processing & Sentiment Analysis
 
 Our system uses two complementary sentiment analysis engines to evaluate unstructured text data:
 
