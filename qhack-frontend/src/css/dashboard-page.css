@@ -84,16 +84,26 @@ body {
     margin-left: 24px;
 }
 
+/* Update the overall score value to match the metric scores */
+.score-value {
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/* Update the score title to match the metric titles */
 .score-info h2 {
     margin: 0;
     font-size: 24px;
     font-weight: 500;
     letter-spacing: -0.5px;
+    color: var(--primary-color);
 }
 
-.score-value {
-    color: #e9e9ec;
-    font-size: 36px;
+/* Make sure the modal score value also uses the same color */
+.modal-score-value {
+    color: var(--primary-color);
+    font-size: 24px;
     font-weight: 600;
 }
 
@@ -337,12 +347,6 @@ body {
     overflow: hidden;
 }
 
-.modal-score-value {
-    color: var(--primary-color);
-    font-size: 24px;
-    font-weight: 600;
-}
-
 .modal-progress-container {
     display: flex;
     flex-direction: column;
@@ -530,12 +534,6 @@ body {
     .score-info {
         margin-left: 0;
     }
-
-    .score-info h2 {
-        text-align: center;
-        font-size: 20px;
-    }
-
     .metrics-grid {
         grid-template-columns: 1fr;
     }

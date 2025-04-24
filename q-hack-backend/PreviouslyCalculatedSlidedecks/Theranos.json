@@ -1,0 +1,92 @@
+{
+  "company_name": "InnovateX",
+  "team": {
+    "founders": [
+      {
+        "name": "Alex Johnson",
+        "role": "CEO",
+        "name_source": "chatgpt",
+        "role_source": "chatgpt"
+      },
+      {
+        "name": "Jamie Lee",
+        "role": "CTO",
+        "name_source": "chatgpt",
+        "role_source": "chatgpt"
+      }
+    ],
+    "team_strength": "15",
+    "network_strength": "Strong"
+  },
+  "market": {
+    "TAM": "$1 Billion",
+    "SAM": "$500 Million",
+    "SOM": "$100 Million",
+    "growth_rate": "20% annually"
+  },
+  "product": {
+    "stage": "Beta",
+    "USP": "AI-driven analytics",
+    "customer_acquisition": "Online marketing and partnerships"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "$50,000",
+      "ARR": "$600,000"
+    },
+    "user_growth": "10% month-over-month",
+    "engagement": "High",
+    "customer_validation": {
+      "testimonials": [
+        {
+          "customer": "TechCorp",
+          "feedback": "Revolutionized our data processing.",
+          "customer_source": "chatgpt",
+          "feedback_source": "chatgpt"
+        }
+      ],
+      "churn": "5%",
+      "NPS": "75"
+    },
+    "google_trend_score": 0
+  },
+  "funding": {
+    "stage": "Series A",
+    "amount": "$5 Million",
+    "cap_table_strength": "Balanced",
+    "investors_on_board": [
+      {
+        "name": "Venture Partners",
+        "investment": "$2 Million",
+        "name_source": "chatgpt",
+        "investment_source": "chatgpt"
+      },
+      {
+        "name": "Angel Investors Group",
+        "investment": "$1 Million",
+        "name_source": "chatgpt",
+        "investment_source": "chatgpt"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "$100,000 per month",
+    "CAC_vs_LTV": "1:4",
+    "unit_economics": "Positive"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Low",
+    "geographic_focus": "North America",
+    "timing_fad_risk": "Moderate"
+  },
+  "metrics": {
+    "Team": 47,
+    "Market": 60,
+    "Product": 66,
+    "Traction": 72,
+    "Funding": 40,
+    "FinancialEfficiency": 93,
+    "Miscellaneous": 32,
+    "UnicornScore": 59
+  }
+}

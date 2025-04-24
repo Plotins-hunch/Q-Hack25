@@ -1,0 +1,155 @@
+{
+  "company_name": "AirBed & Breakfast",
+  "team": {
+    "founders": [
+      {
+        "name": "Brian Chesky",
+        "background": "Industrial Design",
+        "university": "Rhode Island School of Design",
+        "network_strength": 500,
+        "Followers": 266852,
+        "degree": "Bachelor of Fine Arts",
+        "age": 42,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "3DID",
+            "title": "Industrial Designer",
+            "start": "Jan 2007",
+            "end": "Aug 2008",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Joe Gebbia",
+        "background": "Industrial Design",
+        "university": "Rhode Island School of Design",
+        "network_strength": 500,
+        "Followers": 21685,
+        "degree": "Bachelor of Fine Arts",
+        "age": 42,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Chronicle Books",
+            "title": "Designer",
+            "start": "Jan 2006",
+            "end": "Dec 2007",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      },
+      {
+        "name": "Nathan Blecharczyk",
+        "background": "Computer Science",
+        "university": "Harvard University",
+        "network_strength": 500,
+        "Followers": 4732,
+        "degree": "Bachelor of Science",
+        "age": 40,
+        "gender": "Male",
+        "previous_employments": [
+          {
+            "company": "Microsoft",
+            "title": "Software Engineer",
+            "start": "Jun 2005",
+            "end": "Aug 2007",
+            "company_source": "chatgpt",
+            "title_source": "chatgpt",
+            "start_source": "chatgpt",
+            "end_source": "chatgpt"
+          }
+        ],
+        "linkedin_posts_last_30d": 0,
+        "university_source": "chatgpt",
+        "degree_source": "chatgpt",
+        "age_source": "chatgpt",
+        "gender_source": "chatgpt",
+        "previous_employments_source": "chatgpt"
+      }
+    ],
+    "team_strength": "Strong complementary skills in design and engineering",
+    "network_strength": "Silicon Valley connections and alumni of RISD and Harvard"
+  },
+  "market": {
+    "TAM": "76 billion",
+    "SAM": "10.7 billion",
+    "SOM": "2.1 billion",
+    "growth_rate": "45.00"
+  },
+  "product": {
+    "stage": "Beta",
+    "USP": "Affordable and accessible short-term accommodation options",
+    "customer_acquisition": "Viral marketing, tech community engagement"
+  },
+  "traction": {
+    "revenue_growth": {
+      "MRR": "5,000",
+      "ARR": "60,000"
+    },
+    "user_growth": "Rapid increase in user sign-ups and listings",
+    "engagement": "High user satisfaction and positive reviews",
+    "customer_validation": {
+      "testimonials": [
+        "AirBed&Breakfast freaking rocks!",
+        "A complete success. It is easy to use and it made me money.",
+        "It\u2019s about the ideas, the interactions, the people."
+      ],
+      "churn": "Low due to positive user experience",
+      "NPS": "70"
+    },
+    "google_trend_score": 0
+  },
+  "funding": {
+    "stage": "Seed",
+    "amount": "600,000",
+    "cap_table_strength": "Diverse and experienced investor base",
+    "investors_on_board": [
+      {
+        "name": "Y Combinator",
+        "type": "Accelerator"
+      },
+      {
+        "name": "Sequoia Capital",
+        "type": "VC"
+      }
+    ]
+  },
+  "financial_efficiency": {
+    "burn_rate": "50,000",
+    "CAC_vs_LTV": "6:1",
+    "unit_economics": "Strong with high lifetime value"
+  },
+  "miscellaneous": {
+    "regulatory_risk": "Moderate due to evolving short-term rental laws",
+    "geographic_focus": "United States",
+    "timing_fad_risk": "Low with increasing trend towards sharing economy"
+  },
+  "metrics": {
+    "Team": 54,
+    "Market": 83,
+    "Product": 59,
+    "Traction": 63,
+    "Funding": 61,
+    "FinancialEfficiency": 80,
+    "Miscellaneous": 63,
+    "UnicornScore": 66
+  }
+}

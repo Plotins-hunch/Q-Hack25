@@ -449,11 +449,18 @@ Return ONLY the completed JSON.
 # -----------------------------
 
 def main(pdf_path=None):
-    # pdf_path = os.path.join(os.path.dirname(__file__), "Tinder.pdf")
-
     # Define cache directory and output path
     os.makedirs("./PreviouslyCalculatedSlidedecks", exist_ok=True)
-    filename = os.path.splitext(os.path.basename(pdf_path))[0]
+
+    # Get the base filename without extension
+    raw_filename = os.path.splitext(os.path.basename(pdf_path))[0]
+
+    # Clean the filename by removing everything before and including the underscore
+    if '_' in raw_filename:
+        filename = raw_filename.split('_', 1)[1]  # Split on first underscore and take second part
+    else:
+        filename = raw_filename  # Keep original if no underscore exists
+
     cached_path = os.path.join("PreviouslyCalculatedSlidedecks", f"{filename}.json")
 
     # 🔁 Return cached version if available
@@ -483,5 +490,3 @@ def main(pdf_path=None):
 
 if __name__ == "__main__":
     main()
-
-

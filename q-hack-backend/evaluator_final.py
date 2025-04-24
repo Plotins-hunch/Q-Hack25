@@ -791,18 +791,18 @@ if __name__ == "__main__":
         print(json.dumps({"metrics": result}, indent=2))
 
         # Save results to output file
-        output_file = filename.replace(".json", "_evaluated.json")
+        #output_file = filename.replace(".json", "_evaluated.json")
 
         # Load original JSON to update with metrics
         with open(filename, 'r') as f:
             original_data = json.load(f)
 
         # Update metrics and save
-        original_data["metrics"] = result
-        with open(output_file, 'w') as f:
-            json.dump(original_data, f, indent=2)
+        #original_data["metrics"] = result
+        #with open(output_file, 'w') as f:
+        #    json.dump(original_data, f, indent=2)
 
-        print(f"Results saved to {output_file}")
+        #print(f"Results saved to {output_file}")
 
     except Exception as e:
         print(f"Error during evaluation: {e}")
